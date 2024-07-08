@@ -1,0 +1,10 @@
+**/.DS_Store
+**/node_modules
+.vscode
+**/*.out
+**/*.log
+**/.env
+**/.env.*
+.svelte-kit
+dist
+*.tgz
