@@ -1,0 +1,12 @@
+{
+	"name": "Hubbardly",
+	"hero": {
+		"title": "Hubbardly",
+		"subtitle": "The amazing community for Makers",
+		"cta": {
+			"text": "Your #pantry# is now your #personal chef#.",
+			"link": "/signup"
+		}
+	},
+	"mainFeatures": [{}, {}]
+}
