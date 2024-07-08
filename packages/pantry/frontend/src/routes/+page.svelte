@@ -20,13 +20,13 @@
 			)}
 		</p>
 
-		<PrimaryButton text="Get Started" url={PUBLIC_APP_URL} icon="fa-solid fa-arrow-right" />
+		<PrimaryButton text="Get Started" url="/signup" icon="fa-solid fa-arrow-right" />
 	</div>
 
 	<div class="w-full p-8 lg:w-1/2 md:block hidden">
 		<img
 			src="/img/splash.webp"
-			alt="A futuristic server room to represent PocketHost"
+			alt="Hero splash"
 			class="rounded-[250px] mix-blend-lighten animated-hero-banner"
 		/>
 	</div>
@@ -37,23 +37,23 @@
 >
 	<div class="bg-zinc-900 md:w-1/2">
 		<MainFeatureBlock
-			icon="fa-laptop-code"
-			title="Up in 30 seconds"
-			tagline="Work Smarter, Not Harder"
-			content="A backend for your next app is as fast as signing up. No provisioning servers, no Docker fiddling, just B(ad)aaS productivity. Pick a unique project name and connect."
-			linkText="Create Your New Backend"
-			linkURL={PUBLIC_APP_URL}
+			icon={meta.mainFeatures[0].icon}
+			title={meta.mainFeatures[0].title}
+			tagline={meta.mainFeatures[0].title}
+			content={meta.mainFeatures[0].content}
+			linkText={meta.mainFeatures[0].linkText}
+			linkURL={meta.mainFeatures[0].linkURL}
 		/>
 	</div>
 
 	<div class="bg-zinc-800 md:w-1/2">
 		<MainFeatureBlock
-			icon="fa-webhook"
-			title="Zero Config"
-			tagline="Move Fast, Build Fast"
-			content="With PocketHost, batteries are included. You get a database, outgoing email, SSL, authentication, cloud functions, and high concurrency all in one stop."
-			linkText="Read the Documentation"
-			linkURL="/docs/overview/introduction"
+			icon={meta.mainFeatures[1].icon}
+			title={meta.mainFeatures[1].title}
+			tagline={meta.mainFeatures[1].title}
+			content={meta.mainFeatures[1].content}
+			linkText={meta.mainFeatures[1].linkText}
+			linkURL={meta.mainFeatures[1].linkURL}
 		/>
 	</div>
 
@@ -61,31 +61,13 @@
 		<div
 			class="bg-zinc-900 p-[75px] border-zinc-700 border-t-2 rounded-[75px] flex flex-wrap justify-center"
 		>
-			<SubfeatureBlock
-				icon="fa-server"
-				title="Database"
-				content="Your PocketHost instance is powered by its own internal SQLite instance. SQLite is more performant than mySQL or Postgres and is perfect for powering your next app."
-			/>
-			<SubfeatureBlock
-				icon="fa-shield-keyhole"
-				title="Auth"
-				content="Email and oAuth authentication options work out of the box. Send transactional email to your users from our verified domain and your custom address."
-			/>
-			<SubfeatureBlock
-				icon="fa-box"
-				title="Storage"
-				content="PocketHost securely stores your files on Amazon S3, or you can use your own key to manage your own storage."
-			/>
-			<SubfeatureBlock
-				icon="fa-seedling"
-				title="Room to Grow"
-				content="PocketHost, and the underlying PocketBase, can scale to well over 10,000 simultaneous connections."
-			/>
-			<SubfeatureBlock
-				icon="fa-transporter-3"
-				title="Self-host"
-				content="When you're ready to take your project in-house, we have you covered. You can export your entire PocketHost environment along with a Dockerfile to run it."
-			/>
+			{#each meta.subFeatures as subfeature}
+				<SubfeatureBlock
+					icon={subfeature.icon}
+					title={subfeature.title}
+					content={subfeature.content}
+				/>
+			{/each}
 		</div>
 	</div>
 </div>
