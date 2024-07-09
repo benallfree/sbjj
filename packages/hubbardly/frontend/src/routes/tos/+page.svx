@@ -1,14 +1,13 @@
 <script lang="ts">
-    import meta from '$src/meta.json'
-    const date = new Date();
-    const formattedDate = `${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`;
+	export let data
+	const { meta, publishDate } = data
 </script>
 
 <article class="prose lg:prose-xl">
 
 # Terms of Service
 
-**Effective Date: {formattedDate}**
+**Effective Date: {publishDate}**
 
 ## 1. Acceptance of Terms
 

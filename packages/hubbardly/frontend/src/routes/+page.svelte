@@ -1,9 +1,11 @@
-<script>
-	import { PUBLIC_APP_URL } from '../env';
-	import MainFeatureBlock from './MainFeatureBlock.svelte';
-	import PrimaryButton from './PrimaryButton.svelte';
-	import SubfeatureBlock from './SubfeatureBlock.svelte';
-	import meta from '$src/meta.json';
+<script lang="ts">
+	import { PUBLIC_APP_URL } from '../env'
+	import MainFeatureBlock from './MainFeatureBlock.svelte'
+	import PrimaryButton from './PrimaryButton.svelte'
+	import SubfeatureBlock from './SubfeatureBlock.svelte'
+	export let data
+
+	const { meta } = data
 </script>
 
 <div class="block md:hidden">
@@ -37,23 +39,23 @@
 >
 	<div class="bg-zinc-900 md:w-1/2">
 		<MainFeatureBlock
-			icon={meta.mainFeatures[0].icon}
-			title={meta.mainFeatures[0].title}
-			tagline={meta.mainFeatures[0].tagline}
-			content={meta.mainFeatures[0].content}
-			linkText={meta.mainFeatures[0].linkText}
-			linkURL={meta.mainFeatures[0].linkURL}
+			icon={meta.features.main[0].icon}
+			title={meta.features.main[0].title}
+			tagline={meta.features.main[0].tagline}
+			content={meta.features.main[0].content}
+			linkText={meta.features.main[0].linkText}
+			linkURL={meta.features.main[0].linkURL}
 		/>
 	</div>
 
 	<div class="bg-zinc-800 md:w-1/2">
 		<MainFeatureBlock
-			icon={meta.mainFeatures[1].icon}
-			title={meta.mainFeatures[1].title}
-			tagline={meta.mainFeatures[1].tagline}
-			content={meta.mainFeatures[1].content}
-			linkText={meta.mainFeatures[1].linkText}
-			linkURL={meta.mainFeatures[1].linkURL}
+			icon={meta.features.main[1].icon}
+			title={meta.features.main[1].title}
+			tagline={meta.features.main[1].tagline}
+			content={meta.features.main[1].content}
+			linkText={meta.features.main[1].linkText}
+			linkURL={meta.features.main[1].linkURL}
 		/>
 	</div>
 
@@ -61,7 +63,7 @@
 		<div
 			class="bg-zinc-900 p-[75px] border-zinc-700 border-t-2 rounded-[75px] flex flex-wrap justify-center"
 		>
-			{#each meta.subFeatures as subfeature}
+			{#each meta.features.sub as subfeature}
 				<SubfeatureBlock
 					icon={subfeature.icon}
 					title={subfeature.title}

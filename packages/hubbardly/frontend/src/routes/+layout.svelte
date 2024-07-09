@@ -1,10 +1,12 @@
-<script>
+<script lang="ts">
 	import Header from './Header.svelte'
 	import '../app.css'
 	import '@beyonk/gdpr-cookie-consent-banner/banner.css' // optional, you can also define your own styles
 	import GdprBanner from '@beyonk/gdpr-cookie-consent-banner'
+	import type { PageData } from './$types'
 
-	import meta from '$src/meta.json'
+	export let data: PageData
+	const { meta } = data
 
 	function initAnalytics() {
 		// do something with segment.io or google analytics etc
@@ -34,7 +36,7 @@
 	</footer>
 
 	<GdprBanner
-		cookieName={meta.gpdr.cookieName}
+		cookieName={meta.gpdr.cookie.name}
 		description={meta.gpdr.description}
 		on:analytics={initAnalytics}
 	/>

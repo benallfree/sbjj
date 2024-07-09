@@ -1,5 +1,14 @@
 {
 	"name": "Hubbardly",
+	"support": {
+		"discord": {
+			"url": "https://discord.gg/yfv2S76dSN",
+			"admins": [{ "username": "noaxis" }, { "username": "willowmuse" }]
+		}
+	},
+	"pocketbase": {
+		"endpoint": "https://hubbardly.pockethost.io"
+	},
 	"gpdr": {
 		"cookie": { "name": "hubbardly-gpdr" },
 		"description": "We use cookies to improve your experience on our site. By using our site, you consent to our use of cookies."
@@ -85,6 +94,7 @@
 			{
 				"name": "Founder",
 				"price": "299/lifetime",
+				"slug": "founder",
 				"checkoutUrl": "",
 				"description": "Super elite! Hubbardly for life. The Founder's Edition is our way of saying thanks for supporting Hubbardly in these early days. These are rare, so get them while they last!",
 				"qtyMax": 100,
@@ -113,6 +123,7 @@
 			{
 				"name": "Flounder",
 				"price": "499/lifetime",
+				"slug": "flounder",
 				"checkoutUrl": "",
 				"description": "Tepid elite! You're really sleeping on this one, but there's still hope and a killer lifetime deal. ",
 				"qtyMax": 10000,
@@ -125,6 +136,7 @@
 			{
 				"name": "Clownder",
 				"price": "649/lifetime",
+				"slug": "clownder",
 				"checkoutUrl": "",
 				"description": "Clown elite! You're a clown, but you're our clown. And we love you for it. You get the same deal as the Flounder, but with a little extra love. ",
 				"features": [

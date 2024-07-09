@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import { writable } from 'svelte/store'
-	import FaqSection from './FAQSection.svelte'
 	import PricingCard from './PricingCard.svelte'
-	import meta from '$src/meta.json'
+	import type { PageData } from './$types'
+
+	export let data: PageData
+	const { meta } = data
 
 	const {
 		plans: { title, tagline, content, tiers, presale }
@@ -47,11 +49,10 @@
 						active={$userSubscriptionType === slug}
 						{features}
 						{qtyMax}
+						qtySold={data.soldCounts[slug] || 0}
 					/>
 				{/each}
 			</div>
 		</div>
-
-		<FaqSection />
 	</main>
 </div>

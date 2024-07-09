@@ -10,7 +10,21 @@
 	export let locked = false
 	export let active: boolean
 	export let qtyMax = 0
-	export let qtyRemaining = 0
+	export let qtySold = 0
+
+	function formatNumber(num: number): string {
+		if (num < 1000) {
+			return num.toString()
+		} else if (num < 1_000_000) {
+			return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
+		} else if (num < 1_000_000_000) {
+			return (num / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'm'
+		} else {
+			return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, '') + 'b'
+		}
+	}
+
+	const qtyRemaining = qtyMax - qtySold
 
 	const mappedFeatures = features.map((feature) => feature.split(/#/))
 
@@ -46,7 +60,7 @@
 			class="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-xl font-black"
 		>
 			<i class="fa-regular fa-clock"></i>
-			{qtyRemaining}/{qtyMax} Remaining
+			{formatNumber(qtyRemaining)}/{formatNumber(qtyMax)} Remaining
 		</p>
 		{#if qtyRemaining <= 0}
 			<p class="text-error text-xl font-black">SOLD OUT</p>
