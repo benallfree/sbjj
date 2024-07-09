@@ -1,6 +1,4 @@
 import meta from '../meta.json'
-import PocketBase, { type RecordModel } from 'pocketbase'
-import type { JsonValue } from 'type-fest'
 import type { PageServerLoad } from './$types'
 
 const load: PageServerLoad = async ({ params }) => {
