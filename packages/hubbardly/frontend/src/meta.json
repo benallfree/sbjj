@@ -15,12 +15,12 @@
 	},
 	"mainFeatures": [
 		{
-			"title": "Free",
-			"tagline": "Find recipes using up to three ingredients.",
-			"content": "Keep your pantry inventory updated and connect with a community of home cooks. Input your ingredients and find delicious recipes using up to three of your pantry items. Share your own recipes and discover new ones, all for free!",
+			"title": "Community",
+			"tagline": "A thriving Discord community of home cooks",
+			"content": "Join our Discord community to share recipes, ask questions, and get inspired by other home cooks.",
 			"icon": "fa-rotate",
-			"linkText": "Get Cookin'",
-			"linkURL": "/signup"
+			"linkText": "See what's Cookin'",
+			"linkURL": "https://discord.gg/yfv2S76dSN"
 		},
 
 		{
