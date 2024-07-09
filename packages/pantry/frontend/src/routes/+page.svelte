@@ -3,7 +3,7 @@
 	import MainFeatureBlock from './MainFeatureBlock.svelte';
 	import PrimaryButton from './PrimaryButton.svelte';
 	import SubfeatureBlock from './SubfeatureBlock.svelte';
-	import meta from './meta.json';
+	import meta from '$src/meta.json';
 </script>
 
 <div class="block md:hidden">
@@ -39,7 +39,7 @@
 		<MainFeatureBlock
 			icon={meta.mainFeatures[0].icon}
 			title={meta.mainFeatures[0].title}
-			tagline={meta.mainFeatures[0].title}
+			tagline={meta.mainFeatures[0].tagline}
 			content={meta.mainFeatures[0].content}
 			linkText={meta.mainFeatures[0].linkText}
 			linkURL={meta.mainFeatures[0].linkURL}
@@ -50,7 +50,7 @@
 		<MainFeatureBlock
 			icon={meta.mainFeatures[1].icon}
 			title={meta.mainFeatures[1].title}
-			tagline={meta.mainFeatures[1].title}
+			tagline={meta.mainFeatures[1].tagline}
 			content={meta.mainFeatures[1].content}
 			linkText={meta.mainFeatures[1].linkText}
 			linkURL={meta.mainFeatures[1].linkURL}

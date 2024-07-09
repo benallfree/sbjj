@@ -1,0 +1,42 @@
+{
+	"name": "Hubbardly",
+	"gpdr": {
+		"cookieName": "hubbardly-gpdr",
+		"description": "We use cookies to improve your experience on our site. By using our site, you consent to our use of cookies."
+	},
+	"domain": "hubbardly.com",
+	"hero": {
+		"title": "Hubbardly",
+		"subtitle": "From Pantry to Plate: Discover, Cook, Enjoy!",
+		"cta": {
+			"text": "Transform your #pantry# into a #culinary adventure#!",
+			"link": "/signup"
+		}
+	},
+	"mainFeatures": [
+		{
+			"title": "Free",
+			"tagline": "Find recipes using up to three ingredients.",
+			"content": "Keep your pantry inventory updated and connect with a community of home cooks. Input your ingredients and find delicious recipes using up to three of your pantry items. Share your own recipes and discover new ones, all for free!",
+			"icon": "fa-rotate",
+			"linkText": "Get Cookin'",
+			"linkURL": "/signup"
+		},
+
+		{
+			"title": "Zero Config",
+			"tagline": "Move Fast, Build Fast",
+			"content": "With PocketHost, batteries are included. You get a database, outgoing email, SSL, authentication, cloud functions, and high concurrency all in one stop.",
+			"icon": "fa-webhook",
+			"linkText": "Read the Documentation",
+			"linkURL": "/pricing"
+		}
+	],
+	"subFeatures": [
+		{
+			"icon": "fa-server",
+			"title": "Database",
+			"content": "Your PocketHost instance is powered by its own internal SQLite instance. SQLite is more performant than mySQL or Postgres and is perfect for powering your next app."
+		}
+	]
+}
