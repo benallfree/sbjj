@@ -25,8 +25,10 @@
 			<nav>
 				<h6 class="footer-title">Legal</h6>
 				<a href="/tos" class="link link-hover">Terms of Service</a>
-				<a href="/privacy" class="link link-hover">Privacy Policy</a>
-				<a href="/cookie" class="link link-hover">Cookie Policy</a>
+				<a href="/privacy" class="link link-hover">Privacy</a>
+				<a href="/cookie" class="link link-hover">Cookies</a>
+				<a href="/affiliate" class="link link-hover">Affiliates</a>
+				<a href="/cancel" class="link link-hover">Canceling and Refunds</a>
 			</nav>
 		</footer>
 	</footer>
