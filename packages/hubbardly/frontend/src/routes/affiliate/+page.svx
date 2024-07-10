@@ -19,9 +19,12 @@ To begin the enrollment process, you must submit a completed Affiliate Program a
 
 ### Commission Structure
 
-- **Founder Sales**: 30% commission on pre-sales. Founder sales are pre-sales, meaning the project may still be canceled. If the project is canceled, customers will receive a refund, and affiliate commissions will still be paid.
-- **Cofounder Sales**: 20% commission.
-- **Flounder and Clownder Sales**: 10% commission.
+- **Founder**: 30% commission on pre-sales. Founder sales are pre-sales, meaning the project may still be canceled. If the project is canceled, customers will receive a refund, and affiliate commissions will still be paid.
+- **Astounder**: 20% commission. Astounder sales are post-sales, meaning the project has been confirmed and is in progress.
+- **Flounder**: 10% commission. Flounder sales are post-sales, meaning the project has been confirmed and is in progress.
+- **Monthly Recurring Revenue (MRR)**: 10% commission on the first 12 months of MRR.
+- **Yearly Recurring Revenue (YRR)**: 10% commission on the year of YRR.
+- **Lifetime Value (LTV)**: 10% commission on the first 12 months of LTV.
 
 ### Payment Terms
 
