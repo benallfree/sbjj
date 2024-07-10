@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+
 	import { PUBLIC_APP_URL } from '../env'
 	import MainFeatureBlock from './MainFeatureBlock.svelte'
 	import PrimaryButton from './PrimaryButton.svelte'
@@ -22,7 +24,7 @@
 			)}
 		</p>
 
-		<PrimaryButton text="Get Started" url="/signup" icon="fa-solid fa-arrow-right" />
+		<PrimaryButton text="Get Started" url="/signup" icon={faArrowRight} />
 	</div>
 
 	<div class="w-full p-8 lg:w-1/2 md:block hidden">

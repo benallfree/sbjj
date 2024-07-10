@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { DOCS_URL } from '$src/env'
+	import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
+	import Fa from 'svelte-fa'
 	import { writable } from 'svelte/store'
 
 	export let name: string
@@ -51,7 +53,7 @@
 	</div>
 	{#if locked}
 		<div>
-			<i class="fa fa-lock" /> <span class="text-warning">Locked during presale</span>
+			<Fa icon={faLock} /> <span class="text-warning">Locked during presale</span>
 		</div>
 	{/if}
 
@@ -59,7 +61,7 @@
 		<p
 			class="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-xl font-black"
 		>
-			<i class="fa-regular fa-clock"></i>
+			<Fa icon={faClock} />
 			{formatNumber(qtyRemaining)}/{formatNumber(qtyMax)} Remaining
 		</p>
 		{#if qtyRemaining <= 0}
@@ -73,7 +75,7 @@
 		<ul class="text-sm leading-6 text-gray-300">
 			{#each mappedFeatures as [feature, infoUrl]}
 				<li class="flex items-center gap-x-2">
-					<i class="fa-solid fa-check text-primary"></i>
+					<Fa icon={faCheck} class="text-primary" />
 					{feature}
 					{#if infoUrl}
 						<a

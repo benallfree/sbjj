@@ -2,6 +2,8 @@
 	import { writable } from 'svelte/store'
 	import PricingCard from './PricingCard.svelte'
 	import type { PageData } from './$types'
+	import Fa from 'svelte-fa'
+	import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
 
 	export let data: PageData
 	const { meta } = data
@@ -26,7 +28,7 @@
 			{#if presale}
 				<div class="flex justify-center">
 					<div role="alert" class="alert alert-warning m-8 max-w-2xl">
-						<i class="fa-thin fa-martini-glass"></i>
+						<Fa icon={faMartiniGlass} />
 						<span>{presale}</span>
 					</div>
 				</div>
