@@ -2,7 +2,6 @@
   import { DOCS_URL } from '$src/env'
   import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
-  import { writable } from 'svelte/store'
 
   export let name: string
   export let description: string

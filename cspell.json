@@ -20,6 +20,7 @@
     "dockerode",
     "esbuild",
     "eventsource",
+    "favicons",
     "fira",
     "fontsource",
     "fullchain",

@@ -6,6 +6,7 @@ import {
 
 export const meta = {
   name: 'Hubbardly',
+  description: `From Pantry to Plate: Discover, Cook, Enjoy!`,
   support: {
     discord: {
       url: 'https://discord.gg/9X2T6Gcg5G',
