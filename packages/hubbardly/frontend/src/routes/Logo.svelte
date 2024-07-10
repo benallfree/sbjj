@@ -1,17 +1,21 @@
 <script>
   import { meta } from '$src/meta'
+  import AuthStateGuard from './AuthStateGuard.svelte'
 
   export let hideLogoText = false
   export let logoWidth = 'w-24'
 </script>
 
-<div class="flex items-center justify-center gap-4">
+<a class="flex items-center justify-center" href="/">
   <enhanced:img
     src="$src/assets/favicon.png"
     class="mix-blend-lighten {logoWidth}"
     alt="{meta.name} Logo"
+    style="width: 24px"
   />
-  <h1 class="text-white font-bold text-2xl {hideLogoText && 'sr-only'}">
+  <h1
+    class="text-white font-bold text-2xl pl-0 ml-0 {hideLogoText && 'sr-only'}"
+  >
     {meta.name}
   </h1>
-</div>
+</a>

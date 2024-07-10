@@ -1,6 +1,6 @@
 import { assertExists } from '$src/assert'
 import { createGenericSyncEvent } from '$src/events'
-import { mkSingleton } from '$src/mkSingleton'
+import { meta } from '$src/meta'
 import PocketBase, { BaseAuthStore, type AuthModel } from 'pocketbase'
 
 export type AuthToken = string
@@ -10,15 +10,11 @@ export type AuthStoreProps = {
   isValid: boolean
 }
 
-export type PocketbaseClientConfig = {
-  url: string
-}
+export type PocketbaseClientConfig = {}
 export type PocketbaseClient = ReturnType<typeof createPocketbaseClient>
 
 const createPocketbaseClient = (config: PocketbaseClientConfig) => {
-  const { url } = config
-
-  const client = new PocketBase(url)
+  const client = new PocketBase(meta.pocketbase.endpoint)
 
   const { authStore } = client
 
@@ -186,7 +182,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
   }
 }
 
-export const PocketbaseClient = mkSingleton<
-  PocketbaseClientConfig,
-  PocketbaseClient
->(createPocketbaseClient)
+export const PocketbaseClient = (() => {
+  const client = createPocketbaseClient({})
+  return () => client
+})()

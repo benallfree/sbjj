@@ -5,7 +5,7 @@
   export let name: string
   export let description: string
   export let price: string
-  export let features: string[]
+  export let features: readonly string[]
   export let checkoutUrl
   export let locked = false
   export let active: boolean

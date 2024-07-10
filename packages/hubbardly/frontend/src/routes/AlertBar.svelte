@@ -1,51 +1,81 @@
 <script lang="ts">
+  import {
+    faCircleCheck,
+    faCircleInfo,
+    faCircleXmark,
+    faTriangleExclamation,
+    type IconDefinition,
+  } from '@fortawesome/free-solid-svg-icons'
+  import { onMount } from 'svelte'
+  import Fa from 'svelte-fa'
   import { slide } from 'svelte/transition'
 
   // https://daisyui.com/components/alert/
-  type AlertTypes = 'default' | 'info' | 'success' | 'warning' | 'error'
+  type AlertTypes = 'info' | 'success' | 'warning' | 'error'
 
-  export let message: string = ''
-  export let type: AlertTypes
+  export let type: AlertTypes = 'info'
+  export let icon = true
   export let additionalClasses: string = ''
+  export let remember = ''
+  export let dismissible = !!remember
+
+  let isVisible = false
+
+  const icons: { [key in AlertTypes]: IconDefinition } = {
+    info: faCircleInfo,
+    success: faCircleCheck,
+    warning: faTriangleExclamation,
+    error: faCircleXmark,
+  } as const
+
+  const iconFile = icons[type]
 
   // Set up the default alert classes and icon
-  let alertTypeClass = ''
-  let alertTypeIcon = `<i class="fa-regular fa-circle-info"></i>`
+  const alertTypeClassLookup = {
+    info: 'alert-info',
+    success: 'alert-success',
+    warning: 'alert-warning',
+    error: 'alert-error',
+  } as const
+  const alertTypeClass = alertTypeClassLookup[type]
 
-  if (type === 'default') {
-    alertTypeClass = ''
-    alertTypeIcon = `<i class="fa-regular fa-circle-info"></i>`
-  }
+  onMount(() => {
+    isVisible = true
+    if (!remember) return
+    const storedValue = localStorage.getItem(remember)
+    if (storedValue === 'hidden') {
+      isVisible = false
+    }
+  })
 
-  if (type === 'info') {
-    alertTypeClass = 'alert-info'
-    alertTypeIcon = `<i class="fa-regular fa-circle-info"></i>`
-  }
-
-  if (type === 'success') {
-    alertTypeClass = 'alert-success'
-    alertTypeIcon = `<i class="fa-regular fa-circle-check"></i>`
-  }
-
-  if (type === 'warning') {
-    alertTypeClass = 'alert-warning'
-    alertTypeIcon = `<i class="fa-regular fa-triangle-exclamation"></i>`
-  }
-
-  if (type === 'error') {
-    alertTypeClass = 'alert-error'
-    alertTypeIcon = `<i class="fa-regular fa-circle-xmark"></i>`
+  function dismiss() {
+    isVisible = false
+    if (remember) {
+      localStorage.setItem(remember, 'hidden')
+    }
   }
 </script>
 
-{#if message}
-  <div
-    class="alert mb-4 {alertTypeClass} {additionalClasses} justify-center"
-    transition:slide
-    role="alert"
-  >
-    {@html alertTypeIcon}
+{#if isVisible}
+  <div class="m-4">
+    <div
+      class="alert {alertTypeClass} {additionalClasses} relative"
+      transition:slide
+      role="alert"
+    >
+      {#if dismissible}
+        <button
+          class="absolute top-0 right-0 m-1 btn btn-circle btn-sm btn-outline"
+          on:click={dismiss}>X</button
+        >
+      {/if}
 
-    <span>{@html message}</span>
+      <div class={dismissible ? 'mt-6' : 'mt-0'}>
+        {#if icon}<Fa
+            icon={iconFile}
+            class="h-6 w-6 shrink-0 stroke-current"
+          />{/if}<span><slot /></span>
+      </div>
+    </div>
   </div>
 {/if}

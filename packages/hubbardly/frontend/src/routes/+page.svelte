@@ -8,13 +8,6 @@
   const { meta } = data
 </script>
 
-<div class="block md:hidden">
-  <enhanced:img
-    src="$src/assets/img/logo.png"
-    alt="Logo"
-    class="w-full p-8 mix-blend-lighten"
-  />
-</div>
 <div class="container mx-auto text-white flex items-center">
   <div class="p-8 lg:w-1/2">
     <h1 class="text-6xl font-bold mb-8">{meta.hero.subtitle}</h1>

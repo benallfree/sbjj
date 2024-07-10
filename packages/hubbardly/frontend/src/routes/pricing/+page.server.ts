@@ -1,3 +1,4 @@
+import { keys } from '@s-libs/micro-dash'
 import PocketBase, { type RecordModel } from 'pocketbase'
 import type { JsonValue } from 'type-fest'
 import type { PageServerLoad } from './$types'
@@ -7,7 +8,7 @@ export type SettingsModel = RecordModel & { name: string; value: JsonValue }
 const load: PageServerLoad = async ({ parent }) => {
   const { meta } = await parent()
   const client = new PocketBase(meta.pocketbase.endpoint)
-  const slugs = meta.plans.tiers.map((tier) => tier.slug)
+  const slugs = keys(meta.plans.tiers)
   const counts = await client
     .collection('settings')
     .getFullList<SettingsModel>({

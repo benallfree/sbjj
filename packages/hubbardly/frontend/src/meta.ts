@@ -6,6 +6,8 @@ import {
 
 export const meta = {
   name: 'Hubbardly',
+  presale:
+    'Hubbardly is currently in Presale mode. <b>No features are available yet.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
   description: `From Pantry to Plate: Discover, Cook, Enjoy!`,
   support: {
     discord: {
@@ -65,8 +67,6 @@ export const meta = {
     tagline: 'Plans for aspiring cooks and seasoned chefs alike',
     content:
       'Hubbardly is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!',
-    presale:
-      'Hubbardly is in Pre-Sale mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked.',
     tiers: {
       free: {
         name: 'Free',
@@ -74,6 +74,7 @@ export const meta = {
         slug: 'free',
         summary: `You're on the basic Free plan. Upgrade to Pro to unlock all community recipes.`,
         upgradable: true,
+        qtyMax: 0,
         description:
           'Free forever. Use Hubbardly to build your pantry and share your recipes with the world.',
         checkoutUrl: '',
@@ -99,6 +100,7 @@ export const meta = {
           'Match all community recipes with unlimited ingredients',
         ],
         locked: true,
+        qtyMax: 0,
       },
       [`pro-annual`]: {
         name: 'Pro Annual',
@@ -114,6 +116,7 @@ export const meta = {
           'Save 20% with an annual subscription',
         ],
         locked: true,
+        qtyMax: 0,
       },
       founder: {
         name: 'Founder',

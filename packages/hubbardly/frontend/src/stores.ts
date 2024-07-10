@@ -6,7 +6,7 @@ import { meta, type Meta } from './meta'
 import { PocketbaseClient } from './pocketbase-client/PocketbaseClient'
 import type { UserFields } from './routes/pricing/User'
 
-const { onAuthChange } = PocketbaseClient({ url: meta.pocketbase.endpoint })
+const { onAuthChange } = PocketbaseClient()
 
 export const isUserLegacy = writable(false)
 export const userSubscriptionType =

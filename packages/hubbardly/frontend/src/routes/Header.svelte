@@ -8,16 +8,9 @@
   import VerifyAccountBar from './VerifyAccountBar.svelte'
 </script>
 
-<AuthStateGuard>
-  <div>
-    <Navbar />
+<div>
+  <Navbar />
+  <VerifyAccountBar />
 
-    <main class="py-10 {$isUserLoggedIn ? `lg:pl-72` : ``}">
-      <div class="px-4 sm:px-6 lg:px-8">
-        <VerifyAccountBar />
-
-        <slot />
-      </div>
-    </main>
-  </div>
-</AuthStateGuard>
+  <slot />
+</div>
