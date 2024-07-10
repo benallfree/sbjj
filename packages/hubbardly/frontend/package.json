@@ -13,6 +13,8 @@
 	"devDependencies": {
 		"@beyonk/gdpr-cookie-consent-banner": "^12.1.4",
 		"@fontsource/fira-mono": "^4.5.10",
+		"@fortawesome/free-brands-svg-icons": "^6.5.2",
+		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@neoconfetti/svelte": "^1.0.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.2",
@@ -34,6 +36,7 @@
 		"rollup-plugin-svelte": "^7.2.2",
 		"svelte": "^4.2.18",
 		"svelte-check": "^3.6.0",
+		"svelte-fa": "^4.0.2",
 		"tailwindcss": "^3.4.4",
 		"tslib": "^2.4.1",
 		"type-fest": "^4.21.0",

@@ -2,8 +2,7 @@
 	"name": "Hubbardly",
 	"support": {
 		"discord": {
-			"url": "https://discord.gg/yfv2S76dSN",
-			"admins": [{ "username": "noaxis" }, { "username": "willowmuse" }]
+			"url": "https://discord.gg/9X2T6Gcg5G"
 		}
 	},
 	"pocketbase": {
@@ -131,19 +130,6 @@
 					"Everything in Pro, plus...",
 					"Votes on new features",
 					"Sadness that you slept for so long"
-				]
-			},
-			{
-				"name": "Clownder",
-				"price": "649/lifetime",
-				"slug": "clownder",
-				"checkoutUrl": "",
-				"description": "Clown elite! You're a clown, but you're our clown. And we love you for it. You get the same deal as the Flounder, but with a little extra love. ",
-				"features": [
-					"Everything in Pro, plus...",
-					"Votes on new features",
-					"Deep and lasting shame for being a clown",
-					"Deep and lasting love for being our clown"
 				]
 			}
 		]
