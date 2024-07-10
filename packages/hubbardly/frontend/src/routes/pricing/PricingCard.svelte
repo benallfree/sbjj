@@ -35,7 +35,9 @@
 
 <div
   class={`flex flex-col rounded-3xl p-8 xl:p-10 ${
-    active ? 'bg-white/5 ring-2 ring-primary' : 'ring-1 ring-white/10'
+    !locked
+      ? 'bg-white/5 ring-2 ring-primary'
+      : 'ring-1 ring-white/90 bg-warning/20'
   }`}
 >
   <div class="flex items-center justify-between gap-x-4">
