@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
-	import { PUBLIC_APP_URL } from '../env'
 	import MainFeatureBlock from './MainFeatureBlock.svelte'
 	import PrimaryButton from './PrimaryButton.svelte'
 	import SubfeatureBlock from './SubfeatureBlock.svelte'
@@ -11,7 +9,7 @@
 </script>
 
 <div class="block md:hidden">
-	<img src="/img/logo.png" alt="Logo" class="w-full p-8 mix-blend-lighten" />
+	<enhanced:img src="$src/assets/img/logo.png" alt="Logo" class="w-full p-8 mix-blend-lighten" />
 </div>
 <div class="container mx-auto text-white flex items-center">
 	<div class="p-8 lg:w-1/2">
@@ -28,8 +26,8 @@
 	</div>
 
 	<div class="w-full p-8 lg:w-1/2 md:block hidden">
-		<img
-			src="/img/splash.webp"
+		<enhanced:img
+			src="$src/assets/img/splash.webp"
 			alt="Hero splash"
 			class="rounded-[250px] mix-blend-lighten animated-hero-banner"
 		/>
