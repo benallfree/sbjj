@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{svelte,js,ts,md}'],
+	content: ['./src/**/*.{svelte,js,ts,svx}'],
 	theme: {
 		extend: {
 			animation: {
@@ -35,4 +35,4 @@ module.exports = {
 		]
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')]
-};
+}
