@@ -1,4 +1,4 @@
-import { meta } from '../meta'
+import { meta } from '$src/meta'
 import type { PageServerLoad } from './$types'
 
 const load: PageServerLoad = async ({ params }) => {

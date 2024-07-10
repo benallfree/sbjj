@@ -1,6 +1,5 @@
 <script>
   import { meta } from '$src/meta'
-  import AuthStateGuard from './AuthStateGuard.svelte'
 
   export let hideLogoText = false
   export let logoWidth = 'w-24'

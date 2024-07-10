@@ -7,7 +7,7 @@ import {
 export const meta = {
   name: 'Hubbardly',
   presale:
-    'Hubbardly is currently in Presale mode. <b>No features are available yet.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
+    'Hubbardly is currently in Presale mode. <b>We are building features as funds are raised.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
   description: `From Pantry to Plate: Discover, Cook, Enjoy!`,
   support: {
     discord: {
@@ -23,44 +23,46 @@ export const meta = {
       'We use cookies to improve your experience on our site. By using our site, you consent to our use of cookies.',
   },
   domain: 'hubbardly.com',
-  hero: {
-    title: 'Hubbardly',
-    subtitle: 'From Pantry to Plate: Discover, Cook, Enjoy!',
-    cta: {
-      text: 'Transform your #pantry# into a #culinary adventure#!',
-      link: '/signup',
+  lander: {
+    hero: {
+      title: 'Hubbardly',
+      subtitle: 'From Pantry to Plate: Discover, Cook, Enjoy!',
+      cta: {
+        text: 'Transform your #pantry# into a #culinary adventure#!',
+        link: '/signup',
+      },
     },
-  },
-  features: {
-    main: [
-      {
-        title: 'Community',
-        tagline: 'A thriving Discord community of home cooks',
-        content:
-          'Join our Discord community to share recipes, ask questions, and get inspired by other home cooks.',
-        icon: faRotate,
-        linkText: "See what's Cookin'",
-        linkURL: 'https://discord.gg/yfv2S76dSN',
-      },
+    features: {
+      main: [
+        {
+          title: 'Community',
+          tagline: 'A thriving Discord community of home cooks',
+          content:
+            'Join our Discord community to share recipes, ask questions, and get inspired by other home cooks.',
+          icon: faRotate,
+          linkText: "See what's Cookin'",
+          linkURL: 'https://discord.gg/yfv2S76dSN',
+        },
 
-      {
-        title: 'Zero Config',
-        tagline: 'Move Fast, Build Fast',
-        content:
-          'With PocketHost, batteries are included. You get a database, outgoing email, SSL, authentication, cloud functions, and high concurrency all in one stop.',
-        icon: faArrowAltCircleDown,
-        linkText: 'Read the Documentation',
-        linkURL: '/pricing',
-      },
-    ],
-    sub: [
-      {
-        icon: faServer,
-        title: 'Database',
-        content:
-          'Your PocketHost instance is powered by its own internal SQLite instance. SQLite is more performant than mySQL or Postgres and is perfect for powering your next app.',
-      },
-    ],
+        {
+          title: 'Zero Config',
+          tagline: 'Move Fast, Build Fast',
+          content:
+            'With PocketHost, batteries are included. You get a database, outgoing email, SSL, authentication, cloud functions, and high concurrency all in one stop.',
+          icon: faArrowAltCircleDown,
+          linkText: 'Read the Documentation',
+          linkURL: '/pricing',
+        },
+      ],
+      sub: [
+        {
+          icon: faServer,
+          title: 'Database',
+          content:
+            'Your PocketHost instance is powered by its own internal SQLite instance. SQLite is more performant than mySQL or Postgres and is perfect for powering your next app.',
+        },
+      ],
+    },
   },
   plans: {
     title: 'Pricing',

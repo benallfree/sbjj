@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Header from './Header.svelte'
-  import '../app.css'
+  import Header from '../Header.svelte'
+  import '../../app.css'
   import '@beyonk/gdpr-cookie-consent-banner/banner.css' // optional, you can also define your own styles
   import GdprBanner from '@beyonk/gdpr-cookie-consent-banner'
   import type { PageData } from './$types'

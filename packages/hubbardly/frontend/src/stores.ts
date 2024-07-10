@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store'
 // TODO: Removing this will cause the app to crash
 // Theres a reference inside of `createPocketbaseClient.ts` that needs the information that comes from this file
+import { meta, type Meta } from '$src/meta'
 import type { UnsubscribeFunc } from 'pocketbase'
-import { meta, type Meta } from './meta'
 import { PocketbaseClient } from './pocketbase-client/PocketbaseClient'
 import type { UserFields } from './routes/pricing/User'
 
