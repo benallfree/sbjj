@@ -4,6 +4,7 @@
   import '@beyonk/gdpr-cookie-consent-banner/banner.css' // optional, you can also define your own styles
   import GdprBanner from '@beyonk/gdpr-cookie-consent-banner'
   import type { PageData } from './$types'
+  import { PocketbaseClient } from '$src/pocketbase-client/PocketbaseClient'
 
   export let data: PageData
   const { meta } = data
@@ -36,6 +37,7 @@
   </footer>
 
   <GdprBanner
+    showEditIcon={false}
     cookieName={meta.gpdr.cookie.name}
     description={meta.gpdr.description}
     on:analytics={initAnalytics}

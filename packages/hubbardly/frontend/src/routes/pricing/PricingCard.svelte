@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { DOCS_URL } from '$src/env'
   import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
 
@@ -80,11 +79,7 @@
           <Fa icon={faCheck} class="text-primary" />
           {feature}
           {#if infoUrl}
-            <a
-              href={infoUrl.startsWith(`http`) ? infoUrl : DOCS_URL(infoUrl)}
-              class="badge badge-neutral"
-              target="_blank">i</a
-            >
+            <a href={infoUrl} class="badge badge-neutral" target="_blank">i</a>
           {/if}
         </li>
       {/each}

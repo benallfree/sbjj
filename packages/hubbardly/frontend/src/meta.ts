@@ -67,11 +67,13 @@ export const meta = {
       'Hubbardly is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!',
     presale:
       'Hubbardly is in Pre-Sale mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked.',
-    tiers: [
-      {
+    tiers: {
+      free: {
         name: 'Free',
         price: '0',
         slug: 'free',
+        summary: `You're on the basic Free plan. Upgrade to Pro to unlock all community recipes.`,
+        upgradable: true,
         description:
           'Free forever. Use Hubbardly to build your pantry and share your recipes with the world.',
         checkoutUrl: '',
@@ -83,10 +85,12 @@ export const meta = {
         ],
         locked: true,
       },
-      {
+      [`pro-monthly`]: {
         name: 'Pro',
         price: '19/mo',
         slug: 'pro-monthly',
+        summary: `You're on the monthly Pro plan. Thank you for supporting Hubbardly!`,
+        upgradable: true,
         description:
           'Unlock the full potential of Hubbardly with our Pro plan. Get access to all community recipes and match with your pantry items.',
         checkoutUrl: '',
@@ -96,11 +100,13 @@ export const meta = {
         ],
         locked: true,
       },
-      {
+      [`pro-annual`]: {
         name: 'Pro Annual',
         price: '199/yr',
         slug: 'pro-annual',
         checkoutUrl: '',
+        summary: `You're on the annual Pro plan. Thank you for supporting Hubbardly!`,
+        upgradable: true,
         description:
           'Unlock the full potential of Hubbardly with our Pro plan. Get access to all community recipes and match with your pantry items.',
         features: [
@@ -109,11 +115,13 @@ export const meta = {
         ],
         locked: true,
       },
-      {
+      founder: {
         name: 'Founder',
         price: '299/lifetime',
         slug: 'founder',
         checkoutUrl: '',
+        summary: `What an absolute Chad! You're a Hubbardly Founder for life!`,
+        upgradable: false,
         description:
           "Super elite! Hubbardly for life. The Founder's Edition is our way of saying thanks for supporting Hubbardly in these early days. These are rare, so get them while they last!",
         qtyMax: 100,
@@ -126,11 +134,13 @@ export const meta = {
           "Commemorative Founder's mug",
         ],
       },
-      {
+      astounder: {
         name: 'Astounder',
         slug: 'astounder',
         price: '349/lifetime',
         checkoutUrl: '',
+        summary: `What an absolute Chad! The Astounder Edition is yours for life.`,
+        upgradable: false,
         description:
           "Meta elite! Missed the Founder's Edition? The Astounder Edition gives you another chance. ",
         qtyMax: 1000,
@@ -140,11 +150,13 @@ export const meta = {
           'Votes on new features',
         ],
       },
-      {
+      flounder: {
         name: 'Flounder',
         price: '499/lifetime',
         slug: 'flounder',
         checkoutUrl: '',
+        summary: `What an absolute Chad! The Flounder Edition is yours for life.`,
+        upgradable: false,
         description:
           "Tepid elite! You're really sleeping on this one, but there's still hope and a killer lifetime deal. ",
         qtyMax: 10000,
@@ -154,7 +166,7 @@ export const meta = {
           'Sadness that you slept for so long',
         ],
       },
-    ],
+    },
   },
   faqs: [
     {
