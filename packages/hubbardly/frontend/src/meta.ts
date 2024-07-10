@@ -4,7 +4,7 @@ import {
   faServer,
 } from '@fortawesome/free-solid-svg-icons'
 
-export default {
+export const meta = {
   name: 'Hubbardly',
   support: {
     discord: {
@@ -155,11 +155,55 @@ export default {
       },
     ],
   },
-  faq: [
+  faqs: [
     {
-      title: `What's Hubbardly?`,
-      content:
+      question: `What's Hubbardly?`,
+      answer:
         'Hubbardly is a platform for home cooks to discover, cook, and enjoy recipes. You can build your pantry, share your recipes, and match with community recipes.',
+    },
+    {
+      question: 'What is Presale Mode?',
+      answer: `Hubbardly is in Presale mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked. This is done to fund the development of the platform and to reward early supporters.`,
+    },
+    {
+      question: `How does the affiliate program work?`,
+      answer:
+        'The affiliate program is a way for you to earn money by referring others to Hubbardly. You will receive a unique link to share with your friends and followers. When someone signs up using your link, you will receive a commission on their subscription. Check out <a href="/affiliate" class="link">our affiliate page</a> for more information.',
+    },
+    {
+      question: 'How do I get started?',
+      answer: `Create an account. Choose a support tier and join in the funding of Hubbardly if you can. Otherwise, sit tight while we get organized and we'll send you updates. In the meantime, join our Discord community to meet other home cooks and share recipes.`,
+    },
+    {
+      question: 'How do I join the Discord community?',
+      answer:
+        'Join our Discord community by visiting <a href="/support" class="link">the support page</a>.',
+    },
+    {
+      question: `What's your refund policy?`,
+      answer: `Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. While we are in Presale mode, we are not offering refunds. However, if you really have a change of heart, of course we will refund your money. You'll lose your place in line though, and many not get another chance to become a Founder. Also, if we decide to cancel the project for any reason, we will refund your money.`,
+    },
+    {
+      question: 'Post-launch: How do I share my recipes?',
+      answer:
+        'Once you have an account, you can create recipes and share them with the community.',
+    },
+    {
+      question: 'Post-launch: How do I match with community recipes?',
+      answer:
+        'Add items to your pantry and Hubbardly will show you recipes that you can make with those items across the Community, including your own recipes.',
+    },
+    {
+      question: `Post-launch: How do I create recipes?`,
+      answer:
+        'Once you have an account, you can create recipes by adding ingredients and instructions.',
+    },
+    {
+      question: 'Post-launch: How do I get access to all community recipes?',
+      answer:
+        'Community recipes with three or fewer ingredients are available to all users. To get access to all community recipes, you need to subscribe to the Pro plan.',
     },
   ],
 } as const
+
+export type Meta = typeof meta

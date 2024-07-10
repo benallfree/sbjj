@@ -2,6 +2,7 @@
   import FaqSection from './FAQSection.svelte'
   export let data
   const { meta } = data
+  const { faqs } = meta
 </script>
 
 <div class="container mx-auto py-8 px-4">
@@ -14,5 +15,5 @@
       >Discord server</a
     >
   </div>
-  <FaqSection />
+  <FaqSection {faqs} />
 </div>
