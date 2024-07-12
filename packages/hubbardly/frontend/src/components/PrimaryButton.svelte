@@ -1,10 +1,12 @@
 <script lang="ts">
-  import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+  import {
+    faCheck,
+    type IconDefinition,
+  } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
 
-  export let text: string
   export let url: string
-  export let icon: IconDefinition
+  export let icon: IconDefinition = faCheck
   export let target = '_self'
 </script>
 
@@ -19,7 +21,7 @@
     {target}
     role="button"
   >
-    {text}
+    <slot />
     {#if icon}
       <Fa {icon} />
     {/if}

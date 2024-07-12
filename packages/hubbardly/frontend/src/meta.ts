@@ -37,7 +37,7 @@ export const PRELAUNCH_NAME = `Kickstarter`
 export const meta = {
   publishDate: `7/12/2024`,
   name: APP_NAME,
-  prelaunch: false,
+  prelaunch: true,
   description: `Discover hidden meals in your own pantry.`,
   support: {
     discord: {
@@ -174,7 +174,7 @@ export const meta = {
         price: `299 once, use forever`,
         slug: `founder`,
         checkoutUrl: `https://${APP_NAME}.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
-        summary: `What an absolute Chad! You're a ${APP_NAME} Founder for life!`,
+        summary: `What an absolute Chad! You're in ${APP_NAME} for life!`,
         upgradable: false,
         description: `Super elite! ${APP_NAME} for life. The Founder's Edition is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!`,
         qtyMax: 500,
@@ -261,5 +261,5 @@ export const meta = {
 }
 
 export type Meta = typeof meta
-export type PricingTier = Meta[`plans`][`tiers`][`free`]
-export type PlanSlugs = keyof Meta[`plans`][`tiers`]
+export type Plan = Meta[`plans`][`tiers`][`free`]
+export type PlanSlug = keyof Meta[`plans`][`tiers`]

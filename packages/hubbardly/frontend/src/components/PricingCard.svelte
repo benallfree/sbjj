@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { meta, PRELAUNCH_NAME, type PricingTier } from '$src/meta'
+  import { meta, PRELAUNCH_NAME, type Plan } from '$src/meta'
   import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
   import PricingCardDivButton from './PricingCardDivButton.svelte'
   import PricingCardAnchorButton from './PricingCardAnchorButton.svelte'
   import AlertBar from './AlertBar.svelte'
 
-  export let data: PricingTier
+  export let data: Plan
   export let qtySold = 0
   export let active = false
 
@@ -53,7 +53,7 @@
 </script>
 
 <div
-  class={`flex flex-col rounded-3xl p-8 xl:p-10 ${
+  class={`flex flex-col rounded-3xl p-8 xl:p-10  ${
     !locked
       ? 'bg-white/5 ring-2 ring-primary'
       : 'ring-1 ring-white/90 bg-warning/20'

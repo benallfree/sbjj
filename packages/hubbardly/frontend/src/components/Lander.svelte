@@ -30,11 +30,9 @@
       )}
     </p>
 
-    <PrimaryButton
-      text={cta.button.text}
-      url={cta.button.link}
-      icon={faArrowRight}
-    />
+    <PrimaryButton url={cta.button.link} icon={faArrowRight}
+      >{cta.button.text}</PrimaryButton
+    >
   </div>
 
   <div class="w-full p-8 md:w-1/2 lg:w-1/2 xl:w-1/3 md:block hidden">
@@ -49,12 +47,6 @@
 <div class="m-2">
   <slot />
 </div>
-
-{#if prelaunch}
-  <div class="m-2">
-    <PricingCard data={meta.plans.tiers.founder} />
-  </div>
-{/if}
 
 {#if !prelaunch}
   <div

@@ -1,5 +1,6 @@
 <script lang="ts">
   import GpdrBanner from '$components/Gpdr/Gpdr.svelte'
+  import Footer from '$src/components/Footer.svelte'
   import '../../app.css'
 </script>
 
@@ -10,5 +11,6 @@
     </div>
   </main>
 
+  <Footer />
   <GpdrBanner />
 </div>

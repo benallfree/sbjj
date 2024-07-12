@@ -25,5 +25,5 @@
 
   <p class="mb-12">{content}</p>
 
-  <PrimaryButton text={linkText} url={linkURL} icon={faArrowRight} />
+  <PrimaryButton url={linkURL} icon={faArrowRight}>{linkText}</PrimaryButton>
 </div>
