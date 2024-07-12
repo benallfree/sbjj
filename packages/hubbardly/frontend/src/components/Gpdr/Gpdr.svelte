@@ -1,6 +1,7 @@
 <script lang="ts">
-  import '@beyonk/gdpr-cookie-consent-banner/banner.css' // optional, you can also define your own styles
+  import '../../app.css'
   import GdprBanner from '@beyonk/gdpr-cookie-consent-banner'
+  import './custom.css'
   import { meta } from '$src/meta'
 
   function initAnalytics() {

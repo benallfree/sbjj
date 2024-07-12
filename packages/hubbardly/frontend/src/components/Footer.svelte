@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <footer
   class="footer bg-neutral text-neutral-content p-10 mt-10 flex space-x-4"
 >
