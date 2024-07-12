@@ -37,7 +37,7 @@ At **{meta.name}**, we believe in keeping things simple and fun! Whether you nee
 
 ## Need Help?
 
-If you have questions or comments about this policy, you may contact us at help@{meta.domain}.
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
 ---
 

@@ -2,7 +2,7 @@
   import PricingCard from '$components/PricingCard.svelte'
   import Fa from 'svelte-fa'
   import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
-  import { meta } from '$src/meta'
+  import { meta, PRELAUNCH_NAME } from '$src/meta'
 
   export let data
 
@@ -25,7 +25,14 @@
       <div class="flex justify-center">
         <div role="alert" class="alert alert-warning m-8 max-w-2xl">
           <Fa icon={faMartiniGlass} />
-          <span>{@html prelaunch}</span>
+          <span
+            >{meta.name} is currently in {PRELAUNCH_NAME} mode.
+            <b>We are building features as funds are raised.</b> All subscription
+            plans will remain locked until the official launch. In the meantime,
+            you can join the waitlist by creating an account, or support the project
+            by purchasing a Founder tier. As each tier sells out, new features will
+            be unlocked.</span
+          >
         </div>
       </div>
     {/if}

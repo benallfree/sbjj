@@ -64,7 +64,7 @@ We may update this privacy notice from time to time in order to stay compliant w
 
 ## 8. Contact Us
 
-If you have questions or comments about this policy, you may contact us at privacy@{meta.domain}.
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
 _{meta.name}_
 

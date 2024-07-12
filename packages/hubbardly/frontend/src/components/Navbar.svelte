@@ -58,8 +58,3 @@
     <a href="/login" class="btn btn-xs btn-primary">Login</a>
   </UserLoggedOut>
 </div>
-{#if meta.prelaunch}
-  <AlertBar type="info" icon={false} remember="prelaunch-warning"
-    >{@html meta.prelaunch}</AlertBar
-  >
-{/if}

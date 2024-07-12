@@ -46,7 +46,7 @@ We may update our Cookie Policy from time to time to reflect changes in our prac
 
 ## 7. Contact Us
 
-If you have questions or comments about this policy, you may contact us at privacy@{meta.domain}.
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
 _{meta.name}_
 

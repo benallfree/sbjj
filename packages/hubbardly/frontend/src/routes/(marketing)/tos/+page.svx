@@ -50,4 +50,10 @@ We may terminate or suspend your account and bar access to the App immediately, 
 
 The App is provided on an "AS IS" and "AS AVAILABLE" basis. Use of the App is at your own risk. To the maximum extent
 
+## 10. Contact Us
+
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
+
+_{meta.name}_
+
 </article>

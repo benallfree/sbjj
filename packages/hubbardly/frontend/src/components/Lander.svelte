@@ -19,17 +19,8 @@
   const subFeatures = sub
 </script>
 
-<div class="w-full grid justify-items-center block md:hidden">
-  <div class="max-w-sm">
-    <enhanced:img
-      src={splashImg}
-      alt="Hero splash"
-      class="rounded-[30px] mix-blend-lighten animated-hero-banner"
-    />
-  </div>
-</div>
 <div class="container mx-auto text-white flex items-center">
-  <div class="p-8 lg:w-1/2">
+  <div class="p-8 md:w-1/2">
     <h1 class="md:text-6xl text-4xl font-bold mb-8">{title}</h1>
 
     <p class="text-2xl mb-12">
@@ -46,7 +37,7 @@
     />
   </div>
 
-  <div class="w-full p-8 lg:w-1/2 md:block hidden">
+  <div class="w-full p-8 md:w-1/2 lg:w-1/2 xl:w-1/3 md:block hidden">
     <enhanced:img
       src={splashImg}
       alt="Hero splash"

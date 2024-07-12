@@ -70,7 +70,7 @@ This Agreement will be governed by the laws of [Your Jurisdiction], without rega
 
 ## 11. Contact Information
 
-If you have questions or comments about this policy, you may contact us at privacy@{meta.domain}.
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
 _{meta.name}_
 

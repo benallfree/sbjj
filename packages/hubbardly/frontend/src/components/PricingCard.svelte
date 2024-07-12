@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PricingTier } from '$src/meta'
+  import { meta, PRELAUNCH_NAME, type PricingTier } from '$src/meta'
   import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
   import PricingCardDivButton from './PricingCardDivButton.svelte'
@@ -48,7 +48,7 @@
   })
 
   const url = locked
-    ? `javascript:alert('This plan is locked during Prelaunch')`
+    ? `javascript:alert('This plan is locked while ${meta.name} is in ${PRELAUNCH_NAME} mode.')`
     : checkoutUrl
 </script>
 
@@ -75,7 +75,7 @@
   {#if locked}
     <div>
       <Fa icon={faLock} />
-      <span class="text-warning">Locked during Prelaunch</span>
+      <span class="text-warning">Locked during {PRELAUNCH_NAME}</span>
     </div>
   {/if}
 
@@ -95,12 +95,6 @@
 
   <div class="mb-8">
     {#if prelaunch}
-      <AlertBar type="warning" icon={false}>
-        We are in Prelaunch mode! Once all the Founder's Edition memberships are
-        sold, we will begin building. Your Founder's Edition membership is fully
-        refundable at any time for any reason during Prelaunch. After we launch,
-        it is refundable for 90 days.
-      </AlertBar>
       <div class="prose">Features in Planning</div>
     {/if}
     <ul class="text-sm leading-6 text-gray-300">
