@@ -1,8 +1,15 @@
 import splashImg from '$src/assets/img/splash.webp?enhanced'
 import {
-  faArrowAltCircleDown,
-  faRotate,
-  faServer,
+  faHeartCircleCheck,
+  faLightbulb,
+  faListAlt,
+  faLock,
+  faPeopleRoof,
+  faSave,
+  faSearch,
+  faSearchPlus,
+  faStar,
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 
 export const APP_NAME = `Hubbardly`
@@ -30,7 +37,7 @@ export const PRELAUNCH_NAME = `Kickstarter`
 export const meta = {
   publishDate: `7/12/2024`,
   name: APP_NAME,
-  prelaunch: PRELAUNCH_NAME,
+  prelaunch: false,
   description: `Discover hidden meals in your own pantry.`,
   support: {
     discord: {
@@ -60,28 +67,63 @@ export const meta = {
     features: {
       main: [
         {
-          title: `Community`,
-          tagline: `A thriving Discord community of home cooks`,
-          content: `Join our Discord community to share recipes, ask questions, and get inspired by other home cooks.`,
-          icon: faRotate,
+          title: `Communities`,
+          tagline: `Discover, Join, and Cook with Specialized Communities`,
+          content: `Hubbardly connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes using just the ingredients in your pantry.`,
+          icon: faPeopleRoof,
           linkText: 'See what`s Cookin`',
-          linkURL: `https://discord.gg/yfv2S76dSN`,
+          linkURL: `/kickstart`,
         },
 
         {
-          title: `Zero Config`,
-          tagline: `Move Fast, Build Fast`,
-          content: `With PocketHost, batteries are included. You get a database, outgoing email, SSL, authentication, cloud functions, and high concurrency all in one stop.`,
-          icon: faArrowAltCircleDown,
-          linkText: `Read the Documentation`,
-          linkURL: `/pricing`,
+          title: `Inspire Your Meals`,
+          tagline: `Unlock Unexpected Recipes from Your Pantry`,
+          content: `Hubbardly's core feature transforms your pantry into a treasure trove of culinary possibilities. By matching your on-hand ingredients with thousands of recipes, Hubbardly inspires meals you may have never thought of. Discover new and exciting dishes using what you already have at home.`,
+          icon: faLightbulb,
+          linkText: 'Get Inspired',
+          linkURL: `/kickstart`,
         },
       ],
       sub: [
         {
-          icon: faServer,
-          title: `Database`,
-          content: `Your PocketHost instance is powered by its own internal SQLite instance. SQLite is more performant than mySQL or Postgres and is perfect for powering your next app.`,
+          icon: faSearch,
+          title: `Free Forever`,
+          content: `Search for recipes with up to 3 ingredients.`,
+        },
+        {
+          icon: faSearchPlus,
+          title: `Unlimited Searches`,
+          content: `Premium users can search for recipes with unlimited ingredients.`,
+        },
+        {
+          icon: faSave,
+          title: `Save Recipes`,
+          content: `Save your own recipes and always have them searchable.`,
+        },
+        {
+          icon: faUsers,
+          title: `Create Communities`,
+          content: `Create your own community and invite other moderators.`,
+        },
+        {
+          icon: faLock,
+          title: `Community Privacy`,
+          content: `Set your community to public or private, auto-join or approval first.`,
+        },
+        {
+          icon: faStar,
+          title: `Recipe Ratings`,
+          content: `Recipes have ratings and comments.`,
+        },
+        {
+          icon: faHeartCircleCheck,
+          title: `Favorite Recipes`,
+          content: `Favorite your best-loved recipes for easy access.`,
+        },
+        {
+          icon: faListAlt,
+          title: `Meal Planning`,
+          content: `Add meals to your planning list and generate a shopping list for missing ingredients.`,
         },
       ],
     },

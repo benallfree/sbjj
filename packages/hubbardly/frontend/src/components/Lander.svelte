@@ -50,9 +50,11 @@
   <slot />
 </div>
 
-<div class="m-2">
-  <PricingCard data={meta.plans.tiers.founder} />
-</div>
+{#if prelaunch}
+  <div class="m-2">
+    <PricingCard data={meta.plans.tiers.founder} />
+  </div>
+{/if}
 
 {#if !prelaunch}
   <div
