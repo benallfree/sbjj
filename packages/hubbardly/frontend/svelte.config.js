@@ -28,6 +28,7 @@ const config = {
     alias: {
       $src: './src',
       $components: './src/components',
+      $types: './src/types',
     },
     prerender: {
       entries: ['*'],

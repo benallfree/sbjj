@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let data
-	const { meta, publishDate } = data
+	import { meta } from '$src/meta'
+	const {  publishDate } = meta
 </script>
 
 <article class="prose lg:prose-xl">

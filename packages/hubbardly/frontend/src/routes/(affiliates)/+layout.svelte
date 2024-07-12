@@ -1,8 +1,6 @@
 <script lang="ts">
-  import GpdrBanner from '../../components/GpdrBanner.svelte'
-  import Footer from '../../components/Footer.svelte'
+  import GpdrBanner from '$components/Gpdr/Gpdr.svelte'
   import '../../app.css'
-  import Logo from '../Logo.svelte'
 </script>
 
 <div class="app">

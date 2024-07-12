@@ -1,7 +1,6 @@
 <script lang="ts">
+  import { meta } from '$src/meta'
   import FaqSection from './FAQSection.svelte'
-  export let data
-  const { meta } = data
   const { faqs } = meta
 </script>
 

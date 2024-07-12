@@ -1,19 +1,15 @@
 <script lang="ts">
-  import { writable } from 'svelte/store'
   import PricingCard from '$components/PricingCard.svelte'
-  import type { PageData } from './$types'
   import Fa from 'svelte-fa'
   import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
+  import { meta } from '$src/meta'
 
-  export let data: PageData
-  const { meta } = data
+  export let data
 
   const {
     prelaunch,
     plans: { title, tagline, content, tiers },
   } = meta
-
-  const userSubscriptionType = writable('')
 </script>
 
 <main>

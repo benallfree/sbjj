@@ -23,6 +23,7 @@ export const FOUNDER_FEATURES = [
   "Commemorative Founder's Edition mug",
 ]
 export const meta = {
+  publishDate: `7/12/2024`,
   name: 'Hubbardly',
   prelaunch:
     'Hubbardly is currently in Prelaunch mode. <b>We are building features as funds are raised.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
@@ -232,3 +233,5 @@ export const meta = {
 }
 
 export type Meta = typeof meta
+export type PricingTier = Meta['plans']['tiers']['free']
+export type PlanSlugs = keyof Meta['plans']['tiers']

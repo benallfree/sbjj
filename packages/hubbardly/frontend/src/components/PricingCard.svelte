@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { Meta } from '$src/meta'
+  import type { PricingTier } from '$src/meta'
   import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
   import PricingCardDivButton from './PricingCardDivButton.svelte'
   import PricingCardAnchorButton from './PricingCardAnchorButton.svelte'
   import AlertBar from './AlertBar.svelte'
 
-  export let data: Meta['plans']['tiers']['free']
+  export let data: PricingTier
   export let qtySold = 0
   export let active = false
 
