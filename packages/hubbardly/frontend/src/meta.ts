@@ -18,11 +18,11 @@ export const PRO_FEATURES = [
   `Search and view public community recipes with unlimited ingredients`,
 ]
 export const FOUNDER_FEATURES = [
-  "Founder's Badge on your profile",
-  "Private Founder's channel in ${APP_NAME} Discord",
+  `Founder's Badge on your profile`,
+  `Private Founder's channel in ${APP_NAME} Discord`,
   `Early access to new features`,
   `Vote on new features`,
-  "Commemorative Founder's Edition mug",
+  `Commemorative Founder's Edition mug`,
 ]
 
 export const PRELAUNCH_NAME = `Kickstarter`
@@ -134,8 +134,7 @@ export const meta = {
         checkoutUrl: `https://${APP_NAME}.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
         summary: `What an absolute Chad! You're a ${APP_NAME} Founder for life!`,
         upgradable: false,
-        description:
-          "Super elite! ${APP_NAME} for life. The Founder's Edition is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!",
+        description: `Super elite! ${APP_NAME} for life. The Founder's Edition is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!`,
         qtyMax: 500,
         features: [`Everything in Pro, plus...`, ...FOUNDER_FEATURES],
         locked: false,
@@ -147,8 +146,7 @@ export const meta = {
         checkoutUrl: ``,
         summary: `What an absolute Chad! The Astounder Edition is yours for life.`,
         upgradable: false,
-        description:
-          "Meta elite! Missed the Founder's Edition? The Astounder Edition gives you another chance. ",
+        description: `Meta elite! Missed the Founder's Edition? The Astounder Edition gives you another chance. `,
         qtyMax: 5000,
         features: [
           `Everything in Pro, plus...`,
