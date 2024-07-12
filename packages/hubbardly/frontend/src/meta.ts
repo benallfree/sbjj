@@ -1,13 +1,31 @@
+import splashImg from '$src/assets/img/splash.webp?enhanced'
 import {
   faArrowAltCircleDown,
   faRotate,
   faServer,
 } from '@fortawesome/free-solid-svg-icons'
 
+export const FREE_FEATURES = [
+  'Unlimited pantry items',
+  'Unlimited personal recipes',
+  'Unlimited matching with your recipes',
+  'Search and view public community recipes with up to 3 ingredients',
+  'Search and preview public community recipes with more than 3 ingredients',
+]
+export const PRO_FEATURES = [
+  'Search and view public community recipes with unlimited ingredients',
+]
+export const FOUNDER_FEATURES = [
+  "Founder's Badge on your profile",
+  "Private Founder's channel in Hubbardly Discord",
+  'Early access to new features',
+  'Vote on new features',
+  "Commemorative Founder's Edition mug",
+]
 export const meta = {
   name: 'Hubbardly',
-  presale:
-    'Hubbardly is currently in Presale mode. <b>We are building features as funds are raised.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
+  prelaunch:
+    'Hubbardly is currently in Prelaunch mode. <b>We are building features as funds are raised.</b> All subscription plans will remain locked until the official launch. In the meantime, you can join the waitlist by creating an account, or support the project by purchasing a Founder tier. As each tier sells out, new features will be unlocked.',
   description: `From Pantry to Plate: Discover, Cook, Enjoy!`,
   support: {
     discord: {
@@ -25,11 +43,14 @@ export const meta = {
   domain: 'hubbardly.com',
   lander: {
     hero: {
-      title: 'Hubbardly',
-      subtitle: 'From Pantry to Plate: Discover, Cook, Enjoy!',
+      title: 'From Pantry to Plate: Discover, Cook, Enjoy!',
+      splashImg,
       cta: {
         text: 'Transform your #pantry# into a #culinary adventure#!',
-        link: '/signup',
+        button: {
+          text: 'Get Started',
+          link: '/signup',
+        },
       },
     },
     features: {
@@ -71,8 +92,8 @@ export const meta = {
       'Hubbardly is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!',
     tiers: {
       free: {
-        name: 'Free',
-        price: '0',
+        name: 'Free Forever',
+        price: 'Free Forever',
         slug: 'free',
         summary: `You're on the basic Free plan. Upgrade to Pro to unlock all community recipes.`,
         upgradable: true,
@@ -80,12 +101,7 @@ export const meta = {
         description:
           'Free forever. Use Hubbardly to build your pantry and share your recipes with the world.',
         checkoutUrl: '',
-        features: [
-          'Unlimited pantry items',
-          'Unlimited recipes',
-          'Unlimited matching with your recipes',
-          'See community recipes with up to 3 ingredients',
-        ],
+        features: FREE_FEATURES,
         locked: true,
       },
       [`pro-monthly`]: {
@@ -97,10 +113,7 @@ export const meta = {
         description:
           'Unlock the full potential of Hubbardly with our Pro plan. Get access to all community recipes and match with your pantry items.',
         checkoutUrl: '',
-        features: [
-          'Everything in Free, plus...',
-          'Match all community recipes with unlimited ingredients',
-        ],
+        features: ['Everything in Free, plus...', ...PRO_FEATURES],
         locked: true,
         qtyMax: 0,
       },
@@ -113,31 +126,22 @@ export const meta = {
         upgradable: true,
         description:
           'Unlock the full potential of Hubbardly with our Pro plan. Get access to all community recipes and match with your pantry items.',
-        features: [
-          'Everything in Pro, plus...',
-          'Save 20% with an annual subscription',
-        ],
+        features: ['Everything in Free, plus...', ...PRO_FEATURES],
         locked: true,
         qtyMax: 0,
       },
       founder: {
-        name: 'Founder',
+        name: `Founder's Edition`,
         price: '299 once, use forever',
         slug: 'founder',
-        checkoutUrl: '',
+        checkoutUrl:
+          'https://hubbardly.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306',
         summary: `What an absolute Chad! You're a Hubbardly Founder for life!`,
         upgradable: false,
         description:
           "Super elite! Hubbardly for life. The Founder's Edition is our way of saying thanks for supporting Hubbardly in these early days. These are rare, so get them while they last!",
-        qtyMax: 100,
-        features: [
-          'Everything in Pro, plus...',
-          "Founder's Badge on your profile",
-          "Private Founder's channel in Discord",
-          'Early access to new features',
-          'Votes on new features',
-          "Commemorative Founder's mug",
-        ],
+        qtyMax: 500,
+        features: [`Everything in Pro, plus...`, ...FOUNDER_FEATURES],
         locked: false,
       },
       astounder: {
@@ -149,7 +153,7 @@ export const meta = {
         upgradable: false,
         description:
           "Meta elite! Missed the Founder's Edition? The Astounder Edition gives you another chance. ",
-        qtyMax: 1000,
+        qtyMax: 5000,
         features: [
           'Everything in Pro, plus...',
           'Early access to new features',
@@ -183,8 +187,8 @@ export const meta = {
         'Hubbardly is a platform for home cooks to discover, cook, and enjoy recipes. You can build your pantry, share your recipes, and match with community recipes.',
     },
     {
-      question: 'What is Presale Mode?',
-      answer: `Hubbardly is in Presale mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked. This is done to fund the development of the platform and to reward early supporters.`,
+      question: 'What is Prelaunch Mode?',
+      answer: `Hubbardly is in Prelaunch mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked. This is done to fund the development of the platform and to reward early supporters.`,
     },
     {
       question: `How does the affiliate program work?`,
@@ -202,7 +206,7 @@ export const meta = {
     },
     {
       question: `What's your refund policy?`,
-      answer: `Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. While we are in Presale mode, we are not offering refunds. However, if you really have a change of heart, of course we will refund your money. You'll lose your place in line though, and many not get another chance to become a Founder. Also, if we decide to cancel the project for any reason, we will refund your money.`,
+      answer: `Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. While we are in Prelaunch mode, we are not offering refunds. However, if you really have a change of heart, of course we will refund your money. You'll lose your place in line though, and many not get another chance to become a Founder. Also, if we decide to cancel the project for any reason, we will refund your money.`,
     },
     {
       question: 'Post-launch: How do I share my recipes?',
@@ -225,6 +229,6 @@ export const meta = {
         'Community recipes with three or fewer ingredients are available to all users. To get access to all community recipes, you need to subscribe to the Pro plan.',
     },
   ],
-} as const
+}
 
 export type Meta = typeof meta

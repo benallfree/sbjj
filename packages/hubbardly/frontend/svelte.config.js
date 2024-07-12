@@ -27,6 +27,7 @@ const config = {
     adapter: adapter({}),
     alias: {
       $src: './src',
+      $components: './src/components',
     },
     prerender: {
       entries: ['*'],

@@ -58,8 +58,8 @@
     <a href="/login" class="btn btn-xs btn-primary">Login</a>
   </UserLoggedOut>
 </div>
-{#if meta.presale}
-  <AlertBar type="info" icon={false} remember="presale-warning"
-    >{@html meta.presale}</AlertBar
+{#if meta.prelaunch}
+  <AlertBar type="info" icon={false} remember="prelaunch-warning"
+    >{@html meta.prelaunch}</AlertBar
   >
 {/if}

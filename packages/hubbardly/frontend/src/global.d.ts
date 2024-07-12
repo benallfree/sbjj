@@ -1,3 +1,9 @@
+declare module '*.svx' {
+  import type { SvelteComponent } from 'svelte'
+  const value: SvelteComponent
+  export default value
+}
+
 // src/enhanced-images.d.ts
 declare module '*.webp?enhanced' {
   const value: string

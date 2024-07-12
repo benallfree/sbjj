@@ -1,28 +1,36 @@
 <script lang="ts">
   import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
   import PrimaryButton from './PrimaryButton.svelte'
-  import { meta, type Meta } from '$src/meta'
   import MainFeatureBlock from './MainFeatureBlock.svelte'
   import SubfeatureBlock from './SubfeatureBlock.svelte'
-  import defaultSplashImg from '$src/assets/img/splash.webp?enhanced'
+  import PricingCard from './PricingCard.svelte'
+  import type { Meta } from '$src/meta'
 
-  const { lander } = meta
+  export let meta: Meta
+  const { lander, prelaunch } = meta
   const {
-    hero,
+    hero: { title, cta, splashImg },
+
     features: { main, sub },
   } = lander
 
-  export let title = hero.title
-  export let cta = hero.cta
-  export let splashImg = defaultSplashImg
-  export let mainFeature1 = main[0]
-  export let mainFeature2 = main[1]
-  export let subFeatures = sub
+  const mainFeature1 = main[0]
+  const mainFeature2 = main[1]
+  const subFeatures = sub
 </script>
 
+<div class="w-full grid justify-items-center block md:hidden">
+  <div class="max-w-sm">
+    <enhanced:img
+      src={splashImg}
+      alt="Hero splash"
+      class="rounded-[30px] mix-blend-lighten animated-hero-banner"
+    />
+  </div>
+</div>
 <div class="container mx-auto text-white flex items-center">
   <div class="p-8 lg:w-1/2">
-    <h1 class="text-6xl font-bold mb-8">{title}</h1>
+    <h1 class="md:text-6xl text-4xl font-bold mb-8">{title}</h1>
 
     <p class="text-2xl mb-12">
       {@html cta.text.replaceAll(
@@ -31,7 +39,11 @@
       )}
     </p>
 
-    <PrimaryButton text="Get Started" url={cta.link} icon={faArrowRight} />
+    <PrimaryButton
+      text={cta.button.text}
+      url={cta.button.link}
+      icon={faArrowRight}
+    />
   </div>
 
   <div class="w-full p-8 lg:w-1/2 md:block hidden">
@@ -41,6 +53,14 @@
       class="rounded-[250px] mix-blend-lighten animated-hero-banner"
     />
   </div>
+</div>
+
+<div class="m-2">
+  <slot />
+</div>
+
+<div class="m-2">
+  <PricingCard data={meta.plans.tiers.founder} />
 </div>
 
 <div

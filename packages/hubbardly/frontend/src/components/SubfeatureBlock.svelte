@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { IconDefinition } from '@fortawesome/free-solid-svg-icons'
-  import FeatureIcon from './FeatureIcon.svelte'
+  import FeatureIcon from '$components/FeatureIcon.svelte'
 
   export let icon: IconDefinition
   export let title: string

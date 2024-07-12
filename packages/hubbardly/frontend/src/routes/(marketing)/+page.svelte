@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Lander from '../Lander.svelte'
+  import Lander from '$components/Lander.svelte'
 </script>
 
 <Lander />
