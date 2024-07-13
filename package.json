@@ -13,5 +13,16 @@
     "prettier-plugin-organize-imports": "^4.0.0",
     "prettier-plugin-svelte": "^3.2.5",
     "typescript": "^5.5.3"
+  },
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "plugins": [
+      "./node_modules/prettier-plugin-organize-imports/index.js",
+      "./node_modules/prettier-plugin-svelte/plugin.js",
+      "./node_modules/prettier-plugin-jsdoc/dist/index.js"
+    ]
   }
 }
