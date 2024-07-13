@@ -2,6 +2,8 @@ name: Hubbardly
 
 on:
   push:
+    branches:
+      - 'hubbardly/*'
   pull_request:
   workflow_dispatch:
     inputs:
