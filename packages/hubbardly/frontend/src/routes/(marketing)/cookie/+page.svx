@@ -1,0 +1,53 @@
+<script lang="ts">
+    import { meta } from '$src/meta'
+    const { publishDate } = meta
+</script>
+
+<article class="prose lg:prose-xl">
+
+# Cookie Policy
+
+**Effective Date: {publishDate}**
+
+## 1. Introduction
+
+**{meta.name}** ("we", "our", "us") uses cookies and similar tracking technologies to enhance your experience on our application ("App"). This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+
+## 2. What Are Cookies?
+
+Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website or use an app. Cookies allow the website or app to recognize your device and store some information about your preferences or past actions.
+
+## 3. How We Use Cookies
+
+We use cookies for several purposes, including:
+
+- **Essential Cookies**: These cookies are necessary for the App to function and cannot be switched off in our systems. They are usually only set in response to actions made by you, such as setting your privacy preferences, logging in, or filling in forms.
+- **Performance and Analytics Cookies**: These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our App. They help us know which pages are the most and least popular and see how visitors move around the App.
+- **Functional Cookies**: These cookies enable the App to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.
+- **Targeting Cookies**: These cookies may be set through our App by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant ads on other sites.
+
+## 4. Third-Party Cookies
+
+In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the App, deliver advertisements, and so on. These third-party cookies are governed by the respective third party's privacy or cookie policy.
+
+## 5. Your Choices Regarding Cookies
+
+You have several options to control or limit how cookies are used:
+
+- **Browser Settings**: Most web browsers allow you to manage cookies through their settings preferences. You can set your browser to refuse cookies, or delete certain cookies. However, if you choose to disable cookies, some features of our App may not function properly or at all.
+- **Opt-Out Links**: Some third parties provide opt-out options for their cookies. You can follow these links to opt-out:
+  - Google Analytics: [Opt-Out](https://tools.google.com/dlpage/gaoptout)
+  - Network Advertising Initiative: [Opt-Out](http://optout.networkadvertising.org/?c=1)
+- **Do Not Track**: Some browsers include a "Do Not Track" (DNT) feature that can send a signal to the websites you visit indicating that you do not want to be tracked. However, there is no universal standard for recognizing DNT signals, so we do not currently respond to DNT signals.
+
+## 6. Changes to This Cookie Policy
+
+We may update our Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new Cookie Policy on our App. You are advised to review this Cookie Policy periodically for any changes.
+
+## 7. Contact Us
+
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
+
+_{meta.name}_
+
+</article>

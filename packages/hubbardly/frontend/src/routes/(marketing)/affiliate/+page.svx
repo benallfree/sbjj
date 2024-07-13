@@ -1,0 +1,77 @@
+<script lang="ts">
+    import { meta } from '$src/meta'
+    const { publishDate } = meta
+</script>
+
+<article class="prose lg:prose-xl">
+
+# Affiliate Agreement
+
+**Effective Date: {publishDate}**
+
+This Affiliate Agreement ("Agreement") is made between **{meta.name}** ("Company", "we", "us", "our") and the Affiliate ("you", "your").
+
+## 1. Enrollment in the Affiliate Program
+
+To begin the enrollment process, you must submit a completed Affiliate Program application. The Company may reject your application at its sole discretion.
+
+## 2. Commissions and Payment Terms
+
+### Commission Structure
+
+- **Founder**: 30% commission on pre-sales. Founder sales are pre-sales, meaning the project may still be canceled. If the project is canceled, customers will receive a refund, and affiliate commissions will still be paid.
+- **Astounder**: 20% commission. Astounder sales are post-sales, meaning the project has been confirmed and is in progress.
+- **Flounder**: 10% commission. Flounder sales are post-sales, meaning the project has been confirmed and is in progress.
+- **Monthly Recurring Revenue (MRR)**: 10% commission on the first 12 months of MRR.
+- **Yearly Recurring Revenue (YRR)**: 10% commission on the year of YRR.
+- **Lifetime Value (LTV)**: 10% commission on the first 12 months of LTV.
+
+### Payment Terms
+
+- Commissions are paid out within 30-90 days, depending on the payment channel used.
+- If a customer asks for a refund for any reason (as we have a no-questions-asked refund policy), the commission will be reversed and considered unearned.
+- If any project is canceled, resulting in customer refunds, affiliate commissions will still be paid.
+
+## 3. Order Processing
+
+The Company will process orders placed by customers who follow special links from your site to the Company site. We reserve the right to reject orders that do not comply with our requirements.
+
+## 4. Affiliate Responsibilities
+
+As an Affiliate, you agree to the following:
+
+- Ensure that all promotional content is appropriate and not misleading.
+- Comply with all applicable laws, rules, and regulations.
+- Refrain from using any inappropriate or unethical marketing practices.
+
+## 5. Term and Termination
+
+The term of this Agreement will begin upon our acceptance of your Affiliate Program application and will end when terminated by either party. Either you or the Company may terminate this Agreement at any time, with or without cause, by giving the other party written notice of termination.
+
+## 6. Limitation of Liability
+
+The Company will not be liable for indirect, special, or consequential damages (or any loss of revenue, profits, or data) arising in connection with this Agreement or the Affiliate Program, even if we have been advised of the possibility of such damages.
+
+## 7. Disclaimers
+
+We make no express or implied warranties or representations with respect to the Affiliate Program or any products sold through the Affiliate Program (including, without limitation, warranties of fitness, merchantability, non-infringement, or any implied warranties arising out of a course of performance, dealing, or trade usage). In addition, we make no representation that the operation of the Company site will be uninterrupted or error-free, and we will not be liable for the consequences of any interruptions or errors.
+
+## 8. Independent Contractor
+
+You are an independent contractor, and nothing in this Agreement will create any partnership, joint venture, agency, franchise, sales representative, or employment relationship between you and the Company. You will have no authority to make or accept any offers or representations on our behalf.
+
+## 9. Modification
+
+The Company may modify any of the terms and conditions in this Agreement at any time at our sole discretion. In such event, you will be notified by email. Modifications may include, but are not limited to, changes in the payment procedures and Affiliate Program rules. If any modification is unacceptable to you, your only option is to terminate this Agreement. Your continued participation in the Affiliate Program following the posting of the change notice or new Agreement on our site will indicate your agreement to the changes.
+
+## 10. Governing Law
+
+This Agreement will be governed by the laws of [Your Jurisdiction], without regard to the conflict of laws provisions thereof.
+
+## 11. Contact Information
+
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
+
+_{meta.name}_
+
+</article>

@@ -1,0 +1,59 @@
+<script lang="ts">
+	import { meta } from '$src/meta'
+	const {  publishDate } = meta
+</script>
+
+<article class="prose lg:prose-xl">
+
+# Terms of Service
+
+**Effective Date: {publishDate}**
+
+## 1. Acceptance of Terms
+
+Welcome to **{meta.name}** ("we", "our", "us"). By accessing or using our application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our App.
+
+## 2. Description of Service
+
+**{meta.name}** provides an App that helps users create dishes using existing ingredients. Users can inventory their pantry, add recipes, and receive meal suggestions based on on-hand ingredients. Recipes are also visible to the community, allowing others to make shared dishes if they have the necessary ingredients or are missing only a few.
+
+## 3. User Responsibilities
+
+You are responsible for your use of the App and for any content you provide, including compliance with applicable laws, rules, and regulations. You should only provide content that you are comfortable sharing with others.
+
+## 4. Account Registration
+
+To use certain features of the App, you may be required to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete. We reserve the right to suspend or terminate your account if any information provided during the registration process or thereafter proves to be inaccurate, not current, or incomplete.
+
+## 5. Privacy
+
+Your use of the App is also subject to our [Privacy Policy](/privacy) which explains how we collect, use, and share your information.
+
+## 6. Prohibited Activities
+
+You agree not to engage in any of the following prohibited activities:
+
+- Using the App for any illegal purpose or in violation of any local, state, national, or international law.
+- Posting, uploading, or distributing any content that is unlawful, defamatory, abusive, obscene, or otherwise objectionable.
+- Interfering with or disrupting the operation of the App or servers or networks connected to the App.
+- Engaging in any conduct that restricts or inhibits any other person from using or enjoying the App.
+
+## 7. Intellectual Property
+
+All content and materials available on the App, including but not limited to text, graphics, website name, code, images, and logos are the intellectual property of **{meta.name}** and are protected by applicable copyright and trademark law. Any inappropriate use, including but not limited to the reproduction, distribution, display, or transmission of any content on this site is strictly prohibited unless specifically authorized by **{meta.name}**.
+
+## 8. Termination
+
+We may terminate or suspend your account and bar access to the App immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever, including but not limited to a breach of the Terms. If you wish to terminate your account, you may simply discontinue using the App.
+
+## 9. Disclaimers
+
+The App is provided on an "AS IS" and "AS AVAILABLE" basis. Use of the App is at your own risk. To the maximum extent
+
+## 10. Contact Us
+
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
+
+_{meta.name}_
+
+</article>
