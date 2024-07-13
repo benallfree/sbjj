@@ -2,13 +2,16 @@
   import PricingCard from '$components/PricingCard.svelte'
   import Fa from 'svelte-fa'
   import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
-  import { meta, PRELAUNCH_NAME } from '$src/meta'
+  import { meta, PRELAUNCH_NAME, type PlanSlug } from '$src/meta'
 
   export let data
 
   const {
     prelaunch,
-    plans: { title, tagline, content, tiers },
+    pages: {
+      pricing: { title, tagline, content },
+    },
+    plans,
   } = meta
 </script>
 
@@ -39,15 +42,13 @@
 
     <p
       class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300"
-    >
-      {content}
-    </p>
+    ></p>
 
     <div
       class="mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      {#each Object.entries(tiers) as [slug, tier]}
-        <PricingCard data={tier} qtySold={data.soldCounts[slug] || 0} />
+      {#each Object.entries(plans) as [slug, plan]}
+        <PricingCard plan={slug} qtySold={data.soldCounts[slug] || 0} />
       {/each}
     </div>
   </div>

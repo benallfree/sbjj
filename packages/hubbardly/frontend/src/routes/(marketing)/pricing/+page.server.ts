@@ -8,7 +8,7 @@ export type SettingsModel = RecordModel & { name: string; value: JsonValue }
 
 const load: PageServerLoad = async ({ parent }) => {
   const client = new PocketBase(meta.pocketbase.endpoint)
-  const slugs = keys(meta.plans.tiers)
+  const slugs = keys(meta.plans)
   const counts = await client
     .collection('settings')
     .getFullList<SettingsModel>({

@@ -1,25 +1,35 @@
 <script lang="ts">
-  import { meta, PRELAUNCH_NAME, type Plan } from '$src/meta'
-  import { faCheck, faClock, faLock } from '@fortawesome/free-solid-svg-icons'
+  import {
+    FEATURES_MATRIX,
+    meta,
+    PRELAUNCH_NAME,
+    type Plan,
+    type PlanSlug,
+  } from '$src/meta'
+  import {
+    faCheck,
+    faClock,
+    faClockFour,
+    faLock,
+  } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
   import PricingCardDivButton from './PricingCardDivButton.svelte'
   import PricingCardAnchorButton from './PricingCardAnchorButton.svelte'
-  import AlertBar from './AlertBar.svelte'
 
-  export let data: Plan
+  export let plan: PlanSlug
   export let qtySold = 0
   export let active = false
 
   const {
-    slug,
     name,
     description,
     price,
-    features,
     checkoutUrl,
-    locked,
     qtyMax,
-  } = data
+    bonusFeatures,
+    isPrelaunch,
+    isDefault,
+  } = meta.plans[plan]
 
   export let prelaunch = true
 
@@ -42,10 +52,12 @@
     )
   const qtyRemaining = qtyMax - qtySold
 
-  const mappedFeatures = features.map((feature) => {
+  const mappedFeatures = bonusFeatures.map((feature) => {
     const [featureText, link] = feature.split(/🔗/)
     return [greenify(featureText), link]
   })
+
+  const locked = !isPrelaunch
 
   const url = locked
     ? `javascript:alert('This plan is locked while ${meta.name} is in ${PRELAUNCH_NAME} mode.')`
@@ -73,19 +85,20 @@
     {/if}
   </div>
   {#if locked}
-    <div>
-      <Fa icon={faLock} />
+    <div class="flex flex-row">
+      <Fa icon={faLock} class="mt-1 mr-1" />
       <span class="text-warning">Locked during {PRELAUNCH_NAME}</span>
     </div>
   {/if}
 
   {#if qtyMax > 0}
-    <p
-      class="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-xl font-black"
-    >
-      <Fa icon={faClock} />
-      {formatNumber(qtyRemaining)}/{formatNumber(qtyMax)} Remaining
-    </p>
+    <div class="flex flex-row">
+      <Fa icon={faClockFour} class="mt-1 mr-1" />
+      <span
+        class="animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-xl font-black"
+        >{formatNumber(qtyRemaining)}/{formatNumber(qtyMax)} Remaining</span
+      >
+    </div>
     {#if qtyRemaining <= 0}
       <p class="text-error text-xl font-black">SOLD OUT</p>
     {/if}
@@ -111,7 +124,7 @@
   </div>
 
   <div class="mt-auto">
-    {#if slug === 'free'}
+    {#if isDefault}
       <PricingCardDivButton {price} {url} />
     {:else if qtyMax > 0}
       {#if qtyRemaining > 0}

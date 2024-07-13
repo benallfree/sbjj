@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class="mb-4">
-    <PricingCard data={founder} />
+    <PricingCard plan={founder} />
   </div>
 </Lander>
 

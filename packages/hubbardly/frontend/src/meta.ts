@@ -1,5 +1,6 @@
 import splashImg from '$src/assets/img/splash.webp?enhanced'
 import {
+  faDollarSign,
   faHeartCircleCheck,
   faLightbulb,
   faListAlt,
@@ -7,23 +8,105 @@ import {
   faPeopleRoof,
   faSave,
   faSearch,
-  faSearchPlus,
   faStar,
   faUsers,
 } from '@fortawesome/free-solid-svg-icons'
 
 export const APP_NAME = `Hubbardly`
 
-export const FREE_FEATURES = [
-  `Unlimited pantry items`,
-  `Unlimited personal recipes`,
-  `Unlimited matching with your recipes`,
-  `Search and view public community recipes with up to 3 ingredients`,
-  `Search and preview public community recipes with more than 3 ingredients`,
-]
-export const PRO_FEATURES = [
-  `Search and view public community recipes with unlimited ingredients`,
-]
+export const FEATURES_MATRIX = {
+  'pantry-items': {
+    title: `Unlimited pantry items`,
+    description: `Pantry items are ingredients you have on hand. You can add pantry items to your account and match them with personal and community recipes.`,
+  },
+  'personal-recipes': {
+    title: `Unlimited personal recipes`,
+    description: `Personal recipes are recipes you create and save for yourself with unlimited ingredients.`,
+  },
+  'match-recipes': {
+    title: `Match your pantry items with personal and community recipes`,
+    description: `You can search and view public community recipes with up to 3 ingredients as a Free user and unlimited ingredients as a Pro user.`,
+  },
+  'discord-community': {
+    title: `Discord community`,
+    description: `Join our Discord community to chat with other users.`,
+  },
+  'favorite-recipes': {
+    title: `Favorite recipes`,
+    description: `You can favorite recipes shared by other users.`,
+    isStretch: true,
+  },
+  'shopping-list': {
+    title: `Shopping list`,
+    description: `Add recipes to your meal plan and generate a shopping list for missing ingredients.`,
+    isStretch: true,
+  },
+  'join-communities': {
+    title: `Join communities`,
+    description: `Communities are groups of users who share recipes and pantry items. You can join an existing community to discover new recipes.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'rate-recipes': {
+    title: `Rate recipes`,
+    description: `You can rate recipes shared by other users.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'comment-recipes': {
+    title: `Comment on recipes`,
+    description: `You can comment on recipes shared by other users.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'create-communities': {
+    title: `Communities: create and manage`,
+    description: `Communities are groups of users who share recipes and pantry items. You can create your own community and invite others to join, or you can join an existing community.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'store-integration': {
+    title: `Store integration`,
+    description: `You can connect your account to a grocery store and import your shopping list.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'social-sharing': {
+    title: `Sharable and social`,
+    description: `Share your recipes on social media.`,
+  },
+  'recipe-privacy': {
+    title: `Recipe privacy`,
+    description: `You can set your recipes to private or public.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'community-public': {
+    title: `Communities: open`,
+    description: `Public communities are open to all users and show recipes to everyone.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'private-community': {
+    title: `Private communities`,
+    description: `Private communities require an invitation to join and only show recipes to members.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'community-moderators': {
+    title: `Community moderators`,
+    description: `Assign moderators to help manage your community.`,
+    isPremium: true,
+    isStretch: true,
+  },
+  'community-premium': {
+    title: `Premium communities`,
+    description: `Create and join premium communities that require an additional subscription to access.`,
+    isPremium: true,
+    isStretch: true,
+  },
+} as const
+
 export const FOUNDER_FEATURES = [
   `Founder's Badge on your profile`,
   `Private Founder's channel in ${APP_NAME} Discord`,
@@ -38,7 +121,7 @@ export const meta = {
   publishDate: `7/12/2024`,
   name: APP_NAME,
   prelaunch: true,
-  description: `Discover hidden meals in your own pantry.`,
+  description: `Discover exclusive recipes from your favorite culinary creators.`,
   support: {
     discord: {
       url: `https://discord.gg/9X2T6Gcg5G`,
@@ -52,168 +135,141 @@ export const meta = {
     description: `We use cookies to improve your experience on our site. By using our site, you consent to our use of cookies.`,
   },
   domain: `${APP_NAME}.com`,
-  lander: {
-    hero: {
-      title: `Discover hidden meals in your own pantry`,
-      splashImg,
-      cta: {
-        text: `Hubbardly uses what you already have in your #pantry# to find delicious #recipes# you didn't know you had.`,
-        button: {
-          text: `Get Started`,
-          link: `/signup`,
+  pages: {
+    lander: {
+      hero: {
+        title: `Discover exclusive recipes from your favorite culinary creators`,
+        splashImg,
+        cta: {
+          text: `Join #communities# with exclusive #recipes# or create your own community on Hubbardly `,
+          button: {
+            text: `Get Started`,
+            link: `/signup`,
+          },
         },
       },
-    },
-    features: {
-      main: [
-        {
-          title: `Communities`,
-          tagline: `Discover, Join, and Cook with Specialized Communities`,
-          content: `Hubbardly connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes using just the ingredients in your pantry.`,
-          icon: faPeopleRoof,
-          linkText: 'See what`s Cookin`',
-          linkURL: `/kickstart`,
-        },
+      features: {
+        main: [
+          {
+            title: `Communities`,
+            tagline: `Discover, Join, and Cook with Specialized Communities`,
+            content: `Hubbardly connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes.`,
+            icon: faPeopleRoof,
+            linkText: 'See what`s Cookin`',
+            linkURL: `/kickstart`,
+          },
 
-        {
-          title: `Inspire Your Meals`,
-          tagline: `Unlock Unexpected Recipes from Your Pantry`,
-          content: `Hubbardly's core feature transforms your pantry into a treasure trove of culinary possibilities. By matching your on-hand ingredients with thousands of recipes, Hubbardly inspires meals you may have never thought of. Discover new and exciting dishes using what you already have at home.`,
-          icon: faLightbulb,
-          linkText: 'Get Inspired',
-          linkURL: `/kickstart`,
-        },
-      ],
-      sub: [
-        {
-          icon: faSearch,
-          title: `Free Forever`,
-          content: `Search for recipes with up to 3 ingredients.`,
-        },
-        {
-          icon: faSearchPlus,
-          title: `Unlimited Searches`,
-          content: `Premium users can search for recipes with unlimited ingredients.`,
-        },
-        {
-          icon: faSave,
-          title: `Save Recipes`,
-          content: `Save your own recipes and always have them searchable.`,
-        },
-        {
-          icon: faUsers,
-          title: `Create Communities`,
-          content: `Create your own community and invite other moderators.`,
-        },
-        {
-          icon: faLock,
-          title: `Community Privacy`,
-          content: `Set your community to public or private, auto-join or approval first.`,
-        },
-        {
-          icon: faStar,
-          title: `Recipe Ratings`,
-          content: `Recipes have ratings and comments.`,
-        },
-        {
-          icon: faHeartCircleCheck,
-          title: `Favorite Recipes`,
-          content: `Favorite your best-loved recipes for easy access.`,
-        },
-        {
-          icon: faListAlt,
-          title: `Meal Planning`,
-          content: `Add meals to your planning list and generate a shopping list for missing ingredients.`,
-        },
-      ],
+          {
+            title: `Inspire Your Meals`,
+            tagline: `Unlock Unexpected Recipes from Your Pantry`,
+            content: `Hubbardly helps you discover communities you love by matching what you already have in your pantry with recipes from top creators. Get inspired to cook with what you have while exploring new flavors from around the world.`,
+            icon: faLightbulb,
+            linkText: 'Get Inspired',
+            linkURL: `/kickstart`,
+          },
+        ],
+        sub: [
+          {
+            icon: faSearch,
+            title: `Free Forever`,
+            content: `Search, create and join public communities.`,
+          },
+          {
+            icon: faSave,
+            title: `Save Recipes`,
+            content: `Save your own recipes for personal use.`,
+          },
+          {
+            icon: faUsers,
+            title: `Create Communities`,
+            content: `Create your own community and invite other moderators.`,
+          },
+          {
+            icon: faDollarSign,
+            title: `Premium Communities`,
+            content: `Create premium communities with paid access where you earn 80% of the revenue from members who join.`,
+          },
+          {
+            icon: faLock,
+            title: `Community Privacy`,
+            content: `Set your community to public or private, auto-join or approval first.`,
+          },
+          {
+            icon: faStar,
+            title: `Recipe Ratings`,
+            content: `Recipes have ratings and comments.`,
+          },
+          {
+            icon: faHeartCircleCheck,
+            title: `Favorite Recipes`,
+            content: `Favorite your best-loved recipes for easy access.`,
+          },
+          {
+            icon: faListAlt,
+            title: `Meal Planning`,
+            content: `Add meals to your planning list and generate a shopping list for missing ingredients.`,
+          },
+        ],
+      },
+    },
+    pricing: {
+      title: `Pricing`,
+      tagline: `Plans for aspiring cooks and seasoned chefs alike`,
+      content: `${APP_NAME} is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!`,
     },
   },
   plans: {
-    title: `Pricing`,
-    tagline: `Plans for aspiring cooks and seasoned chefs alike`,
-    content: `${APP_NAME} is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!`,
-    tiers: {
-      free: {
-        name: `Free Forever`,
-        price: `Free Forever`,
-        slug: `free`,
-        summary: `You're on the basic Free plan. Upgrade to Pro to unlock all community recipes.`,
-        upgradable: true,
-        qtyMax: 0,
-        description: `Free forever. Use ${APP_NAME} to build your pantry and share your recipes with the world.`,
-        checkoutUrl: ``,
-        features: FREE_FEATURES,
-        locked: true,
-      },
-      [`pro-monthly`]: {
-        name: `Pro`,
-        price: `19/mo`,
-        slug: `pro-monthly`,
-        summary: `You're on the monthly Pro plan. Thank you for supporting ${APP_NAME}!`,
-        upgradable: true,
-        description: `Unlock the full potential of ${APP_NAME} with our Pro plan. Get access to all community recipes and match with your pantry items.`,
-        checkoutUrl: ``,
-        features: [`Everything in Free, plus...`, ...PRO_FEATURES],
-        locked: true,
-        qtyMax: 0,
-      },
-      [`pro-annual`]: {
-        name: `Pro Annual`,
-        price: `199/yr`,
-        slug: `pro-annual`,
-        checkoutUrl: ``,
-        summary: `You're on the annual Pro plan. Thank you for supporting ${APP_NAME}!`,
-        upgradable: true,
-        description: `Unlock the full potential of ${APP_NAME} with our Pro plan. Get access to all community recipes and match with your pantry items.`,
-        features: [`Everything in Free, plus...`, ...PRO_FEATURES],
-        locked: true,
-        qtyMax: 0,
-      },
-      founder: {
-        name: `Founder's Edition`,
-        price: `299 once, use forever`,
-        slug: `founder`,
-        checkoutUrl: `https://${APP_NAME}.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
-        summary: `What an absolute Chad! You're in ${APP_NAME} for life!`,
-        upgradable: false,
-        description: `Super elite! ${APP_NAME} for life. The Founder's Edition is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!`,
-        qtyMax: 500,
-        features: [`Everything in Pro, plus...`, ...FOUNDER_FEATURES],
-        locked: false,
-      },
-      astounder: {
-        name: `Astounder`,
-        slug: `astounder`,
-        price: `349 once, use forever`,
-        checkoutUrl: ``,
-        summary: `What an absolute Chad! The Astounder Edition is yours for life.`,
-        upgradable: false,
-        description: `Meta elite! Missed the Founder's Edition? The Astounder Edition gives you another chance. `,
-        qtyMax: 5000,
-        features: [
-          `Everything in Pro, plus...`,
-          `Early access to new features`,
-          `Votes on new features`,
-        ],
-        locked: false,
-      },
-      flounder: {
-        name: `Flounder`,
-        price: `499 once, use forever`,
-        slug: `flounder`,
-        checkoutUrl: ``,
-        summary: `What an absolute Chad! The Flounder Edition is yours for life.`,
-        upgradable: false,
-        description:
-          'Tepid elite! You`re really sleeping on this one, but there`s still hope and a killer lifetime deal. ',
-        qtyMax: 10000,
-        features: [
-          `Everything in Pro, plus...`,
-          `Votes on new features`,
-          `Sadness that you slept for so long`,
-        ],
-        locked: false,
-      },
+    free: {
+      name: `Free Forever`,
+      price: `Free Forever`,
+      slug: `free`,
+      summary: `You're on the basic Free plan. Upgrade to Pro to unlock all community recipes.`,
+      qtyMax: 0,
+      description: `Free forever. Use ${APP_NAME} to build your pantry and share your recipes with the world.`,
+      checkoutUrl: ``,
+      isPrelaunch: false,
+      isPremium: true,
+      isDefault: true,
+      bonusFeatures: [],
+    },
+    [`pro-monthly`]: {
+      name: `Pro`,
+      price: `19/mo`,
+      slug: `pro-monthly`,
+      summary: `You're on the monthly Pro plan. Thank you for supporting ${APP_NAME}!`,
+      isPrelaunch: false,
+      description: `Unlock the full potential of ${APP_NAME} with our Pro plan. Get access to all community recipes and match with your pantry items.`,
+      checkoutUrl: ``,
+      qtyMax: 0,
+      isPremium: true,
+      isDefault: false,
+      bonusFeatures: [],
+    },
+    [`pro-annual`]: {
+      name: `Pro Annual`,
+      price: `199/yr`,
+      slug: `pro-annual`,
+      checkoutUrl: ``,
+      summary: `You're on the annual Pro plan. Thank you for supporting ${APP_NAME}!`,
+      isPrelaunch: false,
+      description: `Unlock the full potential of ${APP_NAME} with our Pro plan. Get access to all community recipes and match with your pantry items.`,
+      qtyMax: 0,
+      isPremium: true,
+      isDefault: false,
+      bonusFeatures: [],
+    },
+    founder: {
+      name: `Founder's Edition`,
+      price: `299 once, use forever`,
+      slug: `founder`,
+      checkoutUrl: `https://${APP_NAME}.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
+      summary: `What an absolute Chad! You're in ${APP_NAME} for life!`,
+      description: `Super elite! ${APP_NAME} for life. The Founder's Edition is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!`,
+      qtyMax: 500,
+      isPremium: true,
+      isPrelaunch: true,
+      isDefault: false,
+      bonusFeatures: FOUNDER_FEATURES,
     },
   },
   faqs: [
@@ -261,5 +317,5 @@ export const meta = {
 }
 
 export type Meta = typeof meta
-export type Plan = Meta[`plans`][`tiers`][`free`]
-export type PlanSlug = keyof Meta[`plans`][`tiers`]
+export type PlanSlug = keyof Meta[`plans`]
+export type Plan = Meta[`plans`][PlanSlug]
