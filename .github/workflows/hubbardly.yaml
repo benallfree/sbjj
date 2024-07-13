@@ -14,9 +14,12 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: startsWith(github.ref_name, 'hubbardly/')
+
     permissions:
       contents: read
       deployments: write
+
     name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
