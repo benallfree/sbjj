@@ -55,6 +55,6 @@
     </div>
   </UserLoggedIn>
   <UserLoggedOut>
-    <a href="/login" class="btn btn-xs btn-primary">Login</a>
+    <!-- <a href="/login" class="btn btn-xs btn-primary">Login</a> -->
   </UserLoggedOut>
 </div>

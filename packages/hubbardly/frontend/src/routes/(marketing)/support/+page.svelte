@@ -1,6 +1,6 @@
 <script lang="ts">
   import { meta } from '$src/meta'
-  import FaqSection from './FAQSection.svelte'
+  import FaqSection from '$components/FAQSection.svelte'
   const { faqs } = meta
 </script>
 
