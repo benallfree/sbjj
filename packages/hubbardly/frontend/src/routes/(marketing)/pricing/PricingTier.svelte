@@ -8,13 +8,13 @@
   export let subscribeLink
 </script>
 
-<div class="w-96">
+<div class="lg:w-1/3">
   <div
-    class="flex flex-row justify-between gap-x-2 p-3 w-96 border-solid border-2 bg-neutral border-neutral rounded-t-lg border-b-0"
+    class="flex flex-row justify-between gap-x-2 p-3 border-solid border-2 bg-neutral border-neutral rounded-t-lg border-b-0"
   >
     <div class="whitespace-nowrap"><slot name="title">{title}</slot></div>
   </div>
-  <div class="p-3">
+  <div class="p-3 text-sm">
     <slot />
   </div>
   <div class="p-3">
