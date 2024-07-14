@@ -1,25 +1,15 @@
 <script lang="ts">
   import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
   import PrimaryButton from './PrimaryButton.svelte'
-  import MainFeatureBlock from './MainFeatureBlock.svelte'
-  import SubfeatureBlock from './SubfeatureBlock.svelte'
-  import PricingCard from './PricingCard.svelte'
   import type { Meta } from '$src/meta'
 
   export let meta: Meta
   const {
     pages: { lander },
-    prelaunch,
   } = meta
   const {
     hero: { title, cta, splashImg },
-
-    features: { main, sub },
   } = lander
-
-  const mainFeature1 = main[0]
-  const mainFeature2 = main[1]
-  const subFeatures = sub
 </script>
 
 <div class="container mx-auto text-white flex items-center">
