@@ -5,6 +5,7 @@ import { LANDER } from './lander'
 import { PLANS } from './plans'
 
 export const meta = {
+  repo: `https://github.com/benallfree/sbjj`,
   publishDate: `7/12/2024`,
   name: APP_NAME,
   prelaunch: true,
