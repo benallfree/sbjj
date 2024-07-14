@@ -83,4 +83,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.HUBBARDLY_DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: '**HUBBARDLY LIVE** https://hubbardly.com ([permalink](${{ steps.dashboard_deploy.outputs.url }})) was updated by ${{ github.actor }} in [${{ env.GIT_COMMIT_SHORT_SHA }}](https://github.com/${{ github.repository}}/commit/${{ github.sha }}) on [${{ github.repository}}#${{ github.ref_name }}](https://github.com/${{ github.repository}}/tree/${{ github.ref_name }}): `${{ env.GIT_COMMIT_MESSAGE_SUBJECT }}`'
+          args: '**HUBBARDLY LIVE** https://hubbardly.com was updated by ${{ github.actor }} in [${{ env.GIT_COMMIT_SHORT_SHA }}](https://github.com/${{ github.repository}}/commit/${{ github.sha }}) on [${{ github.repository}}#${{ github.ref_name }}](https://github.com/${{ github.repository}}/tree/${{ github.ref_name }}): `${{ env.GIT_COMMIT_MESSAGE_SUBJECT }}`'
