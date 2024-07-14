@@ -2,6 +2,8 @@ name: Hubbardly
 
 on:
   push:
+    branches:
+      - 'hubbardly/*'
   pull_request:
   workflow_dispatch:
     inputs:
@@ -14,9 +16,11 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       deployments: write
+
     name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
