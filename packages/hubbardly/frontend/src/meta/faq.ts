@@ -11,7 +11,7 @@ export const FAQS = [
   },
   {
     question: `What is the Founder's Edition?`,
-    answer: `The Founder's Edition is a limited-time offer available during ${PRELAUNCH_NAME} mode. Founders receive a lifetime subscription to ${APP_NAME} and a special badge and other perks`,
+    answer: `The Founder's Edition is a limited-time offer available during ${PRELAUNCH_NAME} mode. Founders receive a lifetime subscription to ${APP_NAME}, a special badge, and other perks.`,
   },
   {
     question: `${PRELAUNCH_NAME} mode: What are stretch goals?`,
@@ -39,7 +39,7 @@ export const FAQS = [
   },
   {
     question: `What's your refund policy?`,
-    answer: `Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. While we are in ${PRELAUNCH_NAME} mode, we are not offering refunds. However, if you really have a change of heart, of course we will refund your money. You'll lose your place in line though, and many not get another chance to become a Founder. Also, if we decide to cancel the project for any reason, we will refund your money.`,
+    answer: `Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. We are selling limited Founder's Edition memberships while we are in ${PRELAUNCH_NAME} mode. If you cancel your purchase, you will lose your place in line and may not get another chance to become a Founder later.  Also, if we decide to cancel the project for any reason, we will refund your money.`,
   },
   {
     question: `Post-launch: How do I share my recipes?`,
