@@ -7,6 +7,7 @@
   import { produce } from 'immer'
   import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
   import FaqSection from '$src/components/FAQSection.svelte'
+  import { PREMIUM_NAME } from '$src/meta/constants'
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
@@ -35,8 +36,8 @@
 
 <div class="alert alert-error mt-4">
   <div>
-    Jamie Eats is a private community. You must be a Hubbardly Blue or Founder
-    member to access this page.
+    Jamie Eats is a private community. You must be a {PREMIUM_NAME} member to access
+    this page.
   </div>
 </div>
 <Lander meta={merged}>

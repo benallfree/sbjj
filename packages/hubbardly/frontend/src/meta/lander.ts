@@ -11,6 +11,7 @@ import {
   faStar,
   faUsers,
 } from '@fortawesome/free-solid-svg-icons'
+import { PREMIUM_NAME } from './constants'
 
 export const LANDER = {
   hero: {
@@ -38,7 +39,7 @@ export const LANDER = {
       {
         title: `Inspire Your Meals`,
         tagline: `Unlock Unexpected Recipes`,
-        content: `Hubbardly Blue gives you premium access to ingredient trends, AI-assisted recipe creation, private communities, and more.`,
+        content: `${PREMIUM_NAME} gives you premium access to ingredient trends, AI-assisted recipe creation, private communities, and more.`,
         icon: faLightbulb,
         linkText: 'Get Inspired',
         linkURL: `/pricing`,
@@ -82,7 +83,7 @@ export const LANDER = {
       },
       {
         title: `Monetize Your Community`,
-        content: `Hubbardly Blue allows you to charge a subscription fee for your community`,
+        content: `${PREMIUM_NAME} allows you to earn revenue from your community.`,
         icon: faDollarSign,
       },
     ],

@@ -1,4 +1,4 @@
-import { APP_NAME } from './constants'
+import { APP_NAME, PREMIUM_NAME } from './constants'
 import { FOUNDER_FEATURES } from './features'
 
 export const PLANS = {
@@ -21,7 +21,7 @@ export const PLANS = {
     slug: `pro-monthly`,
     summary: `You're on the monthly Blue plan. Thank you for supporting ${APP_NAME}!`,
     isPrelaunch: false,
-    description: `Unlock the full potential of ${APP_NAME} with Hubbardly Blue. You get a blue check mark and premium features for ultimate recipe creation and discovery.`,
+    description: `Unlock the full potential of ${APP_NAME} with ${PREMIUM_NAME}. You get a blue check mark and premium features for ultimate recipe creation and discovery.`,
     checkoutUrl: ``,
     qtyMax: 0,
     isPremium: true,
@@ -35,7 +35,7 @@ export const PLANS = {
     checkoutUrl: ``,
     summary: `You're on the annual Blue plan. Thank you for supporting ${APP_NAME}!`,
     isPrelaunch: false,
-    description: `Unlock the full potential of ${APP_NAME} with Hubbardly Blue. You get a blue check mark and premium features for ultimate recipe creation and discovery.`,
+    description: `Unlock the full potential of ${APP_NAME} with ${PREMIUM_NAME}. You get a blue check mark and premium features for ultimate recipe creation and discovery.`,
     qtyMax: 0,
     isPremium: true,
     isDefault: false,
