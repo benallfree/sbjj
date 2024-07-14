@@ -40,6 +40,28 @@
   </div>
 </div>
 <Lander meta={merged}>
+  <div slot="hero">
+    <div class="md:hidden">
+      <div class=" section-heading m-2">Community Overview</div>
+      <div class="flex flex-row gap-x-2 m-4 md:hidden">
+        <div class="w-1/3">
+          <enhanced:img
+            src={splashImg}
+            alt="Hero splash"
+            class="rounded-lg mix-blend-lighten animated-hero-banner"
+          />
+        </div>
+        <div class="w-2/3 pl-4 text-sm">
+          <div class="italic text-info">
+            Dedicated to sharing recipes made by Jamie Eats
+          </div>
+          <div>Members: 4,092</div>
+          <div>Recipes: 707</div>
+          <div>Created: 02/24/2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="flex flex-col md:flex-row md:gap-x-2 justify-center mb-4">
     <div class="special-message mt-4 mb-4">
       <div class="prose w-full bg-neutral p-8 rounded-3xl">
