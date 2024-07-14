@@ -26,7 +26,7 @@
   }
 </script>
 
-<div>
+<div class="flex flex-col lg:flex-row gap-x-2">
   <details class="collapse mb-4" open>
     <summary class="collapse-title text-xl font-medium bg-neutral w-96">
       <div class="flex justify-between gap-x-2 p-0 min-h-0 pb-0">

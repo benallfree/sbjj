@@ -6,12 +6,13 @@
   import PricingCard from '$src/components/PricingCard.svelte'
   import { produce } from 'immer'
   import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
+  import BlueCheck from '$src/routes/(marketing)/pricing/BlueCheck.svelte'
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
-    hero.title = `Welcome, to the Jamie Eats community!`
+    hero.title = `Jamie Eats`
     hero.splashImg = splashImg
-    hero.cta.text = `Join #Jamie Eats# today and get access to exclusive recipes, community, and more!`
+    hero.cta.text = `Join the private #Jamie Eats# community today and get access to exclusive recipes, community, and more!`
     hero.cta.button.text = `Get Hubbardly Founder's Edition, JE Special`
     hero.cta.button.link = meta.plans.founder.checkoutUrl
     draft.plans.founder.bonusFeatures[`je-private`] = {
@@ -32,6 +33,12 @@
   } = merged
 </script>
 
+<div class="alert alert-error">
+  <div>
+    Jamie Eats is a private community. You must be a Hubbardly Blue or Founder
+    member to access this page.
+  </div>
+</div>
 <Lander meta={merged}>
   <div class="special-message mt-4 mb-4">
     <div class="prose w-full bg-neutral p-8 rounded-3xl">
