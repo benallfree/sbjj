@@ -1,18 +1,9 @@
 <script lang="ts">
-  import PricingCard from '$components/PricingCard.svelte'
   import Fa from 'svelte-fa'
-  import {
-    faChampagneGlasses,
-    faCheck,
-    faClockFour,
-    faLock,
-    faMartiniGlass,
-  } from '@fortawesome/free-solid-svg-icons'
+  import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
   import { meta } from '$src/meta'
   import FaqSection from '$src/components/FAQSection.svelte'
   import PricingSheet from './PricingSheet.svelte'
-
-  export let data
 
   const {
     prelaunch,

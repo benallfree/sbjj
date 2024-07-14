@@ -25,10 +25,6 @@ importers:
         version: 5.5.3
 
   packages/hubbardly/frontend:
-    dependencies:
-      immer:
-        specifier: ^10.1.1
-        version: 10.1.1
     devDependencies:
       '@beyonk/gdpr-cookie-consent-banner':
         specifier: ^12.1.4
@@ -102,6 +98,9 @@ importers:
       gdpr-cookie-consent-banner:
         specifier: link:@types/@beyonk/gdpr-cookie-consent-banner
         version: link:@types/@beyonk/gdpr-cookie-consent-banner
+      immer:
+        specifier: ^10.1.1
+        version: 10.1.1
       mdsvex:
         specifier: ^0.11.2
         version: 0.11.2(svelte@4.2.18)
