@@ -28,7 +28,9 @@
     "gobot",
     "goja",
     "gpdr",
+    "greenify",
     "Hubbardly",
+    "immer",
     "IPCIDR",
     "jsonifiable",
     "Jsonifiable",
@@ -78,6 +80,7 @@
     "unzipper",
     "upserting",
     "Virtio",
-    "waitlist"
+    "waitlist",
+    "Xmark"
   ]
 }

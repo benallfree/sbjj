@@ -1,29 +1,30 @@
 <script lang="ts">
-    import { meta , PRELAUNCH_NAME} from '$src/meta'
-    const { publishDate } = meta
+    import { meta , } from '$src/meta'
+    
+    const { publishDate ,prelaunchLabel } = meta
 </script>
 
 <article class="prose lg:prose-xl">
 
-# {meta.name} {PRELAUNCH_NAME} Mode
+# {meta.name} {prelaunchLabel} Mode
 
-Welcome to {meta.name}'s {PRELAUNCH_NAME} mode! Here's what it means for you:
+Welcome to {meta.name}'s {prelaunchLabel} mode! Here's what it means for you:
 
 ## Founder's Edition Lifetime Memberships
 
-We are currently offering [Founder's Edition lifetime memberships](/pricing). This special offer is available during our {PRELAUNCH_NAME} phase, where you can support the development of {meta.name} and get exclusive benefits.
+We are currently offering [Founder's Edition lifetime memberships](/pricing). This special offer is available during our {prelaunchLabel} phase, where you can support the development of {meta.name} and get exclusive benefits.
 
 ## Funding Goals and Implementation
 
-During the {PRELAUNCH_NAME} period, we are focused on reaching sufficient funding goals. We will not be implementing any features until these goals are met. Your support is crucial to bring {meta.name} to life!
+During the {prelaunchLabel} period, we are focused on reaching sufficient funding goals. We will not be implementing any features until these goals are met. Your support is crucial to bring {meta.name} to life!
 
-## 90-Day {PRELAUNCH_NAME} Period
+## 90-Day {prelaunchLabel} Period
 
-The {PRELAUNCH_NAME} phase lasts for 90 days. During this time:
+The {prelaunchLabel} phase lasts for 90 days. During this time:
 - Your Founder's Edition purchase is fully refundable at any time, with no questions asked (see [Cancellation Policy](/cancel)).
 - At the end of the 90 days, we will evaluate whether to proceed with the project or refund everyone's money and cancel it.
 
-## Post-{PRELAUNCH_NAME} Period
+## Post-{prelaunchLabel} Period
 
 If we decide to proceed with the project after the initial 90 days:
 - You will have another 90 days to try out {meta.name}.
@@ -33,7 +34,7 @@ If we decide to proceed with the project after the initial 90 days:
 
 At {meta.name}, we are building great things with your help. Join our thriving Discord community to lend your voice to the conversation.
 
-Become a part of the {meta.name} community by supporting our {PRELAUNCH_NAME} campaign. Your support helps us create a better experience for everyone!
+Become a part of the {meta.name} community by supporting our {prelaunchLabel} campaign. Your support helps us create a better experience for everyone!
 
 Thank you for being a part of {meta.name}'s growth and success!
 

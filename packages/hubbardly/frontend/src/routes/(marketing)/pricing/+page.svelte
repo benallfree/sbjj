@@ -1,8 +1,21 @@
 <script lang="ts">
   import PricingCard from '$components/PricingCard.svelte'
   import Fa from 'svelte-fa'
-  import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
-  import { meta, PRELAUNCH_NAME, type PlanSlug } from '$src/meta'
+  import {
+    faChampagneGlasses,
+    faCheck,
+    faClockFour,
+    faLock,
+    faMartiniGlass,
+  } from '@fortawesome/free-solid-svg-icons'
+  import { meta } from '$src/meta'
+  import { values } from '@s-libs/micro-dash'
+  import FaqSection from '$src/components/FAQSection.svelte'
+  import BlueCheck from './BlueCheck.svelte'
+  import FounderBadge from './FounderBadge.svelte'
+  import IconListItem from './IconListItem.svelte'
+  import ListItem from './ListItem.svelte'
+  import PricingSheet from './PricingSheet.svelte'
 
   export let data
 
@@ -11,8 +24,19 @@
     pages: {
       pricing: { title, tagline, content },
     },
-    plans,
   } = meta
+
+  function formatNumber(num: number): string {
+    if (num < 1000) {
+      return num.toString()
+    } else if (num < 1_000_000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
+    } else if (num < 1_000_000_000) {
+      return (num / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'm'
+    } else {
+      return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, '') + 'b'
+    }
+  }
 </script>
 
 <main>
@@ -26,30 +50,26 @@
 
     {#if prelaunch}
       <div class="flex justify-center">
-        <div role="alert" class="alert alert-warning m-8 max-w-2xl">
+        <div role="alert" class="alert alert-warning mt-8 mb-8 max-w-2xl">
           <Fa icon={faMartiniGlass} />
           <span
-            >{meta.name} is currently in {PRELAUNCH_NAME} mode.
+            >{meta.name} is currently in {meta.prelaunchLabel} mode.
             <b>We are building features as funds are raised.</b> All subscription
             plans will remain locked until the official launch. In the meantime,
-            you can join the waitlist by creating an account, or support the project
-            by purchasing a Founder tier. As each tier sells out, new features will
-            be unlocked.</span
+            consider supporting the project by purchasing a Founder's Edition to
+            get lifetime access. As soon as we reach funding (and maybe before!),
+            features will be added.</span
           >
         </div>
       </div>
     {/if}
 
-    <p
-      class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300"
-    ></p>
+    <div class="flex justify-center">
+      <PricingSheet />
+    </div>
 
-    <div
-      class="mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-    >
-      {#each Object.entries(plans) as [slug, plan]}
-        <PricingCard plan={slug} qtySold={data.soldCounts[slug] || 0} />
-      {/each}
+    <div class="m-4">
+      <FaqSection faqs={meta.faqs} />
     </div>
   </div>
 </main>
