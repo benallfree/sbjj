@@ -25,7 +25,7 @@
   })
 </script>
 
-<Lander meta={merged}>
+<Lander page={merged.pages.lander}>
   <div class="special-message mt-4 mb-4">
     <div class="prose w-full bg-neutral p-8 rounded-3xl">
       <Cta />

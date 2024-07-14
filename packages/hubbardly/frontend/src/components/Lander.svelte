@@ -3,18 +3,23 @@
   import PrimaryButton from './PrimaryButton.svelte'
   import type { Meta } from '$src/meta'
 
-  export let meta: Meta
-  const {
-    pages: { lander },
-  } = meta
+  export let page: Meta['pages']['lander']
   const {
     hero: { title, cta, splashImg },
-  } = lander
+  } = page
 </script>
 
-<slot name="hero" />
+<slot name="hero">
+  <div class="flex flex-row justify-center md:hidden">
+    <enhanced:img
+      src={splashImg}
+      alt="Hero splash"
+      class="rounded-lg mix-blend-lighten animated-hero-banner max-w-96"
+    />
+  </div>
+</slot>
 
-<div class="container mx-auto text-white flex items-center">
+<div class="container m-2 text-white flex flex-col md:flex-row">
   <div class="m-4 md:w-1/2">
     <h1 class="md:text-6xl text-4xl font-bold mb-8">{title}</h1>
 
@@ -34,7 +39,7 @@
     <enhanced:img
       src={splashImg}
       alt="Hero splash"
-      class="rounded-[250px] mix-blend-lighten animated-hero-banner"
+      class="rounded-xl mix-blend-lighten animated-hero-banner"
     />
   </div>
 </div>

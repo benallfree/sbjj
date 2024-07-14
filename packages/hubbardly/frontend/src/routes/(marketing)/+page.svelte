@@ -16,7 +16,7 @@
   const subFeatures = sub
 </script>
 
-<Lander {meta}>
+<Lander page={meta.pages.lander}>
   <div
     class="container mx-auto md:bg-gradient-to-r md:from-zinc-900 md:to-zinc-800 bg-zinc-800 border-zinc-700 border-2 rounded-[75px] flex flex-wrap mb-12 shadow-xl overflow-hidden"
   >

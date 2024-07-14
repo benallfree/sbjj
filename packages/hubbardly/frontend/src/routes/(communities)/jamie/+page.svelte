@@ -40,7 +40,7 @@
     this page.
   </div>
 </div>
-<Lander meta={merged}>
+<Lander page={merged.pages.lander}>
   <div slot="hero">
     <div class="md:hidden">
       <div class=" section-heading m-2">Community Overview</div>
