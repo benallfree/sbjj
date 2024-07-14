@@ -28,7 +28,7 @@ export const FAQS = [
   },
   {
     question: `How does the affiliate program work?`,
-    answer: `The affiliate program is a way for you to earn money by referring others to ${APP_NAME}. You will receive a unique link to share with your friends and followers. When someone signs up using your link, you will receive a commission on their subscription. Check out <a href="/affiliate" class="link">our affiliate page</a> for more information.`,
+    answer: `The affiliate program is a way for you to earn money by referring others to ${APP_NAME}. You will receive a unique link to share with your friends and followers. When someone signs up using your link, you will receive a commission on their subscription. Check out <a href="/affiliates" class="link">our affiliate page</a> for more information.`,
   },
   {
     question: `How do I get started?`,
