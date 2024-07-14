@@ -1,7 +1,7 @@
 <script lang="ts">
   import Fa from 'svelte-fa'
   import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
-  import { meta } from '$src/meta'
+  import { FOUNDERS_NAME, meta } from '$src/meta'
   import FaqSection from '$src/components/FAQSection.svelte'
   import PricingSheet from './PricingSheet.svelte'
 
@@ -28,10 +28,10 @@
           <Fa icon={faMartiniGlass} />
           <span
             >{meta.name} is currently in {meta.prelaunchLabel} mode.
-            <b>We are building features as funds are raised.</b> All subscription
-            plans will remain locked until the official launch. In the meantime,
-            consider supporting the project by purchasing a Founder's Edition to
-            get lifetime access. As soon as we reach funding (and maybe before!),
+            <b>We are building features as funds are raised.</b> All
+            subscription plans will remain locked until the official launch. In
+            the meantime, consider supporting the project by purchasing a {FOUNDERS_NAME}
+            to get lifetime access. As soon as we reach funding (and maybe before!),
             features will be added.</span
           >
         </div>

@@ -1,18 +1,18 @@
 <script lang="ts">
-    import { meta , } from '$src/meta'
+    import { meta ,APP_NAME,FOUNDERS_NAME } from '$src/meta'
     
     const { publishDate ,prelaunchLabel } = meta
 </script>
 
 <article class="prose lg:prose-xl">
 
-# {meta.name} {prelaunchLabel} Mode
+# {APP_NAME} {prelaunchLabel} Mode
 
 Welcome to {meta.name}'s {prelaunchLabel} mode! Here's what it means for you:
 
-## Founder's Edition Lifetime Memberships
+## {FOUNDERS_NAME} Lifetime Memberships
 
-We are currently offering [Founder's Edition lifetime memberships](/pricing). This special offer is available during our {prelaunchLabel} phase, where you can support the development of {meta.name} and get exclusive benefits.
+We are currently offering [{FOUNDERS_NAME} lifetime memberships](/pricing). This special offer is available during our {prelaunchLabel} phase, where you can support the development of {meta.name} and get exclusive benefits.
 
 ## Funding Goals and Implementation
 
@@ -21,7 +21,7 @@ During the {prelaunchLabel} period, we are focused on reaching sufficient fundin
 ## 90-Day {prelaunchLabel} Period
 
 The {prelaunchLabel} phase lasts for 90 days. During this time:
-- Your Founder's Edition purchase is fully refundable at any time, with no questions asked (see [Cancellation Policy](/cancel)).
+- Your {FOUNDERS_NAME} purchase is fully refundable at any time, with no questions asked (see [Cancellation Policy](/cancel)).
 - At the end of the 90 days, we will evaluate whether to proceed with the project or refund everyone's money and cancel it.
 
 ## Post-{prelaunchLabel} Period

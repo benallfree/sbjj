@@ -15,7 +15,7 @@
     hero.cta.text = `We've partnered with ${APP_NAME} to create a special ${FOUNDERS_NAME} just for TJ listeners. Purchase a #${APP_NAME} ${FOUNDERS_NAME} TJ Special# to  get a #lifetime membership# to ${APP_NAME} with #TJ-exclusive bonuses#. This is rare, don't sleep on it!`
     hero.cta.button.text = `Get ${APP_NAME} ${FOUNDERS_NAME}: TJ Special`
     hero.cta.button.link = 'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
-    draft.plans.founder.name = `Founder's Edition - TJ Special`
+    draft.plans.founder.name = `${FOUNDERS_NAME}: TJ Special`
     draft.plans.founder.checkoutUrl =
       'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
     draft.plans.founder.bonusFeatures[`je-tee`] = {

@@ -1,3 +1,5 @@
+import { FOUNDERS_NAME } from './constants'
+
 export type Feature = {
   title: string
   description: string
@@ -134,7 +136,7 @@ export const FOUNDER_FEATURES: FeatureLookup = {
     description: `Have a say in the development of new features by participating in feature voting.`,
   },
   'founders-edition-mug': {
-    title: `Commemorative Founder's Edition mug`,
+    title: `Commemorative ${FOUNDERS_NAME} mug`,
     description: `Receive a special edition mug as a token of appreciation for being a founder.`,
   },
 }

@@ -7,25 +7,25 @@
   import { produce } from 'immer'
   import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
   import FaqSection from '$src/components/FAQSection.svelte'
-  import { PREMIUM_NAME } from '$src/meta/constants'
+  import { APP_NAME, FOUNDERS_NAME, PREMIUM_NAME } from '$src/meta/constants'
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
     hero.title = `Jamie Eats`
     hero.splashImg = splashImg
     hero.cta.text = `Join the private #Jamie Eats# community today and get access to exclusive recipes, community, and more!`
-    hero.cta.button.text = `Access Jamie Eats with Hubbardly Founder's Edition, JE Special`
+    hero.cta.button.text = `Access Jamie Eats with ${APP_NAME} ${FOUNDERS_NAME}: JE Special`
     hero.cta.button.link = 'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
-    draft.plans.founder.name = `Founder's Edition - Jamie Eats Special`
+    draft.plans.founder.name = `${FOUNDERS_NAME}: Jamie Eats Special`
     draft.plans.founder.checkoutUrl =
       'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
     draft.plans.founder.bonusFeatures[`je-private`] = {
       title: `#JE Exclusive#: Access to private JE community`,
-      description: `Join the private JE community on Hubbardly to connect with other listeners and share your favorite recipes.`,
+      description: `Join the private JE community on ${APP_NAME} to connect with other listeners and share your favorite recipes.`,
     }
     draft.plans.founder.bonusFeatures[`je-recipes`] = {
       title: `#JE Exclusive#: Unlimited access to private JE recipes`,
-      description: `Unlock all of the private JE recipes on Hubbardly to discover new dishes and share your favorites.`,
+      description: `Unlock all of the private JE recipes on ${APP_NAME} to discover new dishes and share your favorites.`,
     }
     draft.plans.founder.bonusFeatures[`je-tee`] = {
       title: `#JE Exclusive#: #je4lyf tee shirt`,

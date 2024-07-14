@@ -1,10 +1,15 @@
+<script lang="ts">
+    import {APP_NAME} from '$src/meta'
+</script>
+
+
 <article class="prose lg:prose-xl">
 
-# Life as a Creator on Hubbardly
+# Life as a Creator on {APP_NAME}
 
-Creators are the lifeblood of Hubbardly. Your recipes, tutorials, and insights are what make our platform unique and valuable. As a creator, you have the opportunity to build a loyal community, earn money through memberships and affiliate commissions, and share your knowledge with the world.
+Creators are the lifeblood of {APP_NAME}. Your recipes, tutorials, and insights are what make our platform unique and valuable. As a creator, you have the opportunity to build a loyal community, earn money through memberships and affiliate commissions, and share your knowledge with the world.
 
-## Ways to Earn on Hubbardly
+## Ways to Earn on {APP_NAME}
 
 ### Recipe Streams
 
@@ -12,7 +17,7 @@ Each month, we allocate a portion of our site profits to a creator profit sharin
 
 ### Affiliate Commission
 
-When new users sign up for a paid membership through your community page, you earn an affiliate commission from our [affiliate system](/affiliates). This is a great way to monetize your influence and ensure that your community supports you directly. Make sure your audience knows to visit your landing page (hubbardly.com/yourpage) and sign up to help you earn commissions.
+When new users sign up for a paid membership through your community page, you earn an affiliate commission from our [affiliate system](/affiliates). This is a great way to monetize your influence and ensure that your community supports you directly. Make sure your audience knows to visit your landing page ({APP_NAME}.com/yourpage) and sign up to help you earn commissions.
 
 ## Payment Distribution
 
@@ -20,7 +25,7 @@ Payments are distributed 30 days after revenue has come in to account for any po
 
 ## Tips for Success
 
-1. **Promote Your Landing Page**: Make sure your audience is aware of your landing page (hubbardly.com/yourpage) and encourage them to sign up through your page. Let them know that by signing up this way, they are supporting you directly through the signup commission.
+1. **Promote Your Landing Page**: Make sure your audience is aware of your landing page ({APP_NAME}.com/yourpage) and encourage them to sign up through your page. Let them know that by signing up this way, they are supporting you directly through the signup commission.
    
 2. **Frequent Recipe Posting**: Keep your community engaged by posting recipes frequently. Fresh content keeps your audience coming back for more.
 
@@ -32,6 +37,6 @@ Payments are distributed 30 days after revenue has come in to account for any po
 
 6. **Offer Free Recipes**: Occasionally offer a few free recipes. These are visible to non-community members and help potential members assess whether they would like to join your community.
 
-By following these tips and actively engaging with your community, you can maximize your earnings and grow your influence on Hubbardly. We are excited to have you on board and look forward to seeing the amazing content you create!
+By following these tips and actively engaging with your community, you can maximize your earnings and grow your influence on {APP_NAME}. We are excited to have you on board and look forward to seeing the amazing content you create!
 
 </article>

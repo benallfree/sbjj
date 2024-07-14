@@ -1,28 +1,28 @@
 <script lang="ts">
-    import {meta} from '$src/meta'
+    import {meta, APP_NAME} from '$src/meta'
 </script>
 
 <article class="prose lg:prose-xl">
 
-# Hubbardly's Commitment to Open Source
+# {APP_NAME}'s Commitment to Open Source
 
-At Hubbardly, we believe in the power of open source software to drive innovation and collaboration within the community. As part of our commitment to transparency and sharing, we have made all of our code available to the public under the MIT License. 
+At {APP_NAME}, we believe in the power of open source software to drive innovation and collaboration within the community. As part of our commitment to transparency and sharing, we have made all of our code available to the public under the MIT License. 
 
 ## Open Source Philosophy
 
-Open source software promotes a collaborative approach to development, allowing developers from all over the world to contribute to projects, share insights, and improve code quality. By making our code open source, we aim to foster a community-driven environment where everyone can participate in the growth and improvement of Hubbardly.
+Open source software promotes a collaborative approach to development, allowing developers from all over the world to contribute to projects, share insights, and improve code quality. By making our code open source, we aim to foster a community-driven environment where everyone can participate in the growth and improvement of {APP_NAME}.
 
 ## Our Repository
 
-All the code for Hubbardly is hosted on GitHub. You can find it at the following link:
+All the code for {APP_NAME} is hosted on GitHub. You can find it at the following link:
 
 [{meta.repo}]({meta.repo})
 
-This repository contains all the essential components of Hubbardly, including our backend services, frontend applications, and various tools and utilities that make up the Hubbardly ecosystem.
+This repository contains all the essential components of {APP_NAME}, including our backend services, frontend applications, and various tools and utilities that make up the {APP_NAME} ecosystem.
 
 ## MIT License
 
-Hubbardly is released under the MIT License, a permissive free software license that allows anyone to use, modify, and distribute the software with minimal restrictions. This aligns with our goal of making technology accessible and beneficial to everyone.
+{APP_NAME} is released under the MIT License, a permissive free software license that allows anyone to use, modify, and distribute the software with minimal restrictions. This aligns with our goal of making technology accessible and beneficial to everyone.
 
 ### Key Points of the MIT License:
 
@@ -47,8 +47,8 @@ To get started, visit our GitHub repository: [{meta.repo}]({meta.repo})
 4. **Make Changes**: Implement your changes or additions.
 5. **Submit a Pull Request**: Submit a pull request for review.
 
-We are excited to see how the community will enhance and expand Hubbardly. Together, we can create an even more powerful and versatile platform.
+We are excited to see how the community will enhance and expand {APP_NAME}. Together, we can create an even more powerful and versatile platform.
 
-Thank you for supporting open source and being a part of the Hubbardly community!
+Thank you for supporting open source and being a part of the {APP_NAME} community!
 
 </article>

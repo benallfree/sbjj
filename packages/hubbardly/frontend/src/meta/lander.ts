@@ -32,7 +32,7 @@ export const LANDER = {
         tagline: `Discover, Join, and Cook with Specialized Communities`,
         content: `${APP_NAME} connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes.`,
         icon: faPeopleRoof,
-        linkText: 'See what`s Cookin`',
+        linkText: `See what's Cookin'`,
         linkURL: `/pricing`,
       },
 
