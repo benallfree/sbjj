@@ -8,8 +8,53 @@
   import PricingTier from './PricingTier.svelte'
   import type { Meta } from '$src/meta'
   import { formatNumber, greenify } from '$src/util'
+  import { reduce, values } from '@s-libs/micro-dash'
+  import { FEATURES_MATRIX, type FeatureLookup } from '$src/meta/features'
 
   export let meta: Meta
+
+  const coreFeatures = reduce(
+    FEATURES_MATRIX,
+    (acc, feature, slug) => {
+      if (feature.isPremium) return acc
+      if (feature.isStretch) return acc
+      acc[slug] = feature
+      return acc
+    },
+    {} as FeatureLookup,
+  )
+  const coreStretchFeatures = reduce(
+    FEATURES_MATRIX,
+    (acc, feature, slug) => {
+      if (feature.isPremium) return acc
+      if (!feature.isStretch) return acc
+      acc[slug] = feature
+      return acc
+    },
+    {} as FeatureLookup,
+  )
+
+  const premiumFeatures = reduce(
+    FEATURES_MATRIX,
+    (acc, feature, slug) => {
+      if (!feature.isPremium) return acc
+      if (feature.isStretch) return acc
+      acc[slug] = feature
+      return acc
+    },
+    {} as FeatureLookup,
+  )
+
+  const premiumStretchFeatures = reduce(
+    FEATURES_MATRIX,
+    (acc, feature, slug) => {
+      if (!feature.isPremium) return acc
+      if (!feature.isStretch) return acc
+      acc[slug] = feature
+      return acc
+    },
+    {} as FeatureLookup,
+  )
 </script>
 
 <div class="flex flex-col lg:flex-row gap-x-2">
@@ -20,11 +65,20 @@
     subscribeText="Join"
     subscribeLink=""
   >
-    <ListItem>Manage unlimited pantry items</ListItem>
-    <ListItem>Join public communities</ListItem>
-    <ListItem>Join premium communities</ListItem>
-    <ListItem>Discover new recipes</ListItem>
-    <ListItem>Create and share recipes</ListItem>
+    {#each Object.values(coreFeatures) as feature}
+      <ListItem>{feature.title}</ListItem>
+    {/each}
+    {#if values(coreStretchFeatures).length > 0}
+      <ListItem>Stretch goals:</ListItem>
+      {#each Object.values(coreStretchFeatures) as feature}
+        <ListItem
+          ><Fa
+            class="text-info"
+            icon={faChampagneGlasses}
+          />{feature.title}</ListItem
+        >
+      {/each}
+    {/if}
   </PricingTier>
 
   <PricingTier
@@ -35,23 +89,21 @@
     subscribeLink={meta.plans.annual.checkoutUrl}
   >
     <div class="italic text-accent">Everything in Free, plus:</div>
-    <div>Create communities</div>
-    <div>Join private communities</div>
+    {#each Object.values(premiumFeatures) as feature}
+      <ListItem>{feature.title}</ListItem>
+    {/each}
 
-    <ListItem>Stretch goals:</ListItem>
-    <ListItem
-      ><Fa class="text-info" icon={faChampagneGlasses} /> Research ingredient trends</ListItem
-    >
-    <ListItem
-      ><Fa class="text-info" icon={faChampagneGlasses} /> AI-powered recipe suggestions</ListItem
-    >
-    <ListItem
-      ><Fa class="text-info" icon={faChampagneGlasses} />Monetize your community</ListItem
-    >
-    <ListItem
-      ><Fa class="text-info" icon={faChampagneGlasses} />Appoint community
-      moderators</ListItem
-    >
+    {#if values(premiumStretchFeatures).length > 0}
+      <ListItem>Stretch goals:</ListItem>
+      {#each Object.values(premiumStretchFeatures) as feature}
+        <ListItem
+          ><Fa
+            class="text-info"
+            icon={faChampagneGlasses}
+          />{feature.title}</ListItem
+        >
+      {/each}
+    {/if}
   </PricingTier>
 
   <PricingTier
@@ -68,15 +120,9 @@
       >
     </ListItem>
     <div class="italic text-accent">Everything in Blue, plus:</div>
-    <div>Lifetime access to Hubbardly</div>
-    <div>Founder's badge</div>
-    <div>Private Founder's channel on Discord</div>
-    <div>Early access to new features</div>
-    <div>Vote on new features</div>
-    <div>Founder's edition mug</div>
     {#if meta.plans.founder.bonusFeatures}
       {#each Object.values(meta.plans.founder.bonusFeatures) as { title, description }}
-        <ListItem>{@html greenify(title)}</ListItem>
+        <ListItem><div>{@html greenify(title)}</div></ListItem>
       {/each}
     {/if}
   </PricingTier>
