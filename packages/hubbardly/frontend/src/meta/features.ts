@@ -20,15 +20,25 @@ export const FEATURES_MATRIX: FeatureLookup = {
     description: `Personal recipes are recipes you create and save for yourself with unlimited ingredients.`,
   },
   'match-recipes': {
-    title: `Match your pantry items with personal and community recipes`,
+    title: `Pantry matching`,
     description: `You can search and view public community recipes with up to 3 ingredients as a Free user and unlimited ingredients as a Blue user.`,
   },
   'discord-community': {
     title: `Discord community`,
     description: `Join our Discord community to chat with other users.`,
   },
+  'create-communities': {
+    title: `Create your own communities`,
+    description: `Communities are groups of users who share recipes and pantry items. You can create your own community and invite others to join.`,
+    isPremium: true,
+  },
+  'join-private-communities': {
+    title: `Join private communities`,
+    description: `Private communities require an invitation to join and only show recipes to members.`,
+    isPremium: true,
+  },
   'ingredient-trends': {
-    title: `Ingredient trends`,
+    title: `Research ingredient trends`,
     description: `Research ingredient trends and popularity while creating recipes.`,
     isPremium: true,
     isStretch: true,
@@ -58,18 +68,11 @@ export const FEATURES_MATRIX: FeatureLookup = {
   'rate-recipes': {
     title: `Rate recipes`,
     description: `You can rate recipes shared by other users.`,
-    isPremium: true,
     isStretch: true,
   },
   'comment-recipes': {
     title: `Comment on recipes`,
     description: `You can comment on recipes shared by other users.`,
-    isPremium: true,
-    isStretch: true,
-  },
-  'create-communities': {
-    title: `Communities: create and manage`,
-    description: `Communities are groups of users who share recipes and pantry items. You can create your own community and invite others to join, or you can join an existing community.`,
     isPremium: true,
     isStretch: true,
   },
@@ -90,10 +93,8 @@ export const FEATURES_MATRIX: FeatureLookup = {
     isStretch: true,
   },
   'community-public': {
-    title: `Communities: open`,
+    title: `Access public communities`,
     description: `Public communities are open to all users and show recipes to everyone.`,
-    isPremium: true,
-    isStretch: true,
   },
   'private-community': {
     title: `Private communities`,
@@ -108,8 +109,8 @@ export const FEATURES_MATRIX: FeatureLookup = {
     isStretch: true,
   },
   'community-premium': {
-    title: `Premium communities`,
-    description: `Create and join premium communities that require an additional subscription to access.`,
+    title: `Monetize communities`,
+    description: `Participate in the streaming royalties program.`,
     isPremium: true,
     isStretch: true,
   },
