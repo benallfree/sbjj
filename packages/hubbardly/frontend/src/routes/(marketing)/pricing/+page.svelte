@@ -9,12 +9,7 @@
     faMartiniGlass,
   } from '@fortawesome/free-solid-svg-icons'
   import { meta } from '$src/meta'
-  import { values } from '@s-libs/micro-dash'
   import FaqSection from '$src/components/FAQSection.svelte'
-  import BlueCheck from './BlueCheck.svelte'
-  import FounderBadge from './FounderBadge.svelte'
-  import IconListItem from './IconListItem.svelte'
-  import ListItem from './ListItem.svelte'
   import PricingSheet from './PricingSheet.svelte'
 
   export let data
@@ -65,7 +60,7 @@
     {/if}
 
     <div class="flex justify-center">
-      <PricingSheet />
+      <PricingSheet {meta} />
     </div>
 
     <div class="m-4">

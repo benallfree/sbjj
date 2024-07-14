@@ -14,6 +14,7 @@
   import { produce } from 'immer'
   import { forEach, values } from '@s-libs/micro-dash'
   import type { Feature, FeatureLookup } from '$src/meta/features'
+  import { formatNumber, greenify } from '$src/util'
 
   export let meta: Meta
   export let plan: PlanSlug
@@ -32,27 +33,8 @@
     isDefault,
   } = activePlan
 
-  console.log(activePlan.isPremium)
-
   export let prelaunch = true
 
-  function formatNumber(num: number): string {
-    if (num < 1000) {
-      return num.toString()
-    } else if (num < 1_000_000) {
-      return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k'
-    } else if (num < 1_000_000_000) {
-      return (num / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'm'
-    } else {
-      return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, '') + 'b'
-    }
-  }
-
-  const greenify = (text: string) =>
-    text.replaceAll(
-      /#(.*?)#/g,
-      `<b class="text-green-600 dark:text-green-400">$1</b>`,
-    )
   const qtyRemaining = qtyMax - qtySold
 
   const mappedFeatures = Object.entries(

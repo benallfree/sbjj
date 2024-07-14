@@ -3,18 +3,21 @@
   import { meta } from '$src/meta'
   import splashImg from './splash.webp?enhanced'
   import Cta from './cta.svx'
-  import PricingCard from '$src/components/PricingCard.svelte'
+  import Recipe from './Recipe.svelte'
   import { produce } from 'immer'
   import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
-  import BlueCheck from '$src/routes/(marketing)/pricing/BlueCheck.svelte'
+  import FaqSection from '$src/components/FAQSection.svelte'
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
     hero.title = `Jamie Eats`
     hero.splashImg = splashImg
     hero.cta.text = `Join the private #Jamie Eats# community today and get access to exclusive recipes, community, and more!`
-    hero.cta.button.text = `Get Hubbardly Founder's Edition, JE Special`
-    hero.cta.button.link = meta.plans.founder.checkoutUrl
+    hero.cta.button.text = `Access Jamie Eats with Hubbardly Founder's Edition, JE Special`
+    hero.cta.button.link = 'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
+    draft.plans.founder.name = `Founder's Edition - Jamie Eats Special`
+    draft.plans.founder.checkoutUrl =
+      'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
     draft.plans.founder.bonusFeatures[`je-private`] = {
       title: `#JE Exclusive#: Access to private JE community`,
       description: `Join the private JE community on Hubbardly to connect with other listeners and share your favorite recipes.`,
@@ -28,25 +31,32 @@
       description: `Get a limited edition #je4lyf tee shirt to show your support for the Thoughtful Journey podcast.`,
     }
   })
-  const {
-    plans: { founder },
-  } = merged
 </script>
 
-<div class="alert alert-error">
+<div class="alert alert-error mt-4">
   <div>
     Jamie Eats is a private community. You must be a Hubbardly Blue or Founder
     member to access this page.
   </div>
 </div>
 <Lander meta={merged}>
-  <div class="special-message mt-4 mb-4">
-    <div class="prose w-full bg-neutral p-8 rounded-3xl">
-      <Cta />
+  <div class="flex flex-col md:flex-row md:gap-x-2 justify-center mb-4">
+    <div class="special-message mt-4 mb-4">
+      <div class="prose w-full bg-neutral p-8 rounded-3xl">
+        <Cta />
+      </div>
+    </div>
+    <div class="special-message mt-4 mb-4">
+      <div class="prose w-full bg-neutral p-8 rounded-3xl">
+        <Recipe />
+      </div>
     </div>
   </div>
   <div class="flex justify-center mb-4">
-    <PricingSheet />
+    <PricingSheet meta={merged} />
+  </div>
+  <div class="flex justify-center mb-4">
+    <FaqSection faqs={merged.faqs} />
   </div>
 </Lander>
 

@@ -15,7 +15,7 @@ export const PLANS = {
     isDefault: true,
     bonusFeatures: {},
   },
-  [`pro-monthly`]: {
+  [`monthly`]: {
     name: `Blue Monthly`,
     price: `19/mo`,
     slug: `pro-monthly`,
@@ -28,7 +28,7 @@ export const PLANS = {
     isDefault: false,
     bonusFeatures: {},
   },
-  [`pro-annual`]: {
+  [`annual`]: {
     name: `Blue Annual`,
     price: `199/yr`,
     slug: `pro-annual`,
@@ -54,4 +54,4 @@ export const PLANS = {
     isDefault: false,
     bonusFeatures: FOUNDER_FEATURES,
   },
-} as const
+}
