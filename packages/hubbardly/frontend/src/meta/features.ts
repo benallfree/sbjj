@@ -122,7 +122,7 @@ export const FOUNDER_FEATURES: FeatureLookup = {
     description: `Show off your status as a founder with a special badge on your profile.`,
   },
   'private-founders-channel': {
-    title: `Private Founder's channel Discord`,
+    title: `Private Founder's Discord channel`,
     description: `Gain access to a private channel on our Discord server exclusively for founders.`,
   },
   'early-access': {
