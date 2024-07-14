@@ -47,7 +47,7 @@ jobs:
 
       - name: Force Deploy Check
         id: force-deploy
-        run: echo "::set-output name=force::${{ github.event.inputs.force_deploy == 'hubbardly' }}"
+        run: echo "::set-output name=force::${{ github.event.inputs.force_deploy != '' }}"
 
       - name: Get changed files
         id: changed-files
