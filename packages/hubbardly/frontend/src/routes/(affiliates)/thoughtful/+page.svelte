@@ -18,7 +18,7 @@
     draft.plans.founder.checkoutUrl =
       'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
     draft.plans.founder.bonusFeatures[`je-tee`] = {
-      title: `#JE Exclusive#: #tj4lyf tee shirt`,
+      title: `#TJ Exclusive#: #tj4lyf tee shirt`,
       description: `Get a limited edition #tj4lyf tee shirt to show your support for the Thoughtful Journey podcast.`,
     }
   })
