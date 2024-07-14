@@ -3,6 +3,8 @@
   import {
     faChampagneGlasses,
     faClockFour,
+    faInfo,
+    faInfoCircle,
     faLock,
   } from '@fortawesome/free-solid-svg-icons'
   import { meta } from '$src/meta'
@@ -29,15 +31,12 @@
     <summary class="collapse-title text-xl font-medium bg-neutral w-96">
       <div class="flex justify-between gap-x-2 p-0 min-h-0 pb-0">
         <div>Free Forever</div>
-        <button disabled class="btn btn-primary btn-xs">Join</button>
+        <button disabled class="btn btn-primary btn-xs"
+          >Join (Locked for {meta.prelaunchLabel})</button
+        >
       </div>
     </summary>
     <div class="collapse-content" style="padding-bottom: 0px">
-      <div class="text-error">
-        <IconListItem icon={faLock}
-          >Locked for {meta.prelaunchLabel}</IconListItem
-        >
-      </div>
       <div>Manage unlimited pantry items</div>
       <div>Join public communities</div>
       <div>Join premium communities</div>
@@ -54,11 +53,12 @@
           Blue
         </ListItem>
         <button disabled class="btn btn-primary btn-xs"
-          ><Fa icon={faLock} />$19/mo Locked for {meta.prelaunchLabel}</button
+          ><Fa icon={faLock} />$19/mo (Locked for {meta.prelaunchLabel})</button
         >
-      </div></summary
-    >
+      </div>
+    </summary>
     <div class="collapse-content">
+      <div class="italic text-accent">Everything in Free, plus:</div>
       <div>Create communities</div>
       <div>Join private communities</div>
 
@@ -98,6 +98,7 @@
           >{formatNumber(500)}/{formatNumber(500)} Remaining</span
         >
       </ListItem>
+      <div class="italic text-accent">Everything in Blue, plus:</div>
       <div>Lifetime access to Hubbardly</div>
       <div>Founder's badge</div>
       <div>Private Founder's channel on Discord</div>

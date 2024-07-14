@@ -28,7 +28,7 @@ export const meta = {
     pricing: {
       title: `Pricing`,
       tagline: `Plans for aspiring cooks and seasoned chefs alike`,
-      content: `${APP_NAME} is free to use, but you can unlock the full potential of the platform with our Pro plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!`,
+      content: `${APP_NAME} is free to use, but you can unlock the full potential of the platform with our Blue plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!`,
     },
   },
   plans: PLANS,

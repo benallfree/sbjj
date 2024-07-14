@@ -21,7 +21,7 @@ export const FEATURES_MATRIX: FeatureLookup = {
   },
   'match-recipes': {
     title: `Match your pantry items with personal and community recipes`,
-    description: `You can search and view public community recipes with up to 3 ingredients as a Free user and unlimited ingredients as a Pro user.`,
+    description: `You can search and view public community recipes with up to 3 ingredients as a Free user and unlimited ingredients as a Blue user.`,
   },
   'discord-community': {
     title: `Discord community`,

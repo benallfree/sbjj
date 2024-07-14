@@ -1,5 +1,6 @@
 import splashImg from '$src/assets/img/splash.webp?enhanced'
 import {
+  faDollarSign,
   faHeartCircleCheck,
   faLightbulb,
   faListAlt,
@@ -78,6 +79,11 @@ export const LANDER = {
         icon: faListAlt,
         title: `Meal Planning`,
         content: `Add meals to your planning list and generate a shopping list for missing ingredients.`,
+      },
+      {
+        title: `Monetize Your Community`,
+        content: `Hubbardly Blue allows you to charge a subscription fee for your community`,
+        icon: faDollarSign,
       },
     ],
   },

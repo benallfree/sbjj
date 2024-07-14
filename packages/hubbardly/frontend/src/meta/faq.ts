@@ -55,6 +55,6 @@ export const FAQS = [
   },
   {
     question: `Post-launch: How do I get access to all community recipes?`,
-    answer: `Community recipes with three or fewer ingredients are available to all users. To get access to all community recipes, you need to subscribe to the Pro plan.`,
+    answer: `Community recipes with three or fewer ingredients are available to all users. To get access to all community recipes, you need to subscribe to the Blue plan.`,
   },
 ]
