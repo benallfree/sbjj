@@ -28,7 +28,7 @@
     }
     draft.plans.founder.bonusFeatures[`je-tee`] = {
       title: `#JE Exclusive#: #je4lyf tee shirt`,
-      description: `Get a limited edition #je4lyf tee shirt to show your support for the Thoughtful Journey podcast.`,
+      description: `Get a limited edition #je4lyf tee shirt to show your support for the Jamie Eatst.`,
     }
   })
 </script>

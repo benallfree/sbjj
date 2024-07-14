@@ -1,27 +1,27 @@
 <script lang="ts">
   import Lander from '$components/Lander.svelte'
   import { meta } from '$src/meta'
-  import splashImg from './splash.jpg?enhanced'
+  import splashImg from './splash.webp?enhanced'
   import Cta from './cta.svx'
-  import PricingCard from '$src/components/PricingCard.svelte'
   import { produce } from 'immer'
+  import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
+  import FaqSection from '$src/components/FAQSection.svelte'
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
     hero.title = `Welcome, Thoughtful Journey listeners`
     hero.splashImg = splashImg
-    hero.cta.text = `We've partnered with Hubbardly to create a special Founder's Edition just for TJ listeners. Purchase a #Hubbardly Founder's Edition: TJ Special# to help build the exclusive TJ Recipe Community on Hubbardly. You'll get a #lifetime membership# to Hubbardly with #TJ-exclusive bonuses#. This is rare, don't sleep on it!`
+    hero.cta.text = `We've partnered with Hubbardly to create a special Founder's Edition just for TJ listeners. Purchase a #Hubbardly Founder's Edition: TJ Special# to  get a #lifetime membership# to Hubbardly with #TJ-exclusive bonuses#. This is rare, don't sleep on it!`
     hero.cta.button.text = `Get Hubbardly Founder's Edition, TJ Special`
-    hero.cta.button.link = meta.plans.founder.checkoutUrl
-    draft.plans.founder.bonusFeatures.push(
-      `#TTJ Exclusive#: Access to private TJ community`,
-      `#TTJ Exclusive#: Unlimited access to private TJ recipes`,
-      `#TTJ Exclusive#: #tj4lyf tee shirt`,
-    )
+    hero.cta.button.link = 'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
+    draft.plans.founder.name = `Founder's Edition - TJ Special`
+    draft.plans.founder.checkoutUrl =
+      'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
+    draft.plans.founder.bonusFeatures[`je-tee`] = {
+      title: `#JE Exclusive#: #tj4lyf tee shirt`,
+      description: `Get a limited edition #tj4lyf tee shirt to show your support for the Thoughtful Journey podcast.`,
+    }
   })
-  const {
-    plans: { founder },
-  } = merged
 </script>
 
 <Lander meta={merged}>
@@ -30,8 +30,11 @@
       <Cta />
     </div>
   </div>
-  <div class="mb-4">
-    <PricingCard meta={merged} plan={'founder'} />
+  <div class="flex justify-center mb-4">
+    <PricingSheet meta={merged} />
+  </div>
+  <div class="flex justify-center mb-4">
+    <FaqSection faqs={merged.faqs} />
   </div>
 </Lander>
 
