@@ -8,3 +8,4 @@
 .svelte-kit
 dist
 *.tgz
+**/.secrets
