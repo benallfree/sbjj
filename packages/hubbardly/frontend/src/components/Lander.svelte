@@ -14,7 +14,7 @@
     <enhanced:img
       src={splashImg}
       alt="Hero splash"
-      class="rounded-lg mix-blend-lighten animated-hero-banner max-w-96"
+      class="rounded-lg mix-blend-lighten animated-hero-banner w-full max-w-96"
     />
   </div>
 </slot>
