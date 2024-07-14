@@ -11,14 +11,14 @@ import {
   faStar,
   faUsers,
 } from '@fortawesome/free-solid-svg-icons'
-import { PREMIUM_NAME } from './constants'
+import { APP_NAME, PREMIUM_NAME } from './constants'
 
 export const LANDER = {
   hero: {
     title: `Discover exclusive recipes from your favorite culinary creators`,
     splashImg,
     cta: {
-      text: `Join #communities# with and follow #creators# with exclusive #recipes# or create your own community on Hubbardly `,
+      text: `Join #communities# with and follow #creators# with exclusive #recipes# or create your own community on ${APP_NAME} `,
       button: {
         text: `Get Started`,
         link: `/pricing`,
@@ -30,7 +30,7 @@ export const LANDER = {
       {
         title: `Communities`,
         tagline: `Discover, Join, and Cook with Specialized Communities`,
-        content: `Hubbardly connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes.`,
+        content: `${APP_NAME} connects you with hundreds of specialized communities, each focused on specific culinary goals such as paleo, Mediterranean, decadent desserts, and more. Join these communities to discover how to make thousands of recipes.`,
         icon: faPeopleRoof,
         linkText: 'See what`s Cookin`',
         linkURL: `/pricing`,
