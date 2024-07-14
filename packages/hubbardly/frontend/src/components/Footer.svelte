@@ -5,7 +5,7 @@
 </script>
 
 <footer
-  class="footer bg-neutral text-neutral-content p-10 mt-10 flex space-x-4"
+  class="footer bg-neutral text-neutral-content p-10 mt-10 flex flex-col md:flex-row"
 >
   <nav>
     <h6 class="footer-title">Site</h6>
@@ -15,12 +15,8 @@
   </nav>
   <nav>
     <h6 class="footer-title">{meta.prelaunchLabel}</h6>
-    <a href="/kickstart-for-users" class="link link-hover"
-      >Kickstart info for Users</a
-    >
-    <a href="/kickstart-for-creators" class="link link-hover"
-      >Kickstart info for Creators</a
-    >
+    <a href="/kickstart-for-users" class="link link-hover">For Users</a>
+    <a href="/kickstart-for-creators" class="link link-hover">For Creators</a>
   </nav>
   <nav>
     <h6 class="footer-title">Legal</h6>
