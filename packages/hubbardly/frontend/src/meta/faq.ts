@@ -35,7 +35,7 @@ export const FAQS = [
   },
   {
     question: `What is the blue check mark?`,
-    answer: `The blue check mark is a badge of honor. It signifies that you are a premium user and have access to all Hubbardly features.`,
+    answer: `The blue check mark is a badge of honor. It signifies that you are a ${PREMIUM_NAME} member and have access to all ${APP_NAME} features.`,
   },
   {
     question: `What's your refund policy?`,
