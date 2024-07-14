@@ -12,8 +12,10 @@
   } = lander
 </script>
 
+<slot name="hero" />
+
 <div class="container mx-auto text-white flex items-center">
-  <div class="p-8 md:w-1/2">
+  <div class="m-4 md:w-1/2">
     <h1 class="md:text-6xl text-4xl font-bold mb-8">{title}</h1>
 
     <p class="text-2xl mb-12">
