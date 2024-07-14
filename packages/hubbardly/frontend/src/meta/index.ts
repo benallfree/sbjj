@@ -3,6 +3,7 @@ import { FAQS } from './faq'
 import { FEATURES_MATRIX } from './features'
 import { LANDER } from './lander'
 import { PLANS } from './plans'
+export * from './constants'
 
 export const meta = {
   repo: `https://github.com/benallfree/sbjj`,
