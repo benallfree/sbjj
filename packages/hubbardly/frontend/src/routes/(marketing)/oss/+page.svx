@@ -1,0 +1,50 @@
+<article class="prose lg:prose-xl">
+
+# Hubbardly's Commitment to Open Source
+
+At Hubbardly, we believe in the power of open source software to drive innovation and collaboration within the community. As part of our commitment to transparency and sharing, we have made all of our code available to the public under the MIT License. 
+
+## Open Source Philosophy
+
+Open source software promotes a collaborative approach to development, allowing developers from all over the world to contribute to projects, share insights, and improve code quality. By making our code open source, we aim to foster a community-driven environment where everyone can participate in the growth and improvement of Hubbardly.
+
+## Our Repository
+
+All the code for Hubbardly is hosted on GitHub. You can find it at the following link:
+
+[https://github.com/benallfree/sbjj](https://github.com/benallfree/sbjj)
+
+This repository contains all the essential components of Hubbardly, including our backend services, frontend applications, and various tools and utilities that make up the Hubbardly ecosystem.
+
+## MIT License
+
+Hubbardly is released under the MIT License, a permissive free software license that allows anyone to use, modify, and distribute the software with minimal restrictions. This aligns with our goal of making technology accessible and beneficial to everyone.
+
+### Key Points of the MIT License:
+
+- **Freedom to Use**: You are free to use the software for any purpose.
+- **Freedom to Modify**: You can modify the software to fit your needs.
+- **Freedom to Distribute**: You can distribute the software, either as-is or with modifications.
+- **Attribution**: The original authors must be credited in any distributed copies or substantial portions of the software.
+
+By adopting the MIT License, we ensure that our work remains free and accessible, encouraging innovation and collaboration within the open source community.
+
+## Get Involved
+
+We welcome contributions from developers of all skill levels. Whether you're interested in fixing bugs, adding new features, or improving documentation, your contributions are valuable to us.
+
+To get started, visit our GitHub repository: [https://github.com/benallfree/sbjj](https://github.com/benallfree/sbjj)
+
+### How to Contribute:
+
+1. **Fork the Repository**: Create your own copy of the repository by forking it.
+2. **Clone the Repository**: Clone the repository to your local machine.
+3. **Create a Branch**: Create a new branch for your changes.
+4. **Make Changes**: Implement your changes or additions.
+5. **Submit a Pull Request**: Submit a pull request for review.
+
+We are excited to see how the community will enhance and expand Hubbardly. Together, we can create an even more powerful and versatile platform.
+
+Thank you for supporting open source and being a part of the Hubbardly community!
+
+</article>
