@@ -1,4 +1,5 @@
 <script lang="ts">
+  import '$src/app.css'
   import { meta } from '$src/meta'
 </script>
 
