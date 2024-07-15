@@ -14,15 +14,25 @@ export type PocketbaseClientConfig = {}
 export type PocketbaseClient = ReturnType<typeof createPocketbaseClient>
 
 const createPocketbaseClient = (config: PocketbaseClientConfig) => {
-  const client = new PocketBase(meta.pocketbase.endpoint)
+  const pb = new PocketBase(meta.pocketbase.endpoint)
 
-  const { authStore } = client
+  const { authStore } = pb
 
   const user = () => authStore.model as AuthStoreProps['model']
 
   const isLoggedIn = () => authStore.isValid
 
-  const logOut = () => authStore.clear()
+  const logOut = () => {
+    return new Promise<void>((resolve) => {
+      const unsub = onAuthChange(() => {
+        if (!isLoggedIn()) {
+          unsub()
+          resolve()
+        }
+      })
+      authStore.clear()
+    })
+  }
 
   /**
    * This will register a new user into Pocketbase, and email them a
@@ -40,7 +50,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
     }
 
     // Create the user
-    const record = await client.collection('users').create(data)
+    const record = await pb.collection('users').create(data)
 
     // Send the verification email
     await resendVerificationEmail()
@@ -54,7 +64,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
    * @param token {string} The token from the verification email
    */
   const confirmVerification = async (token: string) => {
-    return await client.collection('users').confirmVerification(token)
+    return await pb.collection('users').confirmVerification(token)
   }
 
   /**
@@ -64,7 +74,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
    * @param email {string} The email of the user
    */
   const requestPasswordReset = async (email: string) => {
-    return await client.collection('users').requestPasswordReset(email)
+    return await pb.collection('users').requestPasswordReset(email)
   }
 
   /**
@@ -78,7 +88,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
     token: string,
     password: string,
   ) => {
-    return await client
+    return await pb
       .collection('users')
       .confirmPasswordReset(token, password, password)
   }
@@ -91,19 +101,19 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
    * @param {string} password The password of the user
    */
   const authViaEmail = async (email: string, password: string) => {
-    return await client.collection('users').authWithPassword(email, password)
+    return await pb.collection('users').authWithPassword(email, password)
   }
 
-  const refreshAuthToken = () => client.collection('users').authRefresh()
+  const refreshAuthToken = () => pb.collection('users').authRefresh()
 
   const resendVerificationEmail = async () => {
-    const user = client.authStore.model
+    const user = pb.authStore.model
     assertExists(user, `Login required`)
-    await client.collection('users').requestVerification(user.email)
+    await pb.collection('users').requestVerification(user.email)
   }
 
   const getAuthStoreProps = (): AuthStoreProps => {
-    const { isAdmin, model, token, isValid } = client.authStore
+    const { isAdmin, model, token, isValid } = pb.authStore
 
     if (isAdmin) throw new Error(`Admin models not supported`)
     if (model && !model.email)
@@ -124,8 +134,8 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
   /** This section is for initialization */
   {
     /** Listen for native authStore changes and convert to synthetic event */
-    client.authStore.onChange(() => {
-      fireAuthChange(client.authStore)
+    pb.authStore.onChange(() => {
+      fireAuthChange(pb.authStore)
     })
 
     /**
@@ -135,10 +145,10 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
      */
     refreshAuthToken()
       .catch((error) => {
-        client.authStore.clear()
+        pb.authStore.clear()
       })
       .finally(() => {
-        fireAuthChange(client.authStore)
+        fireAuthChange(pb.authStore)
       })
 
     /**
@@ -166,8 +176,20 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
     })
   }
 
+  const sendOtp = async (email: string) =>
+    pb.send(`/api/otp/auth`, { body: { email }, method: 'POST' })
+
+  const authViaOtp = async (email: string, code: number) => {
+    const res = await pb.send(`/api/otp/verify`, {
+      body: { email, code },
+      method: 'POST',
+    })
+    console.log({ res })
+    pb.authStore.save(res.token, res.record)
+  }
+
   return {
-    client,
+    authViaOtp,
     getAuthStoreProps,
     authViaEmail,
     createUser,
@@ -179,6 +201,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
     isLoggedIn,
     user,
     resendVerificationEmail,
+    sendOtp,
   }
 }
 
