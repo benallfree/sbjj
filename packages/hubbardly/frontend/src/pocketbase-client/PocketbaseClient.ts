@@ -1,6 +1,7 @@
 import { assertExists } from '$src/assert'
 import { createGenericSyncEvent } from '$src/events'
 import { meta } from '$src/meta'
+import { isUserLoggedIn } from '$src/stores'
 import PocketBase, { BaseAuthStore, type AuthModel } from 'pocketbase'
 
 export type AuthToken = string
@@ -31,6 +32,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
         }
       })
       authStore.clear()
+      isUserLoggedIn.set(false)
     })
   }
 
@@ -176,15 +178,14 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
     })
   }
 
-  const sendOtp = async (email: string) =>
-    pb.send(`/api/otp/auth`, { body: { email }, method: 'POST' })
+  const sendOtp = async (email: string, returnUrl: string) =>
+    pb.send(`/api/otp/auth`, { body: { email, returnUrl }, method: 'POST' })
 
   const authViaOtp = async (email: string, code: string) => {
     const res = await pb.send(`/api/otp/verify`, {
       body: { email, code },
       method: 'POST',
     })
-    console.log({ res })
     pb.authStore.save(res.token, res.record)
   }
 

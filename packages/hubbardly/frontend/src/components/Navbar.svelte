@@ -4,9 +4,12 @@
   import { PocketbaseClient } from '$src/pocketbase-client/PocketbaseClient'
   import UserLoggedOut from './UserLoggedOut.svelte'
   import AuthModal from '$src/components/AuthModal.svelte'
+  import Fa from 'svelte-fa'
+  import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 
   // Log the user out and redirect them to the homepage
   const handleLogoutAndRedirect = async () => {
+    console.log('Logging out')
     const { logOut } = PocketbaseClient()
 
     // Clear out the pocketbase information about the current user
@@ -16,8 +19,9 @@
     window.location.href = '/'
   }
 
-  const handleMobileNavDismiss = () => {
-    document.querySelector<HTMLElement>('.drawer-overlay')?.click()
+  const showModal = () => {
+    //@ts-ignore
+    document.getElementById('auth_modal')?.showModal()
   }
 </script>
 
@@ -26,35 +30,26 @@
   <div class="flex-1">
     <Logo />
   </div>
-  <UserLoggedIn>
-    <div class="flex-none">
-      <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img
-              alt="Avatar"
-              src="https://robohash.org/{PocketbaseClient().user()
-                ?.id}.png?set=set4"
-            />
-          </div>
-        </div>
-        <ul
-          class="menu menu-sm dropdown-content bg-neutral rounded-box z-[1] mt-3 w-52 p-2 shadow"
-        >
-          <li>
-            <a class="justify-between" href="/profile"> Profile </a>
-          </li>
-          <li>
-            <button on:click={() => PocketbaseClient().logOut()}>Logout</button>
-          </li>
-        </ul>
+  <UserLoggedIn fallback>
+    <div class="grid grid-flow-col gap-4">
+      <div class="avatar">
+        <a href="/profile" class="w-12 rounded-full">
+          <img
+            alt="Avatar"
+            src="https://robohash.org/{PocketbaseClient().user()
+              ?.id}.png?set=set4"
+          />
+        </a>
+      </div>
+      <div>
+        <button on:click={handleLogoutAndRedirect}>
+          <Fa icon={faSignOut} />
+        </button>
       </div>
     </div>
   </UserLoggedIn>
   <UserLoggedOut>
-    <button class="btn btn-xs btn-primary" onclick="my_modal_1.showModal()"
-      >Login</button
-    >
+    <button class="btn btn-sm btn-primary" on:click={showModal}>Login</button>
     <AuthModal />
   </UserLoggedOut>
 </div>

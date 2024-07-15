@@ -5,11 +5,11 @@
   import Empty from './Empty.svx'
 </script>
 
-<UserLoggedIn>
+<UserLoggedIn fallback>
   <article class="prose lg:prose-xl m-4">
     <Empty />
   </article>
 </UserLoggedIn>
-<UserLoggedOut>
+<UserLoggedOut fallback>
   <LoggedOutLander />
 </UserLoggedOut>

@@ -7,14 +7,18 @@ import { find } from '@s-libs/micro-dash'
 import type { UnsubscribeFunc } from 'pocketbase'
 import { PocketbaseClient } from './pocketbase-client/PocketbaseClient'
 
-const { onAuthChange } = PocketbaseClient()
+const { onAuthChange, isLoggedIn } = PocketbaseClient()
 
-export const isUserLegacy = writable(false)
+export const flash = writable<{
+  message: string
+  type: 'success' | 'error'
+} | null>(null)
+console.log(`isloggedin`, isLoggedIn())
 export const userSubscriptionType = writable<PlanSlug>(`free`)
-export const isUserLoggedIn = writable(false)
+export const isUserLoggedIn = writable(isLoggedIn())
 export const isUserFounder = writable(false)
 export const isUserVerified = writable(false)
-export const isAuthStateInitialized = writable(false)
+export const isAuthStateInitialized = writable(isLoggedIn())
 export const userStore = writable<UserFields | undefined>()
 /**
  * Listen for auth change events. When we get at least one, the auth state is

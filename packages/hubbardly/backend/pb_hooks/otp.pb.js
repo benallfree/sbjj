@@ -15,8 +15,10 @@ routerAdd('POST', '/api/otp/auth', (c) => {
     }
   })()
   const email = parsed.email?.trim()
+  const returnUrl = parsed.returnUrl?.trim()
 
   console.log(`email: ${email}  `)
+  console.log(`returnUrl: ${returnUrl}  `)
 
   const code = $security.randomStringWithAlphabet(6, `0123456789`)
   console.log(`otp: ${code}`)
@@ -50,8 +52,8 @@ routerAdd('POST', '/api/otp/auth', (c) => {
       name: $app.settings().meta.senderName,
     },
     to: [{ address: email }],
-    subject: `Your 6-digit login code`,
-    text: `Your 6-digit login code is: ${code}\n\nPlease enter this code in the app to continue.\n\nIf you didn't request this code, please ignore this email.`,
+    subject: `Your login link`,
+    text: `Your login code is: ${code}\n\nPlease enter this code in the app to continue. If you can't find it, hit 'login' again and then 'I have a code'.\n\nIf you didn't request this code, please ignore this email.`,
   })
 
   $app.newMailClient().send(message)
@@ -90,9 +92,11 @@ routerAdd('POST', '/api/otp/verify', (c) => {
     const created = record.created.time().unixMilli()
     const now = Date.now()
     console.log(`***now:${now}  created:${created}`)
-    if (now - created > 60000) {
+    if (now - created > 10 * 60 * 1000) {
+      // 10 minutes
       throw new BadRequestError(`Code expired`)
     }
+    // dao.deleteRecord(record)
   } catch (e) {
     console.error(`Error confirming otp: ${e}`)
     throw e

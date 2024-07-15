@@ -1,16 +1,18 @@
 <script lang="ts">
+  import { goto } from '$app/navigation'
   import { isAuthStateInitialized, isUserLoggedIn } from '$src/stores'
   import AuthStateGuard from './AuthStateGuard.svelte'
 
+  export let fallback = false
   export let redirect = false
   $: {
     if ($isAuthStateInitialized && redirect && !$isUserLoggedIn) {
-      window.location.href = '/'
+      goto('/')
     }
   }
 </script>
 
-<AuthStateGuard>
+<AuthStateGuard {fallback}>
   {#if $isUserLoggedIn}
     <slot />
   {/if}
