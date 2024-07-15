@@ -3,8 +3,6 @@
     const { publishDate } = meta
 </script>
 
-<article class="prose lg:prose-xl">
-
 # Affiliate Agreement
 
 **Effective Date: {publishDate}**
@@ -73,5 +71,3 @@ This Agreement will be governed by the laws of [Your Jurisdiction], without rega
 If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
 _{meta.name}_
-
-</article>

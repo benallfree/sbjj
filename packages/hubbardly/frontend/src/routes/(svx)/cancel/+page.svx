@@ -3,7 +3,6 @@
     const { publishDate } = meta
 </script>
 
-<article class="prose lg:prose-xl">
 
 # No Questions Asked Refund and Cancellation Policy
 
@@ -45,4 +44,4 @@ Thank you for being a part of the **{meta.name}** community. We appreciate your 
 
 _{meta.name}_
 
-</article>
+

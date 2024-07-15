@@ -3,7 +3,7 @@
 </script>
 
 
-<article class="prose lg:prose-xl">
+
 
 # Life as a Creator on {APP_NAME}
 
@@ -39,4 +39,3 @@ Payments are distributed 30 days after revenue has come in to account for any po
 
 By following these tips and actively engaging with your community, you can maximize your earnings and grow your influence on {APP_NAME}. We are excited to have you on board and look forward to seeing the amazing content you create!
 
-</article>

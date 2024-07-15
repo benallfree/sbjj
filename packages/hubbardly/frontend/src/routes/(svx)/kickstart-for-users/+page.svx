@@ -4,7 +4,7 @@
     const { publishDate ,prelaunchLabel } = meta
 </script>
 
-<article class="prose lg:prose-xl">
+
 
 # {APP_NAME} {prelaunchLabel} Mode
 
@@ -42,4 +42,4 @@ If you have questions or comments about this policy, you may contact us at [our 
 
 _{meta.name}_
 
-</article>
+

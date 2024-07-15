@@ -2,7 +2,7 @@
     import {meta, APP_NAME} from '$src/meta'
 </script>
 
-<article class="prose lg:prose-xl">
+
 
 # {APP_NAME}'s Commitment to Open Source
 
@@ -51,4 +51,3 @@ We are excited to see how the community will enhance and expand {APP_NAME}. Toge
 
 Thank you for supporting open source and being a part of the {APP_NAME} community!
 
-</article>
