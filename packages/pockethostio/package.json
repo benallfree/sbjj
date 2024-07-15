@@ -1,0 +1,25 @@
+{
+  "name": "pockethostio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2"
+  },
+  "dependencies": {
+    "@microsoft/fetch-event-source": "https://github.com/pockethost/fetch-event-source.git#ebe3b7122647b48b93fd11effbbfb915d98956b0",
+    "@s-libs/micro-dash": "^18.0.0",
+    "basic-ftp": "^5.0.5",
+    "chokidar": "^3.6.0",
+    "commander": "^12.1.0",
+    "pocketbase": "^0.21.3",
+    "pockethost": "^1.7.0"
+  }
+}
