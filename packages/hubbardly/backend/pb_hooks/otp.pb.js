@@ -91,7 +91,7 @@ routerAdd('POST', '/api/otp/verify', (c) => {
     const now = Date.now()
     console.log(`***now:${now}  created:${created}`)
     if (now - created > 60000) {
-      //   throw new BadRequestError(`Code expired`)
+      throw new BadRequestError(`Code expired`)
     }
   } catch (e) {
     console.error(`Error confirming otp: ${e}`)
