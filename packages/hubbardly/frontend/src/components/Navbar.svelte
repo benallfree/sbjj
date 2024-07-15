@@ -3,8 +3,7 @@
   import UserLoggedIn from './UserLoggedIn.svelte'
   import { PocketbaseClient } from '$src/pocketbase-client/PocketbaseClient'
   import UserLoggedOut from './UserLoggedOut.svelte'
-  import { meta } from '$src/meta'
-  import AlertBar from './AlertBar.svelte'
+  import AuthModal from '$src/components/AuthModal.svelte'
 
   // Log the user out and redirect them to the homepage
   const handleLogoutAndRedirect = async () => {
@@ -33,28 +32,29 @@
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
             <img
-              alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              alt="Avatar"
+              src="https://robohash.org/{PocketbaseClient().user()
+                ?.id}.png?set=set4"
             />
           </div>
         </div>
         <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          class="menu menu-sm dropdown-content bg-neutral rounded-box z-[1] mt-3 w-52 p-2 shadow"
         >
           <li>
-            <a class="justify-between">
-              Profile
-              <span class="badge">New</span>
-            </a>
+            <a class="justify-between" href="/profile"> Profile </a>
           </li>
-          <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li>
+            <button on:click={() => PocketbaseClient().logOut()}>Logout</button>
+          </li>
         </ul>
       </div>
     </div>
   </UserLoggedIn>
   <UserLoggedOut>
-    <!-- <a href="/login" class="btn btn-xs btn-primary">Login</a> -->
+    <button class="btn btn-xs btn-primary" onclick="my_modal_1.showModal()"
+      >Login</button
+    >
+    <AuthModal />
   </UserLoggedOut>
 </div>

@@ -179,7 +179,7 @@ const createPocketbaseClient = (config: PocketbaseClientConfig) => {
   const sendOtp = async (email: string) =>
     pb.send(`/api/otp/auth`, { body: { email }, method: 'POST' })
 
-  const authViaOtp = async (email: string, code: number) => {
+  const authViaOtp = async (email: string, code: string) => {
     const res = await pb.send(`/api/otp/verify`, {
       body: { email, code },
       method: 'POST',

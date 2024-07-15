@@ -5,7 +5,6 @@
 
 <div>
   <Navbar />
-  <VerifyAccountBar />
 
   <slot />
 </div>

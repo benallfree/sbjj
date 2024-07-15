@@ -9,12 +9,27 @@
   import Fa from 'svelte-fa'
   import type { KeyboardEventHandler } from 'svelte/elements'
 
-  let email = 'ben@benallfree.com'
-  let code = '335584'
-  let otpSent = true
+  let email = ''
+  let code = ''
+  let otpSent = false
   let verifying = false
   let error = ''
-  $: console.log(email)
+  $: {
+    console.log({ code }, code?.length)
+    if (code?.length === 6) {
+      error = ''
+      verifying = true
+      const { authViaOtp } = PocketbaseClient()
+      authViaOtp(email, code)
+        .catch((e) => {
+          error = e.message
+          console.error(e)
+        })
+        .finally(() => {
+          verifying = false
+        })
+    }
+  }
 
   const startOver = () => {
     otpSent = false
@@ -29,20 +44,6 @@
       const { sendOtp } = PocketbaseClient()
       sendOtp(email).catch(console.error)
     }
-  }
-
-  const handleKeydownCode: KeyboardEventHandler<HTMLInputElement> = (event) => {
-    if (code?.length != 6) return
-    verifying = true
-    const { authViaOtp } = PocketbaseClient()
-    authViaOtp(email, parseInt(code, 10))
-      .catch((e) => {
-        error = e.message
-        console.error(e)
-      })
-      .finally(() => {
-        verifying = false
-      })
   }
 </script>
 
@@ -59,10 +60,9 @@
         <label class="input input-bordered flex items-center gap-2">
           <Fa icon={faRightToBracket} />
           <input
-            type="number"
+            type="text"
             maxlength="6"
             bind:value={code}
-            on:keydown={handleKeydownCode}
             class="grow"
             placeholder="Verification code from email"
           />
@@ -77,15 +77,12 @@
           bind:value={email}
           on:keydown={handleKeydown}
           class="grow"
-          placeholder="Search"
+          placeholder="Log in using your email address"
         />
       </label>
     {/if}
   </div>
 </UserLoggedOut>
-<UserLoggedIn
-  >Logged in
-  <button class="btn btn-primary" on:click={() => PocketbaseClient().logOut()}
-    >Log out</button
-  >
+<UserLoggedIn>
+  <slot />
 </UserLoggedIn>

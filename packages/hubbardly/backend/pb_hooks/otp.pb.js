@@ -83,7 +83,7 @@ routerAdd('POST', '/api/otp/verify', (c) => {
 
   try {
     const record = dao.findFirstRecordByData('otp', 'email', email)
-    const storedCode = record.getInt(`code`)
+    const storedCode = record.getString(`code`)
     if (storedCode !== code) {
       throw new BadRequestError(`Invalid code`)
     }
