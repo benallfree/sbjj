@@ -158,6 +158,9 @@ importers:
       basic-ftp:
         specifier: ^5.0.5
         version: 5.0.5
+      bottleneck:
+        specifier: ^2.19.5
+        version: 2.19.5
       chokidar:
         specifier: ^3.6.0
         version: 3.6.0

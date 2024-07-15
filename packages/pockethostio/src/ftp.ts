@@ -1,4 +1,5 @@
 import * as ftp from 'basic-ftp'
+import Bottleneck from 'bottleneck'
 import * as chokidar from 'chokidar'
 
 export interface Config {
@@ -11,6 +12,7 @@ export interface Config {
   port: number
 }
 
+const limiter = new Bottleneck({ maxConcurrent: 1 })
 export const createWatcher = (config: Config) => {
   async function uploadFile(
     client: ftp.Client,
@@ -42,8 +44,9 @@ export const createWatcher = (config: Config) => {
       const relativePath = path.replace(config.localPath, '')
       const remotePath = `${config.remotePath}${relativePath}`
 
+      console.log({ event })
       if (event === 'add' || event === 'change') {
-        uploadFile(client, path, remotePath)
+        limiter.schedule(() => uploadFile(client, path, remotePath))
       }
     })
 }
