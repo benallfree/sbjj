@@ -1,4 +1,3 @@
-import { fetchEventSource } from '@microsoft/fetch-event-source'
 import { keys, map } from '@s-libs/micro-dash'
 import PocketBase, {
   AuthModel,
@@ -9,7 +8,6 @@ import {
   assertExists,
   type InstanceFields,
   type InstanceId,
-  type InstanceLogFields,
 } from 'pockethost/common'
 import { createGenericSyncEvent } from './events'
 
@@ -184,80 +182,10 @@ export const createPocketbaseClient = (config: PocketbaseClientConfig) => {
       .finally(() => {
         fireAuthChange(client.authStore)
       })
-
-    /**
-     * Listen for auth state changes and subscribe to realtime _user events.
-     * This way, when the verified flag is flipped, it will appear that the
-     * authstore model is updated.
-     *
-     * Polling is a stopgap til v.0.8. Once 0.8 comes along, we can do a
-     * realtime watch on the user record and update auth accordingly.
-     */
-    const unsub = onAuthChange((authStore) => {
-      const { model, isAdmin } = authStore
-      if (!model) return
-      if (isAdmin) return
-      if (model.verified) {
-        unsub()
-        return
-      }
-      setTimeout(refreshAuthToken, 1000)
-
-      // TODO - THIS DOES NOT WORK, WE HAVE TO POLL INSTEAD. FIX IN V0.8
-      // unsub = subscribe<User>(`users/${model.id}`, (user) => {
-      //   fireAuthChange({ ...authStore, model: user })
-      // })
-    })
-  }
-
-  const watchInstanceLog = (
-    instance: InstanceFields,
-    update: (log: InstanceLogFields) => void,
-    nInitial = 100,
-  ): (() => void) => {
-    const auth = client.authStore.exportToCookie()
-
-    const controller = new AbortController()
-    const signal = controller.signal
-    const continuallyFetchFromEventSource = () => {
-      const url = `https://hubbardly.pockethost.io/logs`
-
-      fetchEventSource(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: client.authStore.token,
-        },
-        openWhenHidden: true,
-        body: JSON.stringify({
-          instanceId: instance.id,
-          n: nInitial,
-          auth,
-        }),
-        onmessage: (event) => {
-          const {} = event
-          const log = JSON.parse(event.data) as InstanceLogFields
-
-          update(log)
-        },
-        onopen: async (response) => {},
-        onerror: (e) => {},
-        onclose: () => {
-          setTimeout(continuallyFetchFromEventSource, 100)
-        },
-        signal,
-      })
-    }
-    continuallyFetchFromEventSource()
-
-    return () => {
-      controller.abort()
-    }
   }
 
   return {
     client,
-    watchInstanceLog,
     getAuthStoreProps,
     parseError,
     getInstanceById,
