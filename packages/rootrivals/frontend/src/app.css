@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section-heading {
+  @apply flex flex-row justify-between gap-x-2 p-3 border-solid border-2 bg-neutral border-neutral rounded-t-lg border-b-0;
+}

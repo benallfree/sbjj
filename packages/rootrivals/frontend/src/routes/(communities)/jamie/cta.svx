@@ -1,0 +1,25 @@
+<script lang="ts">
+    import {APP_NAME} from '$src/meta'
+</script>
+
+## A personal message from Jamie Eats
+
+**I'm thrilled to introduce you to {APP_NAME}!**
+
+As a valued member of the Jamie Eats community, you have the exclusive opportunity to join our Founder's Series with a lifetime membership to {APP_NAME}, an innovative app designed to transform your pantry into a hub of culinary creativity.
+
+With this special access, you'll enjoy:
+
+- **Exclusive Jamie Eats Recipes**: Access my personal collection of unique and delicious recipes.
+- **Live Cooking Sessions**: Participate in live cooking sessions with me and other community members.
+- **Community Challenges**: Join exciting cooking challenges and showcase your culinary skills.
+- **Direct Interaction**: Connect with me and other food enthusiasts directly through our community forum.
+- **Special Ingredient Tips**: Get insider tips on how to use ingredients creatively and efficiently.
+
+Don't miss out on this chance to be part of something extraordinary. Join the Founder's Series today and revolutionize the way you manage your kitchen!
+
+**Sign up for {APP_NAME} and embark on your culinary adventure now!**
+
+*Sincerely,*
+
+~Jamie Eats
