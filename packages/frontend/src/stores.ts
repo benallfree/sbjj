@@ -13,7 +13,6 @@ export const flash = writable<{
   message: string
   type: 'success' | 'error'
 } | null>(null)
-console.log(`isloggedin`, isLoggedIn())
 export const userSubscriptionType = writable<PlanSlug>(`free`)
 export const isUserLoggedIn = writable(isLoggedIn())
 export const isUserFounder = writable(false)
