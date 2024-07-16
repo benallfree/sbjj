@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tail:hubbardly": "tsx --watch packages/pockethostio/src/index.ts tail ./.secrets/hubbardly-ftp.json",
-    "watch:hubbardly": "tsx --watch packages/pockethostio/src/index.ts watch ./.secrets/hubbardly-ftp.json"
+    "watch": "tsx --watch packages/pockethostio/src/index.ts watch ./.secrets/hubbardly.json"
   },
   "private": true,
   "keywords": [],
