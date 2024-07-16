@@ -1,4 +1,4 @@
-import { APP_NAME, PRELAUNCH_NAME } from './constants'
+import { APP_NAME, PRELAUNCH_NAME, PREMIUM_NAME } from './constants'
 import { FAQS } from './faq'
 import { FEATURES_MATRIX } from './features'
 import { LANDER } from './lander'
@@ -7,18 +7,18 @@ export * from './constants'
 
 export const meta = {
   repo: `https://github.com/benallfree/sbjj`,
-  publishDate: `7/12/2024`,
+  publishDate: `7/15/2024`,
   name: APP_NAME,
   prelaunch: true,
   prelaunchLabel: PRELAUNCH_NAME,
-  description: `Discover exclusive recipes from your favorite culinary creators.`,
+  description: `Plant, grow, win!`,
   support: {
     discord: {
-      url: `https://discord.gg/9X2T6Gcg5G`,
+      url: `https://discord.gg/8hPftRZhRN`,
     },
   },
   pocketbase: {
-    endpoint: `https://hubbardly.pockethost.io`,
+    endpoint: `https://rootrivals.pockethost.io`,
   },
   gpdr: {
     cookie: { name: `${APP_NAME}-gpdr` },
@@ -29,8 +29,8 @@ export const meta = {
     lander: LANDER,
     pricing: {
       title: `Pricing`,
-      tagline: `Plans for aspiring cooks and seasoned chefs alike`,
-      content: `${APP_NAME} is free to use, but you can unlock the full potential of the platform with our Blue plan. Get access to all community recipes and match with your pantry items.  Join our thriving community of makers, we are waiting for you in Discord!`,
+      tagline: `Plans for aspiring growers and seasoned gardeners.`,
+      content: `${APP_NAME} is free to use, but you can unlock the full potential with ${PREMIUM_NAME}.`,
     },
   },
   plans: PLANS,
