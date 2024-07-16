@@ -1,8 +1,8 @@
 <script lang="ts">
-  import {PRELAUNCH_NAME, FOUNDERS_NAME} from '$src/meta'
+  import {APP_NAME, PRELAUNCH_NAME, FOUNDERS_NAME} from '$src/meta'
   </script>
 
-# Hubbardly is in {PRELAUNCH_NAME}
+# {APP_NAME} is in {PRELAUNCH_NAME}
 
 When we begin implementing features, this is where you will see your communities, interact with creators, and search for recipes you love.
 

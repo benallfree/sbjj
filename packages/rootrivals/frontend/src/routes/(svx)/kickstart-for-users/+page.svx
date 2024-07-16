@@ -8,7 +8,7 @@
 
 # {APP_NAME} {prelaunchLabel} Mode
 
-Welcome to {meta.name}'s {prelaunchLabel} mode! Here's what it means for you:
+Welcome to {meta.name} {prelaunchLabel} mode! Here's what it means for you:
 
 ## {FOUNDERS_NAME} Lifetime Memberships
 
