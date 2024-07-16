@@ -13,7 +13,6 @@ export const flash = writable<{
   message: string
   type: 'success' | 'error'
 } | null>(null)
-console.log(`isloggedin`, isLoggedIn())
 export const userSubscriptionType = writable<PlanSlug>(`free`)
 export const isUserLoggedIn = writable(isLoggedIn())
 export const isUserFounder = writable(false)
@@ -25,12 +24,14 @@ export const userStore = writable<UserFields | undefined>()
  * initialized.
  */
 onAuthChange((authStoreProps) => {
+  console.log(`authStoreProps`, authStoreProps)
   const isLoggedIn = authStoreProps.isValid
   isUserLoggedIn.set(isLoggedIn)
   userStore.set(isLoggedIn ? (authStoreProps.model as UserFields) : undefined)
   isAuthStateInitialized.set(true)
 })
 
+console.log(`again`)
 userStore.subscribe((user) => {
   userSubscriptionType.set(
     (user?.subscription || find(meta.plans, (v, k) => v.isDefault)) as PlanSlug,
