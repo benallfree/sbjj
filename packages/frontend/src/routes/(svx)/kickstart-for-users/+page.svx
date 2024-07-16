@@ -1,0 +1,45 @@
+<script lang="ts">
+    import { meta ,APP_NAME,FOUNDERS_NAME } from '$src/meta'
+    
+    const { publishDate ,prelaunchLabel } = meta
+</script>
+
+
+
+# {APP_NAME} {prelaunchLabel} Mode
+
+Welcome to {meta.name} {prelaunchLabel} mode! Here's what it means for you:
+
+## {FOUNDERS_NAME} Lifetime Memberships
+
+We are currently offering [{FOUNDERS_NAME} lifetime memberships](/pricing). This special offer is available during our {prelaunchLabel} phase, where you can support the development of {meta.name} and get exclusive benefits.
+
+## Funding Goals and Implementation
+
+During the {prelaunchLabel} period, we are focused on reaching sufficient funding goals. We will not be implementing any features until these goals are met. Your support is crucial to bring {meta.name} to life!
+
+## 90-Day {prelaunchLabel} Period
+
+The {prelaunchLabel} phase lasts for 90 days. During this time:
+- Your {FOUNDERS_NAME} purchase is fully refundable at any time, with no questions asked (see [Cancellation Policy](/cancel)).
+- At the end of the 90 days, we will evaluate whether to proceed with the project or refund everyone's money and cancel it.
+
+## Post-{prelaunchLabel} Period
+
+If we decide to proceed with the project after the initial 90 days:
+- You will have another 90 days to try out {meta.name}.
+- During this period, you can still [request a refund](/cancel) for any reason with no questions asked.
+
+## Our Commitment to You
+
+At {meta.name}, we are building great things with your help. Join our thriving Discord community to lend your voice to the conversation.
+
+Become a part of the {meta.name} community by supporting our {prelaunchLabel} campaign. Your support helps us create a better experience for everyone!
+
+Thank you for being a part of {meta.name}'s growth and success!
+
+If you have questions or comments about this policy, you may contact us at [our support page](/support).
+
+_{meta.name}_
+
+

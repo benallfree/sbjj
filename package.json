@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "tail:hubbardly": "tsx --watch packages/pockethostio/src/index.ts tail ./.secrets/hubbardly.json",
-    "watch:hubbardly": "tsx --watch packages/pockethostio/src/index.ts watch ./.secrets/hubbardly.json",
-    "watch:rootrivals": "tsx --watch packages/pockethostio/src/index.ts watch ./.secrets/rootrivals.json"
+    "watch": "tsx --watch packages/pockethostio/src/index.ts watch ./.secrets/rootrivals.json"
   },
   "private": true,
   "keywords": [],

@@ -1,0 +1,41 @@
+<script lang="ts">
+    import {APP_NAME} from '$src/meta'
+</script>
+
+
+
+
+# Life as a Creator on {APP_NAME}
+
+Creators are the lifeblood of {APP_NAME}. Your recipes, tutorials, and insights are what make our platform unique and valuable. As a creator, you have the opportunity to build a loyal community, earn money through memberships and affiliate commissions, and share your knowledge with the world.
+
+## Ways to Earn on {APP_NAME}
+
+### Recipe Streams
+
+Each month, we allocate a portion of our site profits to a creator profit sharing pool. This pool is distributed among creators based on the value and popularity of their content relative to others. The more valuable your content, the larger your share of the pool. Our system is transparent, and everything is [open source](/oss), so you can see how the profits are calculated and distributed.
+
+### Affiliate Commission
+
+When new users sign up for a paid membership through your community page, you earn an affiliate commission from our [affiliate system](/affiliates). This is a great way to monetize your influence and ensure that your community supports you directly. Make sure your audience knows to visit your landing page ({APP_NAME}.com/yourpage) and sign up to help you earn commissions.
+
+## Payment Distribution
+
+Payments are distributed 30 days after revenue has come in to account for any potential refunds. If profits for a certain month change after payouts have been made, such as late refunds, it may be reflected as an adjustment to a future payout. We typically won't ask for funds to be returned once they have been paid out, unless there has been a significant accounting error.
+
+## Tips for Success
+
+1. **Promote Your Landing Page**: Make sure your audience is aware of your landing page ({APP_NAME}.com/yourpage) and encourage them to sign up through your page. Let them know that by signing up this way, they are supporting you directly through the signup commission.
+   
+2. **Frequent Recipe Posting**: Keep your community engaged by posting recipes frequently. Fresh content keeps your audience coming back for more.
+
+3. **Engage with Your Community**: Be responsive to comments and feedback from your community members. Engaging with your audience builds a loyal community and encourages more interaction.
+
+4. **Moderate Your Community**: Remove troublesome community members quickly. Maintaining a positive environment is crucial for a thriving community.
+
+5. **Share on Social Media**: Promote your new recipes on social media. These recipes will be behind your paywall, encouraging users to get a paid account to access them.
+
+6. **Offer Free Recipes**: Occasionally offer a few free recipes. These are visible to non-community members and help potential members assess whether they would like to join your community.
+
+By following these tips and actively engaging with your community, you can maximize your earnings and grow your influence on {APP_NAME}. We are excited to have you on board and look forward to seeing the amazing content you create!
+

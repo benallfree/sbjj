@@ -1,0 +1,24 @@
+<script lang="ts">
+    import {APP_NAME} from '$src/meta'
+</script>
+
+## A personal message from TJ
+
+**We're thrilled to introduce you to {APP_NAME}!**
+
+As a valued listener, you have the exclusive opportunity to join our Founder's Series with a lifetime membership to {APP_NAME}, an innovative app designed to transform your pantry into a hub of culinary creativity.
+
+With this special access, you'll enjoy:
+
+- **Effortless Pantry Organization**: Keep track of your ingredients with ease.
+- **Personalized Recipe Suggestions**: Discover delicious meals you can make with what you already have.
+- **Food Waste Reduction Tips**: Learn how to make the most of your ingredients.
+- **A Community of Culinary Enthusiasts**: Connect with fellow food lovers and share your creations.
+
+Don't miss out on this chance to be part of something extraordinary. Join the Founder's Series today and revolutionize the way you manage your kitchen!
+
+**Sign up for {APP_NAME} and embark on your culinary adventure now!**
+
+*Sincerely,*
+
+~TJ

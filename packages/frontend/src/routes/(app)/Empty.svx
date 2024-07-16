@@ -1,0 +1,11 @@
+<script lang="ts">
+  import {APP_NAME, PRELAUNCH_NAME, FOUNDERS_NAME} from '$src/meta'
+  </script>
+
+# {APP_NAME} is in {PRELAUNCH_NAME}
+
+When we begin implementing features, this is where you will see your communities, interact with creators, and search for recipes you love.
+
+Sit tight. You're already on the mailing list.
+
+Have you gotten your [{FOUNDERS_NAME}](/pricing) yet?
