@@ -14,9 +14,9 @@ export type AuthStoreProps = {
 export type PocketbaseClientConfig = {}
 export type PocketbaseClient = ReturnType<typeof createPocketbaseClient>
 
-const createPocketbaseClient = (config: PocketbaseClientConfig) => {
-  const pb = new PocketBase(meta.pocketbase.endpoint)
+export const pb = new PocketBase(meta.pocketbase.endpoint)
 
+const createPocketbaseClient = (config: PocketbaseClientConfig) => {
   const { authStore } = pb
 
   const user = () => authStore.model as AuthStoreProps['model']
