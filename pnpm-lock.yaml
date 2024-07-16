@@ -24,7 +24,7 @@ importers:
         specifier: ^5.5.3
         version: 5.5.3
 
-  packages/hubbardly/frontend:
+  packages/frontend:
     devDependencies:
       '@beyonk/gdpr-cookie-consent-banner':
         specifier: ^12.1.4
