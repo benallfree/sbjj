@@ -45,7 +45,7 @@ export const PLANS = {
     name: FOUNDERS_NAME,
     price: `299 once, use forever`,
     slug: `founder`,
-    checkoutUrl: `https://${APP_NAME}.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
+    checkoutUrl: `https://hubbardly.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306`,
     summary: `What an absolute Chad! You're in ${APP_NAME} for life!`,
     description: `Super elite! ${APP_NAME} for life. The ${FOUNDERS_NAME} is our way of saying thanks for supporting ${APP_NAME} in these early days. These are rare, so get them while they last!`,
     qtyMax: 500,
