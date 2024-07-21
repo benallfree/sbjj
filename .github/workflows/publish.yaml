@@ -3,7 +3,7 @@ name: Cornage
 on:
   push:
     branches:
-      - '${{ env.PROJECT_NAME }}/*'
+      - 'cornage/*'
   pull_request:
   workflow_dispatch:
     inputs:
