@@ -2,16 +2,7 @@ import * as ftp from 'basic-ftp'
 import Bottleneck from 'bottleneck'
 import * as chokidar from 'chokidar'
 import { join } from 'path'
-
-export interface Config {
-  instanceId: string
-  localPath: string
-  remotePath: string
-  username: string
-  password: string
-  host: string
-  port: number
-}
+import { Config } from './Config'
 
 const limiter = new Bottleneck({ maxConcurrent: 1 })
 export const createWatcher = async (config: Config) => {

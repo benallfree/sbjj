@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { meta, type PlanSlug } from '$src/meta'
+  import { meta } from '$meta'
   import { userSubscriptionType } from '$store/user'
 
   export let handleClick: any = () => {}
 
+  type PlanSlug = keyof typeof meta.plans
   let type: PlanSlug
   $: type = $userSubscriptionType as PlanSlug
   $: plan = meta.plans[type]

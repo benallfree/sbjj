@@ -1,13 +1,11 @@
 <script lang="ts">
   import '$src/app.css'
-  import { meta } from '$src/meta'
+  import { createMetaContext, type MetaContext } from '$store/MetaContext'
+  import { setContext } from 'svelte'
+  import Prelaunch from './Prelaunch.svelte'
+
+  setContext<MetaContext>(`meta`, createMetaContext())
 </script>
 
-{#if meta.prelaunch}
-  <div class="bg-warning text-neutral p-2">
-    {meta.name} is in {meta.prelaunchLabel} mode.
-    <a class="link link-neutral" href="/for-users">read more</a>
-  </div>
-{/if}
-
+<Prelaunch />
 <slot />

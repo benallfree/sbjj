@@ -1,70 +1,43 @@
 <script lang="ts">
-  import Fa from 'svelte-fa'
+  import { formatNumber, greenify } from '$src/util'
+  import type { MetaContext } from '$store/MetaContext'
   import {
     faChampagneGlasses,
     faClockFour,
   } from '@fortawesome/free-solid-svg-icons'
+  import { values } from '@s-libs/micro-dash'
+  import { getContext } from 'svelte'
+  import Fa from 'svelte-fa'
   import ListItem from './ListItem.svelte'
   import PricingTier from './PricingTier.svelte'
-  import type { Meta } from '$src/meta'
-  import { formatNumber, greenify } from '$src/util'
-  import { reduce, values } from '@s-libs/micro-dash'
-  import { FEATURES_MATRIX, type FeatureLookup } from '$src/meta/features'
 
-  export let meta: Meta
+  const { state: metaState } = getContext<MetaContext>('meta')
 
-  const coreFeatures = reduce(
-    FEATURES_MATRIX,
-    (acc, feature, slug) => {
-      if (feature.isPremium) return acc
-      if (feature.isStretch) return acc
-      acc[slug] = feature
-      return acc
-    },
-    {} as FeatureLookup,
-  )
-  const coreStretchFeatures = reduce(
-    FEATURES_MATRIX,
-    (acc, feature, slug) => {
-      if (feature.isPremium) return acc
-      if (!feature.isStretch) return acc
-      acc[slug] = feature
-      return acc
-    },
-    {} as FeatureLookup,
-  )
+  $: ({ plans, features } = $metaState)
 
-  const premiumFeatures = reduce(
-    FEATURES_MATRIX,
-    (acc, feature, slug) => {
-      if (!feature.isPremium) return acc
-      if (feature.isStretch) return acc
-      acc[slug] = feature
-      return acc
-    },
-    {} as FeatureLookup,
-  )
-
-  const premiumStretchFeatures = reduce(
-    FEATURES_MATRIX,
-    (acc, feature, slug) => {
-      if (!feature.isPremium) return acc
-      if (!feature.isStretch) return acc
-      acc[slug] = feature
-      return acc
-    },
-    {} as FeatureLookup,
-  )
+  $: ({
+    coreFeatures,
+    coreStretchFeatures,
+    premiumFeatures,
+    premiumStretchFeatures,
+  } = {
+    coreFeatures: features.filter(
+      (feature) => !feature.isPremium && !feature.isStretch,
+    ),
+    coreStretchFeatures: features.filter(
+      (feature) => !feature.isPremium && feature.isStretch,
+    ),
+    premiumFeatures: features.filter(
+      (feature) => feature.isPremium && !feature.isStretch,
+    ),
+    premiumStretchFeatures: features.filter(
+      (feature) => feature.isPremium && feature.isStretch,
+    ),
+  })
 </script>
 
 <div class="flex flex-col lg:flex-row gap-x-2">
-  <PricingTier
-    {meta}
-    disabled
-    title={meta.plans.free.name}
-    subscribeText="Join"
-    subscribeLink=""
-  >
+  <PricingTier disabled plan={'free'}>
     {#each Object.values(coreFeatures) as feature}
       <ListItem>{feature.title}</ListItem>
     {/each}
@@ -81,13 +54,7 @@
     {/if}
   </PricingTier>
 
-  <PricingTier
-    {meta}
-    disabled
-    title={meta.plans.annual.name}
-    subscribeText={meta.plans.annual.price}
-    subscribeLink={meta.plans.annual.checkoutUrl}
-  >
+  <PricingTier disabled plan={'annual'}>
     <div class="italic text-accent">Everything in Free, plus:</div>
     {#each Object.values(premiumFeatures) as feature}
       <ListItem>{feature.title}</ListItem>
@@ -106,12 +73,7 @@
     {/if}
   </PricingTier>
 
-  <PricingTier
-    {meta}
-    title={meta.plans.founder.name}
-    subscribeText={meta.plans.founder.price}
-    subscribeLink={meta.plans.founder.checkoutUrl}
-  >
+  <PricingTier plan={'founder'}>
     <ListItem>
       <Fa icon={faClockFour} class="mt-1 mr-1" />
       <span
@@ -120,8 +82,8 @@
       >
     </ListItem>
     <div class="italic text-accent">Everything in Blue, plus:</div>
-    {#if meta.plans.founder.bonusFeatures}
-      {#each Object.values(meta.plans.founder.bonusFeatures) as { title, description }}
+    {#if plans.founder.bonusFeatures}
+      {#each Object.values(plans.founder.bonusFeatures) as { title, description }}
         <ListItem><div>{@html greenify(title)}</div></ListItem>
       {/each}
     {/if}

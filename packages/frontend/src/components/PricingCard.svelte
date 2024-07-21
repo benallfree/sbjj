@@ -1,21 +1,19 @@
 <script lang="ts">
+  import type { Feature } from '$meta/types'
+  import { type Meta } from '$src/meta'
+  import { formatNumber } from '$src/util'
   import {
     faChampagneGlasses,
     faCheck,
     faClockFour,
     faLock,
-    faWineBottle,
     faXmark,
   } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
-  import PricingCardDivButton from './PricingCardDivButton.svelte'
   import PricingCardAnchorButton from './PricingCardAnchorButton.svelte'
-  import { type Meta, type PlanSlug } from '$src/meta'
-  import { produce } from 'immer'
-  import { forEach, values } from '@s-libs/micro-dash'
-  import type { Feature, FeatureLookup } from '$src/meta/features'
-  import { formatNumber, greenify } from '$src/util'
+  import PricingCardDivButton from './PricingCardDivButton.svelte'
 
+  type PlanSlug = keyof Meta['plans']
   export let meta: Meta
   export let plan: PlanSlug
   export let qtySold = 0
@@ -37,16 +35,10 @@
 
   const qtyRemaining = qtyMax - qtySold
 
-  const mappedFeatures = Object.entries(
-    produce(meta.features, (draft) => {
-      forEach(bonusFeatures as FeatureLookup, (feature, k) => {
-        draft[k] = produce(feature, (draftFeature) => {
-          draftFeature.title = greenify(draftFeature.title)
-        })
-      })
-    }),
-  )
-    .sort(([keyA, featureA], [keyB, featureB]) => {
+  type FeatureLookup = { [_ in keyof Meta['features']]: Meta['features'][_] }
+
+  const mappedFeatures = ([...meta.features, bonusFeatures] as Feature[]).sort(
+    (featureA, featureB) => {
       if (featureA.isStretch && !featureB.isStretch) {
         return 1
       } else if (featureB.isStretch && !featureA.isStretch) {
@@ -58,12 +50,8 @@
       } else {
         return featureB.title.localeCompare(featureA.title)
       }
-    })
-    .reduce((acc, [key, feature]) => {
-      acc[key] = feature
-      return acc
-    }, {} as FeatureLookup)
-
+    },
+  )
   const locked = !isPrelaunch
 
   const url = locked
@@ -118,7 +106,7 @@
       <div class="prose">Features in Planning</div>
     {/if}
     <ul class="text-sm leading-6 text-gray-300">
-      {#each values(mappedFeatures) as { title, description, isPremium, isStretch }}
+      {#each mappedFeatures as { title, description, isPremium, isStretch }}
         <li class="flex items-center gap-x-2">
           <div class="collapse">
             <summary

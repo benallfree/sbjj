@@ -1,6 +1,6 @@
 <script lang="ts">
-  import recipeImg from './recipe.webp?enhanced'
   import Recipe from './recipe.svx'
+  import recipeImg from './recipe.webp?enhanced'
 </script>
 
 <h2>Sample Recipe</h2>

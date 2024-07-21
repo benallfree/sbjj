@@ -1,11 +1,20 @@
 <script lang="ts">
-  import type { Meta } from '$src/meta'
+  import type { Meta } from '$meta'
+  import type { MetaContext } from '$store/MetaContext'
+  import { getContext } from 'svelte'
 
-  export let meta: Meta
+  export let plan: keyof Meta['plans']
+
+  const { state: metaState } = getContext<MetaContext>('meta')
+
+  $: ({ prelaunchLabel, plans } = $metaState)
+
+  $: ({
+    name: title,
+    price: subscribeText,
+    checkoutUrl: subscribeLink,
+  } = plans[plan])
   export let disabled = false
-  export let title
-  export let subscribeText
-  export let subscribeLink
 </script>
 
 <div class="lg:w-1/3">
@@ -22,7 +31,7 @@
       href={disabled ? undefined : subscribeLink}
       class={`btn ${disabled ? `btn-neutral bg-neutral-content text-neutral` : `btn-primary`} `}
       >{subscribeText}
-      {#if disabled}(Locked for {meta.prelaunchLabel}){/if}</a
+      {#if disabled}(Locked for {prelaunchLabel}){/if}</a
     >
   </div>
 </div>

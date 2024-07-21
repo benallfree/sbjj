@@ -1,36 +1,42 @@
 <script lang="ts">
   import Lander from '$components/Lander.svelte'
+  import { translateAll } from '$meta/translate'
+  import FaqSection from '$src/components/FAQSection.svelte'
   import { meta } from '$src/meta'
-  import splashImg from './splash.webp?enhanced'
+  import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
+  import type { MetaContext } from '$store/MetaContext'
+  import { produce } from 'immer'
+  import { getContext } from 'svelte'
   import Cta from './cta.svx'
   import Recipe from './Recipe.svelte'
-  import { produce } from 'immer'
-  import PricingSheet from '$src/routes/(marketing)/pricing/PricingSheet.svelte'
-  import FaqSection from '$src/components/FAQSection.svelte'
-  import { APP_NAME, FOUNDERS_NAME, PREMIUM_NAME } from '$src/meta/constants'
+  import splashImg from './splash.webp?enhanced'
+
+  const { state: metaState } = getContext<MetaContext>('meta')
+  $: ({ PREMIUM_NAME } = $metaState)
 
   const merged = produce(meta, (draft) => {
     const { hero } = draft.pages.lander
     hero.title = `Jamie Eats`
     hero.splashImg = splashImg
     hero.cta.text = `Join the private #Jamie Eats# community today and get access to exclusive recipes, community, and more!`
-    hero.cta.button.text = `Access Jamie Eats with ${APP_NAME} ${FOUNDERS_NAME}: JE Special`
+    hero.cta.button.text = `Access Jamie Eats with #APP_NAME# #FOUNDERS_NAME#: JE Special`
     hero.cta.button.link = 'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
-    draft.plans.founder.name = `${FOUNDERS_NAME}: Jamie Eats Special`
+    draft.plans.founder.name = `#FOUNDERS_NAME#: Jamie Eats Special`
     draft.plans.founder.checkoutUrl =
       'https://buy.stripe.com/fZe28s0wrgLVeuA5kl'
-    draft.plans.founder.bonusFeatures[`je-private`] = {
+    draft.plans.founder.bonusFeatures[`je-private` as any] = {
       title: `#JE Exclusive#: Access to private JE community`,
-      description: `Join the private JE community on ${APP_NAME} to connect with other listeners and share your favorite recipes.`,
+      description: `Join the private JE community on #APP_NAME# to connect with other listeners and share your favorite recipes.`,
     }
-    draft.plans.founder.bonusFeatures[`je-recipes`] = {
+    draft.plans.founder.bonusFeatures[`je-recipes` as any] = {
       title: `#JE Exclusive#: Unlimited access to private JE recipes`,
-      description: `Unlock all of the private JE recipes on ${APP_NAME} to discover new dishes and share your favorites.`,
+      description: `Unlock all of the private JE recipes on #APP_NAME# to discover new dishes and share your favorites.`,
     }
-    draft.plans.founder.bonusFeatures[`je-tee`] = {
+    draft.plans.founder.bonusFeatures[`je-tee` as any] = {
       title: `#JE Exclusive#: #je4lyf tee shirt`,
       description: `Get a limited edition #je4lyf tee shirt to show your support for the Jamie Eatst.`,
     }
+    translateAll(draft)
   })
 </script>
 

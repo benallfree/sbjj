@@ -1,16 +1,21 @@
 <script lang="ts">
-  import Fa from 'svelte-fa'
-  import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
-  import { FOUNDERS_NAME, meta } from '$src/meta'
   import FaqSection from '$src/components/FAQSection.svelte'
+  import type { MetaContext } from '$store/MetaContext'
+  import { faMartiniGlass } from '@fortawesome/free-solid-svg-icons'
+  import { getContext } from 'svelte'
+  import Fa from 'svelte-fa'
   import PricingSheet from './PricingSheet.svelte'
 
-  const {
+  const { state: metaState } = getContext<MetaContext>('meta')
+
+  $: ({
+    earlyAccessMessage,
+    faqs,
     prelaunch,
     pages: {
       pricing: { title, tagline },
     },
-  } = meta
+  } = $metaState)
 </script>
 
 <main>
@@ -26,24 +31,17 @@
       <div class="flex justify-center">
         <div role="alert" class="alert alert-warning mt-8 mb-8 max-w-2xl">
           <Fa icon={faMartiniGlass} />
-          <span
-            >{meta.name} is currently in {meta.prelaunchLabel} mode.
-            <b>We are building features as funds are raised.</b> All
-            subscription plans will remain locked until the official launch. In
-            the meantime, consider supporting the project by purchasing a {FOUNDERS_NAME}
-            to get lifetime access. As soon as we reach funding (and maybe before!),
-            features will be added.</span
-          >
+          <span>{@html earlyAccessMessage}</span>
         </div>
       </div>
     {/if}
 
     <div class="flex justify-center">
-      <PricingSheet {meta} />
+      <PricingSheet />
     </div>
 
     <div class="m-4">
-      <FaqSection faqs={meta.faqs} />
+      <FaqSection {faqs} />
     </div>
   </div>
 </main>

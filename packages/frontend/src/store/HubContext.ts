@@ -78,7 +78,8 @@ const getLocalStorageItemOrDefault = <T>(key: string, defaultValue: T): T => {
 }
 
 export const createHubContext = (hub: HubRecord): HubContext => {
-  const { defaultSeedSlug } = meta.currentSeason
+  const { defaultSeedSlug } =
+    meta.seasons[meta.currentSeason as keyof typeof meta.seasons]
   const player = sanitizePlayerState(
     getLocalStorageItemOrDefault(`hub.${hub.id}.player`, {
       seeds: {
