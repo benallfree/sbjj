@@ -117,7 +117,7 @@ export const meta = {
       },
     },
   },
-  currentSeason: 'season1',
+  currentSeasonSlug: 'season1',
   repo: 'https://github.com/benallfree/sbjj',
   publishDate: '7/15/2024',
   name: '#APP_NAME#',
@@ -244,31 +244,16 @@ export const meta = {
       isDefault: true,
       bonusFeatures: [],
     },
-    monthly: {
-      name: 'Blue Monthly',
-      price: '19/mo',
-      slug: 'pro-monthly',
-      summary:
-        "You're on the monthly Blue plan. Thank you for supporting #APP_NAME#!",
-      isPrelaunch: false,
-      description:
-        'Unlock the full potential of #APP_NAME# with #PREMIUM_NAME#. You get a blue check mark and premium features for ultimate recipe creation and discovery.',
-      checkoutUrl: '',
-      qtyMax: 0,
-      isPremium: true,
-      isDefault: false,
-      bonusFeatures: [],
-    },
-    annual: {
-      name: 'Blue Annual',
-      price: '199/yr',
-      slug: 'pro-annual',
+    season1: {
+      name: 'Season 1 Pass',
+      price: '59',
+      slug: 'season1',
       checkoutUrl: '',
       summary:
-        "You're on the annual Blue plan. Thank you for supporting #APP_NAME#!",
+        'You have the Season 1 pass. Thank you for supporting #APP_NAME#!',
       isPrelaunch: false,
       description:
-        'Unlock the full potential of #APP_NAME# with #PREMIUM_NAME#. You get a blue check mark and premium features for ultimate recipe creation and discovery.',
+        'Unlock the full potential of #APP_NAME# with the Season 1 pass. You get full access to Season 1 and a bunch of goodies!',
       qtyMax: 0,
       isPremium: true,
       isDefault: false,
@@ -276,7 +261,7 @@ export const meta = {
     },
     founder: {
       name: '#FOUNDERS_NAME#',
-      price: '299 once, use forever',
+      price: '299 once, good for all seasons',
       slug: 'founder',
       checkoutUrl:
         'https://cornage.lemonsqueezy.com/buy/3dbf3220-e3f3-4cc5-aa5a-765a9e5bf306',
@@ -289,14 +274,14 @@ export const meta = {
       isDefault: false,
       bonusFeatures: [
         {
-          title: "Founder's Badge on your profile",
+          title: '#FOUNDERS_NAME# badge on your profile',
           description:
-            'Show off your status as a founder with a special badge on your profile.',
+            'Show off your status as a #FOUNDERS_NAME# member with a special badge on your profile.',
         },
         {
-          title: "Private Founder's Discord channel",
+          title: 'Private #FOUNDERS_NAME# Discord channel',
           description:
-            'Gain access to a private channel on our Discord server exclusively for founders.',
+            'Gain access to a private channel on our Discord server exclusively for #FOUNDERS_NAME# members.',
         },
         {
           title: 'Early access to new features',
@@ -309,9 +294,9 @@ export const meta = {
             'Have a say in the development of new features by participating in feature voting.',
         },
         {
-          title: 'Commemorative #FOUNDERS_NAME# mug',
+          title: 'Commemorative #FOUNDERS_NAME# #mug#',
           description:
-            'Receive a special edition mug as a token of appreciation for being a founder.',
+            'Receive a special edition mug as a token of appreciation for being a #FOUNDERS_NAME# member.',
         },
       ],
     },
@@ -320,17 +305,17 @@ export const meta = {
     {
       question: "What's #APP_NAME#?",
       answer:
-        '#APP_NAME# is a platform for home cooks to discover, cook, and enjoy recipes. You can build your pantry, share your recipes, and match with community recipes.',
+        '#APP_NAME# is a game of growth and domination. Plant your corn, grow your empire, and cornquer your rivals live.',
     },
     {
       question: 'What is #PRELAUNCH_NAME# Mode?',
       answer:
-        '#APP_NAME# is in #PRELAUNCH_NAME# mode. All subscription plans are locked until the official launch. Founder tiers are available and need your early support. As each tier sells out, new features are unlocked. This is done to fund the development of the platform and to reward early supporters.',
+        '#APP_NAME# is in #PRELAUNCH_NAME# mode. All normal plans are locked until the official launch. #FOUNDERS_NAME# passes are  available and need your early support. As the tier sells out, new features are unlocked. This is done to fund the development of the platform and to reward early supporters.',
     },
     {
       question: 'What is the #FOUNDERS_NAME#?',
       answer:
-        'The #FOUNDERS_NAME# is a limited-time offer available during #PRELAUNCH_NAME# mode. #FOUNDERS_NAME# members receive a lifetime subscription to #APP_NAME#, a special badge, and other perks.',
+        'The #FOUNDERS_NAME# is a limited-time offer available during #PRELAUNCH_NAME# mode. #FOUNDERS_NAME# members receive a lifetime pass to #APP_NAME#, a special badge, and other perks.',
     },
     {
       question: '#PRELAUNCH_NAME# mode: What are stretch goals?',
@@ -338,19 +323,18 @@ export const meta = {
         "Stretch goals are additional features that we will unlock as we reach certain funding milestones and depending on development feasibility. They aren't promised, but we'd really like to see them happen.",
     },
     {
-      question: 'How do I monetize my community?',
-      answer:
-        'As a #PREMIUM_NAME# member, your community participates in the revenue share program. You earn a percentage of the revenue generated by your community based on usage and activity.',
+      question: 'How can I earn coins?',
+      answer: `Earn coins by planting various types of corn all the way to harvest. You cana also earn coins by creating Cornaments. Every time someone buys your Cornament, you'll get coin credit for it.`,
     },
     {
       question: 'How does the affiliate program work?',
       answer:
-        'The affiliate program is a way for you to earn money by referring others to #APP_NAME#. You will receive a unique link to share with your friends and followers. When someone signs up using your link, you will receive a commission on their subscription. Check out <a href="/affiliates" class="link">our affiliate page</a> for more information.',
+        'The affiliate program is a way for you to earn dollars by referring others to #APP_NAME#. You will receive a unique link to share with your friends and followers. When someone signs up using your link, you will receive a commission on their subscription. Check out <a href="/affiliates" class="link">our affiliate page</a> for more information.',
     },
     {
       question: 'How do I get started?',
       answer:
-        "Create an account. Choose a support tier and join in the funding of #APP_NAME# if you can. Otherwise, sit tight while we get organized and we'll send you updates. In the meantime, join our Discord community to meet other home cooks and share recipes.",
+        "Create an account. Choose a support tier and join in the funding of #APP_NAME# if you can. Otherwise, sit tight while we get organized and we'll send you updates. In the meantime, join our Discord community to meet other huskers.",
     },
     {
       question: 'How do I join the Discord community?',
@@ -358,34 +342,9 @@ export const meta = {
         'Join our Discord community by visiting <a href="/support" class="link">the support page</a>.',
     },
     {
-      question: 'What is the blue check mark?',
-      answer:
-        'The blue check mark is a badge of honor. It signifies that you are a #PREMIUM_NAME# member and have access to all #APP_NAME# features.',
-    },
-    {
       question: "What's your refund policy?",
       answer:
         'Short version: We only want your money if you are happy. If you are not happy, we will refund your money. Long version: <a href="/cancel" class="link">our refund and cancellation policy</a>. We are selling limited #FOUNDERS_NAME# memberships while we are in #PRELAUNCH_NAME# mode. If you cancel your purchase, you will lose your place in line and may not get another chance to become a Founder later.  Also, if we decide to cancel the project for any reason, we will refund your money.',
-    },
-    {
-      question: 'Post-launch: How do I share my recipes?',
-      answer:
-        'Once you have an account, you can create recipes and share them with the community.',
-    },
-    {
-      question: 'Post-launch: How do I match with community recipes?',
-      answer:
-        'Add items to your pantry and #APP_NAME# will show you recipes that you can make with those items across the Community, including your own recipes.',
-    },
-    {
-      question: 'Post-launch: How do I create recipes?',
-      answer:
-        'Once you have an account, you can create recipes by adding ingredients and instructions.',
-    },
-    {
-      question: 'Post-launch: How do I get access to all community recipes?',
-      answer:
-        'Community recipes with three or fewer ingredients are available to all users. To get access to all community recipes, you need to subscribe to the Blue plan.',
     },
   ],
   features: [
