@@ -15,13 +15,13 @@ import { APP_NAME, PREMIUM_NAME } from './constants'
 
 export const LANDER = {
   hero: {
-    title: `Discover exclusive recipes from your favorite culinary creators`,
+    title: `Expand your corn empire and cornquer rivals live.`,
     splashImg,
     cta: {
-      text: `Join #communities# with and follow #creators# with exclusive #recipes# or create your own community on ${APP_NAME} `,
+      text: `Dominate the #multiplayer# field. Earn #coins#. Give your corn a #fit#.`,
       button: {
-        text: `Get Started`,
-        link: `/pricing`,
+        text: `Play Now`,
+        link: `/0x0`,
       },
     },
   },

@@ -1,12 +1,18 @@
 <script lang="ts">
+  import type { MetaContext } from '$store/MetaContext'
   import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+  import { getContext } from 'svelte'
   import PrimaryButton from './PrimaryButton.svelte'
-  import type { Meta } from '$src/meta'
 
-  export let page: Meta['pages']['lander']
-  const {
-    hero: { title, cta, splashImg },
-  } = page
+  const { state: metaState } = getContext<MetaContext>('meta')
+
+  $: ({
+    pages: {
+      lander: {
+        hero: { splashImg, cta, title },
+      },
+    },
+  } = $metaState)
 </script>
 
 <slot name="hero">

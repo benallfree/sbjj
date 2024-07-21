@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Hub from '$components/Hub/Hub.svelte'
+  import Lander from '$components/Lander.svelte'
   import { createHubContext, type HubContext } from '$store/HubContext'
   import { setContext } from 'svelte'
   import type { PageData } from './$types'
@@ -12,4 +12,4 @@
   setContext<HubContext>('hub', createHubContext(hub))
 </script>
 
-<Hub />
+<Lander />
