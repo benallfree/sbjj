@@ -1,5 +1,4 @@
 import { browser } from '$app/environment'
-import { meta } from '$src/meta'
 import { onHubChanged, pb } from '$src/pocketbase-client'
 import type { CornamentSlug } from '$store/CornamentSlug'
 import { EntityStackItem } from '$store/EntityStackItem'
@@ -11,6 +10,7 @@ import { UserModel } from '$store/UserModel'
 import { produce } from 'immer'
 import { writable, type Writable } from 'svelte/store'
 import { z } from 'zod'
+import type { MetaContext_State } from './MetaContext'
 import { sanitizePlayerState } from './defaults'
 
 export const HubRecordState = z.object({
@@ -77,9 +77,11 @@ const getLocalStorageItemOrDefault = <T>(key: string, defaultValue: T): T => {
   return safeParse(localStorage.getItem(key)) || defaultValue
 }
 
-export const createHubContext = (hub: HubRecord): HubContext => {
-  const { defaultSeedSlug } =
-    meta.seasons[meta.currentSeason as keyof typeof meta.seasons]
+export const createHubContext = (
+  meta: MetaContext_State,
+  hub: HubRecord,
+): HubContext => {
+  const { defaultSeedSlug } = meta.currentSeason
   const player = sanitizePlayerState(
     getLocalStorageItemOrDefault(`hub.${hub.id}.player`, {
       seeds: {

@@ -15,7 +15,7 @@
 
   const { hub } = data
 
-  setContext<HubContext>('hub', createHubContext(hub))
+  $: setContext<HubContext>('hub', createHubContext($metaState, hub))
 </script>
 
 <Lander page={lander} />
