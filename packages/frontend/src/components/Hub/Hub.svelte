@@ -31,6 +31,12 @@
 </div>
 
 <style lang="scss">
+  .title {
+    @apply text-3xl font-bold m-2;
+  }
+  .description {
+    @apply text-lg m-4;
+  }
   .game-grid {
     @apply grid grid-cols-10 auto-cols-max;
   }
