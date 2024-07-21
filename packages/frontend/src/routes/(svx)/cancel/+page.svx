@@ -1,6 +1,9 @@
 <script lang="ts">
-    import { meta } from '$src/meta'
-    const { publishDate } = meta
+  import { getContext } from 'svelte'
+  import type { MetaContext } from '$store/MetaContext.js'
+
+  const { state: metaState } = getContext<MetaContext>('meta') 
+  $: ({ name, publishDate, prelaunchLabel, APP_NAME, FOUNDERS_NAME } = $metaState)
 </script>
 
 
@@ -10,7 +13,7 @@
 
 ## Refunds and Cancellations Made Easy!
 
-At **{meta.name}**, we believe in keeping things simple and fun! Whether you need a refund or want to cancel, we've got your back with our No Questions Asked Policy. Here's how it works:
+At **{name}**, we believe in keeping things simple and fun! Whether you need a refund or want to cancel, we've got your back with our No Questions Asked Policy. Here's how it works:
 
 ## How It Works
 
@@ -40,8 +43,8 @@ If you have questions or comments about this policy, you may contact us at [our 
 
 ---
 
-Thank you for being a part of the **{meta.name}** community. We appreciate your support and hope to see you back soon!
+Thank you for being a part of the **{name}** community. We appreciate your support and hope to see you back soon!
 
-_{meta.name}_
+_{name}_
 
 

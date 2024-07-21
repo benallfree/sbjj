@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { meta } from '$src/meta'
-	const {  publishDate } = meta
-</script>
+  import { getContext } from 'svelte'
+  import type { MetaContext } from '$store/MetaContext.js'
 
+  const { state: metaState } = getContext<MetaContext>('meta') 
+  $: ({ name, publishDate, prelaunchLabel, APP_NAME, FOUNDERS_NAME, repo } = $metaState)
+</script>
 
 
 # Terms of Service
@@ -11,11 +13,11 @@
 
 ## 1. Acceptance of Terms
 
-Welcome to **{meta.name}** ("we", "our", "us"). By accessing or using our application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our App.
+Welcome to **{name}** ("we", "our", "us"). By accessing or using our application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our App.
 
 ## 2. Description of Service
 
-**{meta.name}** provides an App that helps users create dishes using existing ingredients. Users can inventory their pantry, add recipes, and receive meal suggestions based on on-hand ingredients. Recipes are also visible to the community, allowing others to make shared dishes if they have the necessary ingredients or are missing only a few.
+**{name}** provides an App that helps users create dishes using existing ingredients. Users can inventory their pantry, add recipes, and receive meal suggestions based on on-hand ingredients. Recipes are also visible to the community, allowing others to make shared dishes if they have the necessary ingredients or are missing only a few.
 
 ## 3. User Responsibilities
 
@@ -40,7 +42,7 @@ You agree not to engage in any of the following prohibited activities:
 
 ## 7. Intellectual Property
 
-All content and materials available on the App, including but not limited to text, graphics, website name, code, images, and logos are the intellectual property of **{meta.name}** and are protected by applicable copyright and trademark law. Any inappropriate use, including but not limited to the reproduction, distribution, display, or transmission of any content on this site is strictly prohibited unless specifically authorized by **{meta.name}**.
+All content and materials available on the App, including but not limited to text, graphics, website name, code, images, and logos are the intellectual property of **{name}** and are protected by applicable copyright and trademark law. Any inappropriate use, including but not limited to the reproduction, distribution, display, or transmission of any content on this site is strictly prohibited unless specifically authorized by **{name}**.
 
 ## 8. Termination
 
@@ -54,6 +56,6 @@ The App is provided on an "AS IS" and "AS AVAILABLE" basis. Use of the App is at
 
 If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
-_{meta.name}_
+_{name}_
 
 

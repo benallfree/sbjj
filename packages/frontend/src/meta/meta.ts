@@ -118,7 +118,7 @@ export const meta = {
     },
   },
   currentSeasonSlug: 'season1',
-  repo: 'https://github.com/benallfree/sbjj',
+  repo: 'https://github.com/benallfree/sbjj/tree/cornage/main',
   publishDate: '7/15/2024',
   name: '#APP_NAME#',
   prelaunch: true,

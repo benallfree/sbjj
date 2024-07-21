@@ -1,6 +1,9 @@
 <script lang="ts">
-    import { meta } from '$src/meta'
-    const { publishDate } = meta
+  import { getContext } from 'svelte'
+  import type { MetaContext } from '$store/MetaContext.js'
+
+  const { state: metaState } = getContext<MetaContext>('meta') 
+  $: ({ name, publishDate, prelaunchLabel, APP_NAME, FOUNDERS_NAME } = $metaState)
 </script>
 
 
@@ -11,7 +14,7 @@
 
 ## 1. Introduction
 
-**{meta.name}** ("we", "our", "us") uses cookies and similar tracking technologies to enhance your experience on our application ("App"). This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
+**{name}** ("we", "our", "us") uses cookies and similar tracking technologies to enhance your experience on our application ("App"). This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
 
 ## 2. What Are Cookies?
 
@@ -48,6 +51,6 @@ We may update our Cookie Policy from time to time to reflect changes in our prac
 
 If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
-_{meta.name}_
+_{name}_
 
 

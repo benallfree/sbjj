@@ -1,7 +1,10 @@
 <script lang="ts">
-    import {meta, APP_NAME} from '$src/meta'
-</script>
+  import { getContext } from 'svelte'
+  import type { MetaContext } from '$store/MetaContext.js'
 
+  const { state: metaState } = getContext<MetaContext>('meta') 
+  $: ({ name, publishDate, prelaunchLabel, APP_NAME, FOUNDERS_NAME, repo } = $metaState)
+</script>
 
 
 # {APP_NAME}'s Commitment to Open Source
@@ -16,7 +19,7 @@ Open source software promotes a collaborative approach to development, allowing 
 
 All the code for {APP_NAME} is hosted on GitHub. You can find it at the following link:
 
-[{meta.repo}]({meta.repo})
+[{repo}]({repo})
 
 This repository contains all the essential components of {APP_NAME}, including our backend services, frontend applications, and various tools and utilities that make up the {APP_NAME} ecosystem.
 
@@ -37,7 +40,7 @@ By adopting the MIT License, we ensure that our work remains free and accessible
 
 We welcome contributions from developers of all skill levels. Whether you're interested in fixing bugs, adding new features, or improving documentation, your contributions are valuable to us.
 
-To get started, visit our GitHub repository: [{meta.repo}]({meta.repo})
+To get started, visit our GitHub repository: [{repo}]({repo})
 
 ### How to Contribute:
 

@@ -1,13 +1,16 @@
 <script lang="ts">
-    import { meta } from '$src/meta'
-    const { publishDate } = meta
+  import { getContext } from 'svelte'
+  import type { MetaContext } from '$store/MetaContext.js'
+
+  const { state: metaState } = getContext<MetaContext>('meta') 
+  $: ({ name, publishDate, prelaunchLabel, APP_NAME, FOUNDERS_NAME } = $metaState)
 </script>
 
 # Affiliate Agreement
 
 **Effective Date: {publishDate}**
 
-This Affiliate Agreement ("Agreement") is made between **{meta.name}** ("Company", "we", "us", "our") and the Affiliate ("you", "your").
+This Affiliate Agreement ("Agreement") is made between **{name}** ("Company", "we", "us", "our") and the Affiliate ("you", "your").
 
 ## 1. Enrollment in the Affiliate Program
 
@@ -70,4 +73,4 @@ This Agreement will be governed by the laws of [Your Jurisdiction], without rega
 
 If you have questions or comments about this policy, you may contact us at [our support page](/support).
 
-_{meta.name}_
+_{name}_
