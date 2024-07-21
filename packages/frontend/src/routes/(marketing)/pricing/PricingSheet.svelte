@@ -54,7 +54,7 @@
     {/if}
   </PricingTier>
 
-  <PricingTier disabled plan={'annual'}>
+  <PricingTier disabled plan={'season1'}>
     <div class="italic text-accent">Everything in Free, plus:</div>
     {#each Object.values(premiumFeatures) as feature}
       <ListItem>{feature.title}</ListItem>
