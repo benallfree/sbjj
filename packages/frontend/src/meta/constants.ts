@@ -1,4 +1,4 @@
-export const APP_NAME = `Root Rivals`
-export const PRELAUNCH_NAME = `Kickstarter`
-export const PREMIUM_NAME = `RRx`
-export const FOUNDERS_NAME = `Founder's Edition`
+export const APP_NAME = `Cornage`
+export const PRELAUNCH_NAME = `Early Access`
+export const PREMIUM_NAME = `Season 1 Pass`
+export const FOUNDERS_NAME = `Kernel's Club`

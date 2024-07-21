@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { isUserLoggedIn } from '$src/stores'
+  import { isUserLoggedIn } from '$store/user'
   import AuthStateGuard from './AuthStateGuard.svelte'
 
   export let fallback = false

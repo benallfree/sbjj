@@ -3,8 +3,8 @@
   import { goto } from '$app/navigation'
   import UserLoggedIn from '$src/components/UserLoggedIn.svelte'
   import UserLoggedOut from '$src/components/UserLoggedOut.svelte'
-  import { PocketbaseClient } from '$src/pocketbase-client/PocketbaseClient'
-  import { flash } from '$src/stores'
+  import { authViaOtp, sendOtp } from '$src/pocketbase-client'
+  import { flash } from '$store/flash'
   import {
     faEnvelope,
     faRightToBracket,
@@ -12,8 +12,6 @@
   import { onMount } from 'svelte'
   import Fa from 'svelte-fa'
   import type { KeyboardEventHandler } from 'svelte/elements'
-
-  const { authViaOtp, sendOtp } = PocketbaseClient()
 
   enum FormState {
     SendCode,

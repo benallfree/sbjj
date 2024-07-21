@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { isAuthStateInitialized } from '$src/stores'
+  import { isAuthStateInitialized } from '$store/user'
 
   export let fallback = false
 </script>

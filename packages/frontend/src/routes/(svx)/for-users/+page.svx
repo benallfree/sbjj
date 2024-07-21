@@ -4,8 +4,6 @@
     const { publishDate ,prelaunchLabel } = meta
 </script>
 
-
-
 # {APP_NAME} {prelaunchLabel} Mode
 
 Welcome to {meta.name} {prelaunchLabel} mode! Here's what it means for you:

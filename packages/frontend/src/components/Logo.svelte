@@ -12,9 +12,12 @@
     alt="{meta.name} Logo"
     style="width: 24px"
   />
-  <h1
-    class="text-white font-bold text-2xl pl-0 ml-0 {hideLogoText && 'sr-only'}"
-  >
-    {meta.name}
-  </h1>
+  {#if !hideLogoText}
+    <h1
+      class="text-white font-bold text-2xl pl-0 ml-0 {hideLogoText &&
+        'sr-only'}"
+    >
+      {meta.name}
+    </h1>
+  {/if}
 </a>

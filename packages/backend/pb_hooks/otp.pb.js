@@ -96,7 +96,7 @@ routerAdd('POST', '/api/otp/verify', (c) => {
       // 10 minutes
       throw new BadRequestError(`Code expired`)
     }
-    // dao.deleteRecord(record)
+    dao.deleteRecord(record)
   } catch (e) {
     console.error(`Error confirming otp: ${e}`)
     throw e

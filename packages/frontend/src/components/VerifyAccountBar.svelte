@@ -1,9 +1,7 @@
 <script lang="ts">
+  import { resendVerificationEmail } from '$src/pocketbase-client'
+  import { isUserLoggedIn, isUserVerified } from '$store/user'
   import { slide } from 'svelte/transition'
-  import { isUserLoggedIn, isUserVerified } from '$src/stores'
-  import { PocketbaseClient } from '$src/pocketbase-client/PocketbaseClient'
-
-  const { resendVerificationEmail } = PocketbaseClient()
 
   let isButtonProcessing: boolean = false
   let formError: string = ''

@@ -1,15 +1,15 @@
 <script lang="ts">
-  import UserLoggedIn from '$src/components/UserLoggedIn.svelte'
-  import UserLoggedOut from '$src/components/UserLoggedOut.svelte'
-  import LoggedOutLander from './LoggedOutLander.svelte'
-  import Empty from './Empty.svx'
+  import Hub from '$components/Hub/Hub.svelte'
+  import { createHubContext, type HubContext } from '$store/HubContext'
+  import { setContext } from 'svelte'
+  import type { PageData } from './$types'
+
+  export let data: PageData
+
+  const { hub } = data
+  console.log({ hub })
+
+  setContext<HubContext>('hub', createHubContext(hub))
 </script>
 
-<UserLoggedIn fallback>
-  <article class="prose lg:prose-xl m-4">
-    <Empty />
-  </article>
-</UserLoggedIn>
-<UserLoggedOut fallback>
-  <LoggedOutLander />
-</UserLoggedOut>
+<Hub />

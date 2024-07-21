@@ -44,7 +44,7 @@ export const LANDER = {
         linkText: 'Get Inspired',
         linkURL: `/pricing`,
       },
-    ],
+    ] as const,
     sub: [
       {
         icon: faSearch,

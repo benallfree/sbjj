@@ -35,6 +35,7 @@
     "fs-extra": "^11.2.0",
     "fs-utils": "^0.7.0",
     "gdpr-cookie-consent-banner": "link:@types/@beyonk/gdpr-cookie-consent-banner",
+    "immer": "^10.1.1",
     "mdsvex": "^0.11.2",
     "pocketbase": "^0.21.3",
     "postcss": "^8.4.39",
@@ -50,7 +51,8 @@
     "type-fest": "^4.21.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.3",
-    "immer": "^10.1.1"
+    "vite-plugin-svelte-svg": "^2.3.0",
+    "zod": "^3.23.8"
   },
   "type": "module"
 }

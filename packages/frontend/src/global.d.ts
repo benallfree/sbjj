@@ -1,3 +1,14 @@
+declare module '*.svg?dataurl' {
+  const value: string
+  export default value
+}
+
+declare module '*.svg?component' {
+  import type { SvelteComponent } from 'svelte'
+  const value: SvelteComponent
+  export default value
+}
+
 declare module '*.svx' {
   import type { SvelteComponent } from 'svelte'
   const value: SvelteComponent

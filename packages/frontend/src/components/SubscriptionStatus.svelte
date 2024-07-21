@@ -1,11 +1,12 @@
 <script lang="ts">
-  import { meta, type Meta, type PlanSlug } from '$src/meta'
-  import { userSubscriptionType } from '$src/stores'
+  import { meta, type PlanSlug } from '$src/meta'
+  import { userSubscriptionType } from '$store/user'
 
   export let handleClick: any = () => {}
 
-  const type = $userSubscriptionType as PlanSlug
-  const plan = meta.plans[type]
+  let type: PlanSlug
+  $: type = $userSubscriptionType as PlanSlug
+  $: plan = meta.plans[type]
 </script>
 
 <div class=" flex flex-col gap-4 mb-4">

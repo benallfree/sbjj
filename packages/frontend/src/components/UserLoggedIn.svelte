@@ -1,6 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
-  import { isAuthStateInitialized, isUserLoggedIn } from '$src/stores'
+  import { isAuthStateInitialized, isUserLoggedIn } from '$store/user'
   import AuthStateGuard from './AuthStateGuard.svelte'
 
   export let fallback = false

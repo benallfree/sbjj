@@ -1,7 +1,7 @@
 <script>
   import { meta } from '$src/meta'
-  import Fa from 'svelte-fa'
   import { faGithub } from '@fortawesome/free-brands-svg-icons'
+  import Fa from 'svelte-fa'
 </script>
 
 <footer
@@ -15,8 +15,8 @@
   </nav>
   <nav>
     <h6 class="footer-title">{meta.prelaunchLabel}</h6>
-    <a href="/kickstart-for-users" class="link link-hover">For Users</a>
-    <a href="/kickstart-for-creators" class="link link-hover">For Creators</a>
+    <a href="/for-users" class="link link-hover">For Users</a>
+    <a href="/for-creators" class="link link-hover">For Creators</a>
   </nav>
   <nav>
     <h6 class="footer-title">Legal</h6>

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { flash } from '$src/stores'
+  import { flash } from '$store/flash'
+  import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
   import Fa from 'svelte-fa'
-  import { faCircleXmark, faClose } from '@fortawesome/free-solid-svg-icons'
 
   const closeFlash = () => {
     flash.set(null)

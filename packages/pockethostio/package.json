@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
+  "bin": {
+    "pockethostio": "src/index.ts"
+  },
   "scripts": {
     "start": "tsx src/index.ts"
   },

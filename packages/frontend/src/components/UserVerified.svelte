@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { isUserVerified } from '$src/stores'
+  import { isUserVerified } from '$store/user'
   import AuthStateGuard from './AuthStateGuard.svelte'
 </script>
 

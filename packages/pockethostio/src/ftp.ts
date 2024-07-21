@@ -1,6 +1,7 @@
 import * as ftp from 'basic-ftp'
 import Bottleneck from 'bottleneck'
 import * as chokidar from 'chokidar'
+import { join } from 'path'
 
 export interface Config {
   instanceId: string
@@ -13,21 +14,13 @@ export interface Config {
 }
 
 const limiter = new Bottleneck({ maxConcurrent: 1 })
-export const createWatcher = (config: Config) => {
+export const createWatcher = async (config: Config) => {
   async function uploadFile(
     client: ftp.Client,
     localPath: string,
     remotePath: string,
   ) {
     try {
-      await client.access({
-        host: config.host,
-        port: config.port,
-        user: config.username,
-        password: config.password,
-        secure: true,
-      })
-
       await client.uploadFrom(localPath, remotePath)
       console.log(`Uploaded ${localPath} to ${remotePath}`)
     } catch (err) {
@@ -35,18 +28,26 @@ export const createWatcher = (config: Config) => {
     }
   }
 
-  const client = new ftp.Client()
+  const client = new ftp.Client(0)
   client.ftp.verbose = true
+  await client.access({
+    host: config.host,
+    port: config.port,
+    user: config.username,
+    password: config.password,
+    secure: true,
+  })
+  ;[`pb_hooks`, `pb_migrations`, `pb_public`].forEach((dir) => {
+    chokidar
+      .watch(dir, { ignored: /(^|[\/\\])\../ })
+      .on('all', (event, path) => {
+        const relativePath = path.replace(config.localPath, '')
+        const remotePath = join(config.remotePath, relativePath)
 
-  chokidar
-    .watch(config.localPath, { ignored: /(^|[\/\\])\../ })
-    .on('all', (event, path) => {
-      const relativePath = path.replace(config.localPath, '')
-      const remotePath = `${config.remotePath}${relativePath}`
-
-      console.log({ event })
-      if (event === 'add' || event === 'change') {
-        limiter.schedule(() => uploadFile(client, path, remotePath))
-      }
-    })
+        console.log({ relativePath, remotePath, event })
+        if (event === 'add' || event === 'change') {
+          limiter.schedule(() => uploadFile(client, path, remotePath))
+        }
+      })
+  })
 }

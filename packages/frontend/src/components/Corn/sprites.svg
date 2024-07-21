@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  viewBox="0 0 200 250"
+  version="1.1"
+  id="svg4"
+  sodipodi:docname="sunglasses.svg"
+  xml:space="preserve"
+  inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <defs id="defs4" />
+  <sodipodi:namedview
+    id="namedview4"
+    pagecolor="#ffffff"
+    bordercolor="#000000"
+    borderopacity="0.25"
+    inkscape:showpageshadow="2"
+    inkscape:pageopacity="0.0"
+    inkscape:pagecheckerboard="0"
+    inkscape:deskcolor="#d1d1d1"
+    inkscape:zoom="2.1565924"
+    inkscape:cx="-20.17071"
+    inkscape:cy="71.177104"
+    inkscape:window-width="1680"
+    inkscape:window-height="1050"
+    inkscape:window-x="0"
+    inkscape:window-y="0"
+    inkscape:window-maximized="0"
+    inkscape:current-layer="svg4"
+    showgrid="false"
+  />
+  <g
+    class="layer"
+    id="base"
+    transform="matrix(0.70639636,0,0,0.81756121,25.335623,60.859228)"
+    style="display: inline"
+    sodipodi:insensitive="true"
+  >
+    <title id="title1">Layer 1</title>
+    <rect fill="#008000" height="180" id="svg_1-3" width="10" x="95" y="50" />
+    <path d="m 100,80 q 30,20 0,70" fill="#008000" id="svg_2-6" />
+    <path d="m 100,120 q -30,20 0,70" fill="#008000" id="svg_3-0" />
+    <path d="m 100,160 q 30,20 0,70" fill="#008000" id="svg_4-4" />
+    <path
+      d="m 77.12,76.02 q -30,24.52 0,85.81"
+      fill="#008000"
+      id="svg_10"
+      transform="rotate(-33.6901,69.6154,118.923)"
+    />
+    <path
+      d="m 82.18,118.76 q -30,24.52 0,85.81"
+      fill="#008000"
+      id="svg_11"
+      transform="rotate(-33.6901,74.6804,161.663)"
+    />
+    <path
+      d="m 72.32,52.28 q 34.35,26.42 0,92.47"
+      fill="#008000"
+      id="svg_12"
+      transform="rotate(-33.6901,80.9112,98.5092)"
+    />
+    <path
+      d="m 117.56,125.51 q 34.35,26.42 0,92.47"
+      fill="#008000"
+      id="svg_13"
+      transform="rotate(-137.784,126.146,171.739)"
+    />
+    <path
+      d="m 131.42,89.3 q -29.97,26.42 0,92.47"
+      fill="#008000"
+      id="svg_14"
+      transform="rotate(-150.06,123.93,135.533)"
+    />
+  </g>
+
+  <g
+    id="yellow"
+    transform="translate(-3.1779661,-40.254238)"
+    style="display: none"
+    inkscape:label="yellow"
+    sodipodi:insensitive="true"
+  >
+    <ellipse
+      cx="100.10593"
+      cy="125"
+      fill="#ffff00"
+      rx="25"
+      ry="50"
+      id="ellipse1"
+    />
+  </g>
+  <g
+    id="red"
+    transform="translate(-3.283892,-40.542373)"
+    style="display: none"
+    inkscape:label="red"
+    sodipodi:insensitive="true"
+  >
+    <ellipse
+      cx="100.10593"
+      cy="125"
+      fill="#ffff00"
+      rx="25"
+      ry="50"
+      id="ellipse1-3"
+      inkscape:label="ellipse1-3"
+      style="fill: #ff0037; fill-opacity: 1"
+    />
+  </g>
+  <g
+    id="blue"
+    transform="translate(-3.283892,-41.062579)"
+    style="display: none"
+    inkscape:label="blue"
+    sodipodi:insensitive="true"
+  >
+    <ellipse
+      cx="100.10593"
+      cy="125"
+      fill="#ffff00"
+      rx="25"
+      ry="50"
+      id="ellipse2"
+      inkscape:label="ellipse1-3"
+      style="display: inline; fill: #0600ff; fill-opacity: 1"
+    />
+  </g>
+  <g
+    id="violet"
+    transform="translate(-3.283892,-41.062579)"
+    style="display: none"
+    inkscape:label="violet"
+    sodipodi:insensitive="true"
+  >
+    <ellipse
+      cx="100.10593"
+      cy="125"
+      fill="#ffff00"
+      rx="25"
+      ry="50"
+      id="ellipse3"
+      inkscape:label="ellipse1-3"
+      style="display: inline; fill: #b100ff; fill-opacity: 1"
+    />
+  </g>
+
+  <g
+    id="pride"
+    transform="translate(-3.283892,34.669491)"
+    style="display: none"
+    inkscape:label="pride"
+    sodipodi:insensitive="true"
+  >
+    <defs id="defs7">
+      <linearGradient
+        id="rainbowGradient"
+        x1="106.06602"
+        x2="176.7767"
+        y1="0"
+        y2="0"
+        gradientTransform="scale(0.70710678,1.4142136)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stop-color="red" id="stop1" />
+        <stop offset="16.6%" stop-color="orange" id="stop2" />
+        <stop offset="33.3%" stop-color="yellow" id="stop3" />
+        <stop offset="50%" stop-color="green" id="stop4" />
+        <stop offset="66.6%" stop-color="blue" id="stop5" />
+        <stop offset="83.3%" stop-color="indigo" id="stop6" />
+        <stop offset="100%" stop-color="violet" id="stop7" />
+      </linearGradient>
+    </defs>
+    <g class="layer" id="g7">
+      <title id="title7">Layer 1</title>
+      <ellipse
+        cx="100"
+        cy="50"
+        fill="url(#rainbowGradient)"
+        id="svg_5"
+        rx="25"
+        ry="50"
+        style="fill: url(#rainbowGradient)"
+      />
+    </g>
+  </g>
+  <g
+    id="unicorn"
+    transform="translate(0,24.364407)"
+    style="display: inline"
+    sodipodi:insensitive="true"
+  >
+    <defs id="defs3">
+      <linearGradient
+        id="unicorn-mane"
+        x1="7.8094363"
+        x2="45.19418"
+        y1="19.145987"
+        y2="56.530731"
+        gradientTransform="scale(1.0222555,0.978229)"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stop-color="#ff55a3" id="stop8" />
+        <stop offset="50%" stop-color="#ff65e3" id="stop9" />
+        <stop offset="100%" stop-color="#9b30ff" id="stop10" />
+      </linearGradient>
+    </defs>
+    <g class="layer" transform="matrix(1.5,0,0,1.5,52.5,0)" id="g3">
+      <title id="title3">Layer 1</title>
+      <g
+        fill="none"
+        id="svg_1"
+        stroke="#000000"
+        stroke-linecap="round"
+        stroke-width="2"
+      >
+        <!-- Horn -->
+
+        <!-- Head -->
+        <path
+          sodipodi:type="star"
+          style="
+            fill: #ffd700;
+            fill-opacity: 1;
+            stroke: none;
+            stroke-width: 1.79279;
+            stroke-miterlimit: 0.3;
+            stroke-dasharray: 0, 19.7207;
+            stroke-dashoffset: 0;
+            paint-order: markers stroke fill;
+          "
+          id="path14"
+          inkscape:flatsided="true"
+          sodipodi:sides="3"
+          sodipodi:cx="80.067551"
+          sodipodi:cy="39.18412"
+          sodipodi:r1="6.7574391"
+          sodipodi:r2="3.3787196"
+          sodipodi:arg1="0.50997206"
+          sodipodi:arg2="1.5571696"
+          inkscape:rounded="0"
+          inkscape:randomized="0"
+          d="M 85.965161,42.482783 74.262019,42.642269 79.975472,32.427308 Z"
+          inkscape:transform-center-x="-2.5229251"
+          inkscape:transform-center-y="-4.9681275"
+          transform="matrix(0.9591388,-0.28334178,0.63745526,2.514717,-74.533442,-60.382514)"
+        />
+        <path
+          d="m 45.2,26.8 c 4,4 14,10 0,20 -6,5 -16,5 -21,0 -5,-5 -5,-15 0,-20 3,-5 10,-5 15,-2"
+          fill="#ffffff"
+          id="svg_4"
+          stroke-width="2"
+        />
+        <!-- Mane -->
+        <path
+          d="m 24.2,26.8 c -5,-5 -10,-10 -15,-5 5,10 0,15 5,25 5,10 25,10 31,0"
+          fill="url(#unicorn-mane)"
+          id="path10"
+          stroke-width="2"
+          style="fill: url(#unicorn-mane)"
+        />
+        <!-- Eye -->
+        <circle cx="34.200001" cy="36.799999" fill="#000000" id="svg_6" r="2" />
+        <!-- Ear -->
+        <path
+          d="m 39.2,26.8 2,-10 4,10"
+          fill="#ffffff"
+          id="svg_7"
+          stroke-width="2"
+        />
+      </g>
+    </g>
+    <g inkscape:groupmode="layer" id="layer11" inkscape:label="Layer 1" />
+    <g inkscape:groupmode="layer" id="layer12" inkscape:label="Layer 2" />
+  </g>
+
+  <g
+    id="shiny"
+    transform="translate(-3.283892,34.669491)"
+    style="display: none"
+    inkscape:label="shiny"
+    sodipodi:insensitive="true"
+  >
+    <defs id="defs15">
+      <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+        <stop
+          offset="0%"
+          id="stop11"
+          style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+        >
+          <animate
+            attributeName="stop-color"
+            values="rgb(255,255,255);rgb(255,0,0);rgb(0,255,0);rgb(0,0,255);rgb(255,255,255)"
+            dur="5s"
+            repeatCount="indefinite"
+          />
+        </stop>
+        <stop
+          offset="30%"
+          id="stop12"
+          style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+        >
+          <animate
+            attributeName="stop-color"
+            values="rgb(255,255,0);rgb(255,0,255);rgb(0,255,255);rgb(255,255,0)"
+            dur="5s"
+            repeatCount="indefinite"
+          />
+        </stop>
+        <stop
+          offset="70%"
+          id="stop13"
+          style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+        >
+          <animate
+            attributeName="stop-color"
+            values="rgb(255,255,0);rgb(0,255,255);rgb(255,0,255);rgb(255,255,0)"
+            dur="5s"
+            repeatCount="indefinite"
+          />
+        </stop>
+        <stop
+          offset="100%"
+          id="stop14"
+          style="stop-color: rgb(255, 255, 255); stop-opacity: 1"
+        >
+          <animate
+            attributeName="stop-color"
+            values="rgb(255,255,255);rgb(0,0,255);rgb(0,255,0);rgb(255,0,0);rgb(255,255,255)"
+            dur="5s"
+            repeatCount="indefinite"
+          />
+        </stop>
+      </linearGradient>
+      <filter
+        id="shinyFilter"
+        x="-0.048"
+        y="-0.024"
+        width="1.096"
+        height="1.048"
+      >
+        <feGaussianBlur
+          in="SourceGraphic"
+          stdDeviation="1"
+          result="blur"
+          id="feGaussianBlur14"
+        />
+        <feSpecularLighting
+          in="blur"
+          surfaceScale="10"
+          specularConstant="1"
+          specularExponent="30"
+          lighting-color="#ffffff"
+          result="specOut"
+          id="feSpecularLighting14"
+        >
+          <fePointLight x="-5000" y="-10000" z="20000" id="fePointLight14" />
+        </feSpecularLighting>
+        <feComposite
+          in="specOut"
+          in2="SourceAlpha"
+          operator="in"
+          result="specOut"
+          id="feComposite14"
+        />
+        <feComposite
+          in="SourceGraphic"
+          in2="specOut"
+          operator="arithmetic"
+          k1="0"
+          k2="1"
+          k3="1"
+          k4="0"
+          id="feComposite15"
+        />
+      </filter>
+    </defs>
+
+    <!-- Apply gradient and filter to ellipse -->
+    <ellipse
+      cx="100"
+      cy="50"
+      rx="25"
+      ry="50"
+      fill="url(#grad1)"
+      filter="url(#shinyFilter)"
+      id="ellipse15"
+    />
+  </g>
+  <g
+    id="earring"
+    inkscape:label="earring"
+    transform="matrix(0.86361558,0,0,0.74723021,-23.77193,8.6441007)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <svg width="200" height="200" version="1.1" id="svg8">
+      <!-- Left earring -->
+
+      <!-- Right earring -->
+      <ellipse
+        cx="64.140755"
+        cy="90.994125"
+        rx="6.2105827"
+        ry="8.7999287"
+        stroke="#daa520"
+        stroke-width="1.30686"
+        fill="none"
+        id="ellipse7-9"
+        inkscape:transform-center-y="0.25585261"
+        inkscape:transform-center-x="-1.6080334e-06"
+        inkscape:label="ellipse9"
+        transform="matrix(1.1579226,0,0,1.3382757,31.776285,-17.759068)"
+      />
+      <ellipse
+        cx="64.01284"
+        cy="91.173576"
+        rx="5.4095001"
+        ry="7.9189358"
+        stroke="#ffd700"
+        stroke-width="0.782903"
+        fill="none"
+        id="ellipse8-9"
+        transform="matrix(1.1579226,0,0,1.3382757,31.776285,-17.759068)"
+        inkscape:label="ellipse8"
+      />
+    </svg>
+  </g>
+
+  <g
+    id="sunglasses"
+    inkscape:label="sunglasses"
+    transform="translate(0,25.423729)"
+    style="display: inline"
+    sodipodi:insensitive="true"
+  >
+    <g transform="matrix(0.5,0,0,0.5,46.5,28)" id="g11">
+      <!-- Left lens -->
+      <ellipse cx="70" cy="50" fill="#000000" id="left_lens" rx="25" ry="20" />
+      <!-- Right lens -->
+      <ellipse
+        cx="130"
+        cy="50"
+        fill="#000000"
+        id="right_lens"
+        rx="25"
+        ry="20"
+      />
+      <!-- Bridge -->
+      <rect x="95" y="45" width="10" height="10" fill="#000000" id="bridge" />
+      <!-- Left temple -->
+      <rect
+        x="45"
+        y="45"
+        width="5"
+        height="40"
+        fill="#000000"
+        id="left_temple"
+      />
+      <!-- Right temple -->
+      <rect
+        x="150"
+        y="45"
+        width="5"
+        height="40"
+        fill="#000000"
+        id="right_temple"
+      />
+    </g>
+  </g>
+  <g
+    id="lipstick"
+    inkscape:label="lipstick"
+    sodipodi:insensitive="true"
+    style="display: inline"
+  >
+    <!-- Red lips -->
+    <!-- Lips -->
+    <path
+      d="m 88.04527,94.842135 q 9.765552,-11.348515 19.53111,0 -9.765558,11.348525 -19.53111,0"
+      fill="#ff0000"
+      stroke="#000000"
+      stroke-width="0.589418"
+      id="path15"
+    />
+    <!-- Line in the middle -->
+    <line
+      x1="88.042915"
+      y1="94.721451"
+      x2="107.57867"
+      y2="94.721451"
+      stroke="#000000"
+      stroke-width="0.474914"
+      id="line15"
+    />
+  </g>
+
+  <g
+    id="disguise"
+    inkscape:label="disguise"
+    transform="translate(1.096462,0.27411551)"
+    sodipodi:insensitive="true"
+    style="display: none"
+  >
+    <!-- Left lens -->
+    <ellipse
+      cx="81.087341"
+      cy="76.630989"
+      stroke="#000000"
+      stroke-width="3.79827"
+      fill="none"
+      id="circle1"
+      rx="8.9370108"
+      ry="9.1579533"
+    />
+    <!-- Right lens -->
+    <ellipse
+      cx="110.87738"
+      cy="76.630989"
+      stroke="#000000"
+      stroke-width="3.79827"
+      fill="none"
+      id="circle2"
+      rx="8.9370108"
+      ry="9.1579533"
+    />
+
+    <!-- Bridge -->
+    <line
+      x1="90.024353"
+      y1="76.630989"
+      x2="101.94037"
+      y2="76.630989"
+      stroke="#000000"
+      stroke-width="3.79827"
+      id="line2"
+    />
+
+    <!-- Nose -->
+    <ellipse
+      cx="95.982361"
+      cy="88.841591"
+      rx="5.9580073"
+      ry="9.1579533"
+      fill="#8b4513"
+      stroke="#000000"
+      stroke-width="1.51931"
+      id="ellipse7"
+    />
+
+    <!-- Mustache -->
+    <path
+      d="M 107.89398,106.79765 Q 96.229376,97.173929 84.412643,106.68763 96.305441,87.605223 107.89398,106.79765"
+      fill="#000000"
+      id="path11"
+      style="stroke-width: 0.52997"
+    />
+
+    <!-- Left eyebrow -->
+    <path
+      d="m 72.150334,67.473037 q 8.937011,-9.157952 17.874022,0"
+      fill="none"
+      stroke="#000000"
+      stroke-width="7.59654"
+      id="path12"
+    />
+    <!-- Right eyebrow -->
+    <path
+      d="m 101.94037,67.473037 q 8.93702,-9.157952 17.87403,0"
+      fill="none"
+      stroke="#000000"
+      stroke-width="7.59654"
+      id="path13"
+    />
+  </g>
+  <g
+    id="mohawk"
+    inkscape:label="mohawk"
+    sodipodi:insensitive="true"
+    style="display: inline"
+  >
+    <!-- Mohawk -->
+    <polygon
+      points="90,50 110,50 100,150 "
+      fill="#000000"
+      id="polygon1"
+      transform="matrix(0.40948892,0,0,0.58664224,56.467622,-16.608124)"
+    />
+    <polygon
+      points="80,60 120,60 100,150 "
+      fill="#000000"
+      id="polygon2"
+      transform="matrix(0.40948892,0,0,0.58664224,56.467622,-16.608124)"
+    />
+    <polygon
+      points="70,70 130,70 100,150 "
+      fill="#000000"
+      id="polygon3"
+      transform="matrix(0.40948892,0,0,0.58664224,56.467622,-16.608124)"
+    />
+    <polygon
+      points="60,80 140,80 100,150 "
+      fill="#000000"
+      id="polygon4"
+      transform="matrix(0.40948892,0,0,0.58664224,56.467622,-16.608124)"
+    />
+    <polygon
+      points="50,90 150,90 100,150 "
+      fill="#000000"
+      id="polygon5"
+      transform="matrix(0.40948892,0,0,0.58664224,56.467622,-16.608124)"
+    />
+  </g>
+  <g
+    id="cowboy-hat"
+    inkscape:label="cowboy-hat"
+    transform="translate(-2.1186441,-24.364407)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <ellipse cx="100" cy="80" fill="#8b4513" id="hat_brim" rx="70" ry="20" />
+    <!-- Hat Crown -->
+    <path d="m 50,80 q 50,-50 100,0" fill="#8b4513" id="hat_crown" />
+    <ellipse cx="100" cy="55" fill="#8b4513" id="hat_top" rx="30" ry="15" />
+    <!-- Hat Top -->
+    <path
+      style="fill: #000000; fill-opacity: 1; stroke-width: 0.754796"
+      d="m 72.417769,61.167713 c 1.424335,-0.07417 1.786776,0.09703 3.250827,0.34726 0.829724,0.141812 1.786311,0.170619 2.641296,0.231506 1.346579,0.0959 0.29769,0.103372 1.422237,0.231506 0.84143,0.09588 1.789166,0.0464 2.641297,0.115754 0.212014,0.01726 0.397515,0.0985 0.60953,0.115753 2.817604,0.22932 5.728134,0.288181 8.53342,0.578766 3.041526,0.315057 5.820866,0.626494 8.736594,1.04178 0.96072,0.136834 4.14238,0 5.28259,0 1.16333,0 3.43749,0.147044 4.46989,0 1.13683,-0.161918 2.33727,-0.135186 3.454,-0.34726 0.30477,-0.05788 0.71112,0.05788 1.01588,0 0.0909,-0.01726 0.11232,-0.0985 0.20318,-0.115753 0.1285,-0.0244 0.27495,0.01872 0.40635,0 0.55755,-0.07941 1.07898,-0.243488 1.62542,-0.34726 0.18286,-0.03472 0.42667,0.03472 0.60953,0 0.0909,-0.01726 0.11751,-0.09135 0.20317,-0.115753 0.22971,-0.06544 1.53055,-0.231507 1.82859,-0.231507 0.38943,0 1.26799,-0.12969 1.62542,-0.231506 0.16254,-0.0463 0.44699,0.0463 0.60953,0 0.2951,-0.08406 0.438,-0.178138 0.8127,-0.231507 0.0262,-0.0037 0.75201,0.03458 0.81271,0 0.0479,-0.02728 -0.0479,-0.08847 0,-0.115753 0.0939,-0.05351 0.48686,0.03495 0.60953,0 0.0857,-0.0244 0.11751,-0.09135 0.20318,-0.115754 0.16916,-0.04819 0.68383,0.07342 0.8127,0 0.0479,-0.02728 -0.0479,-0.08847 0,-0.115752 0.16998,-0.09684 1.02699,-0.0063 1.21906,-0.115754 0.0677,-0.03859 0.13546,-0.308676 0.20318,-0.34726 0.0479,-0.02728 0.1426,0.01726 0.20318,0 0.0662,-0.01887 0.60953,-0.430087 0.60953,-0.463013"
+      id="path1"
+    />
+  </g>
+  <g
+    id="jean-jacket"
+    inkscape:label="jean-jacket"
+    transform="matrix(0.56626149,0,0,0.56304861,40.482261,86.490672)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <!-- Jean Jacket -->
+    <!-- Jacket body -->
+    <rect x="50" y="100" width="100" height="120" fill="#2d5c9e" id="rect1" />
+
+    <!-- Jacket collar -->
+    <path d="M 50,100 75,70 h 50 l 25,30 z" fill="#2d5c9e" id="path3" />
+
+    <!-- Left sleeve -->
+    <path d="m 50,100 q -20,40 0,80 v 40" fill="#2d5c9e" id="path4" />
+
+    <!-- Right sleeve -->
+    <path d="m 150,100 q 20,40 0,80 v 40" fill="#2d5c9e" id="path5" />
+
+    <!-- Jacket pockets -->
+    <rect x="60" y="120" width="30" height="30" fill="#3b73b9" id="rect5" />
+    <rect x="110" y="120" width="30" height="30" fill="#3b73b9" id="rect6" />
+
+    <!-- Jacket buttons -->
+    <circle cx="90" cy="150" r="2" fill="#f1c232" id="circle6" />
+    <circle cx="110" cy="150" r="2" fill="#f1c232" id="circle7" />
+    <circle cx="90" cy="180" r="2" fill="#f1c232" id="circle8" />
+    <circle cx="110" cy="180" r="2" fill="#f1c232" id="circle9" />
+    <circle cx="90" cy="210" r="2" fill="#f1c232" id="circle10" />
+    <circle cx="110" cy="210" r="2" fill="#f1c232" id="circle11" />
+  </g>
+  <g
+    id="beard"
+    inkscape:label="beard"
+    transform="matrix(0.55010185,0,0,0.89444963,42.481643,-65.544298)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <!-- ZZ Top Style Beard -->
+    <path
+      id="path2"
+      style="fill: #502303; fill-opacity: 1"
+      d="m 50.001711,150.00004 c 0.01353,0.0406 0.02553,0.0753 0.03905,0.11573 0.0045,0.002 0.0098,0.004 0.0142,0.007 -0.0198,-0.0402 -0.03322,-0.0822 -0.05326,-0.12228 z m 96.757649,8.8305 c -0.11003,0.0324 -0.13542,0.085 0,0 z m -92.901829,0.27732 c -0.0071,0.004 -0.01406,0.009 -0.0213,0.0131 0.07536,0.13179 0.114994,0.29246 0.102964,0.48258 -0.0011,0.0173 -0.0025,0.0351 -0.0036,0.0524 -0.0112,0.14706 -0.02562,0.29351 -0.08521,0.43673 -0.07874,0.17272 -0.188056,0.34113 -0.3728,0.48257 -0.148598,0.12444 -0.2352,0.20434 -0.355048,0.30134 -0.09227,0.0653 -0.172289,0.12822 -0.234332,0.20744 -0.0084,0.009 -0.02273,0.0285 -0.03195,0.0393 -0.01177,0.0454 -0.02744,0.0961 -0.05326,0.11355 -0.01448,0.0274 -0.02761,0.0555 -0.04261,0.083 1.112761,18.88214 -11.009971,42.17753 -2.758722,58.68003 19.9999,-9.99995 9.998096,9.99969 29.997996,19.99964 19.9999,-9.99995 10.001658,9.99995 30.001541,0 19.9999,-9.99995 9.9981,-29.99959 29.998,-19.99964 7.28546,-14.57093 3.96451,-34.44612 5.48904,-51.89775 -0.057,-0.26901 -0.11334,-0.53805 -0.10296,-0.81012 -0.005,-0.11071 -0.008,-0.22347 -0.0497,-0.33191 -0.0627,-0.18459 -0.15995,-0.36211 -0.21303,-0.54808 -0.0603,-0.2801 -0.13821,-0.55989 -0.14912,-0.84287 -0.0122,-0.15273 -0.0116,-0.31003 -0.0923,-0.45638 -0.12131,-0.24357 -0.25211,-0.48487 -0.31244,-0.73805 -0.0918,-0.27473 -0.17285,-0.55228 -0.15267,-0.83414 1.2e-4,-0.19319 0.003,-0.38765 0.004,-0.58084 0.002,-0.25527 -9e-5,-0.50901 0.004,-0.76426 4.2e-4,-0.0189 0.003,-0.0378 0.004,-0.0568 -8.14208,12.11389 -16.28533,3.43473 -24.4273,27.86062 -9.99995,-19.9999 -19.99979,9.99995 -39.999691,0 C 71.28629,163.85513 62.57346,175.50035 53.858853,159.10786 Z"
+    />
+  </g>
+  <g
+    id="mustache"
+    inkscape:label="mustache"
+    transform="matrix(0.61418032,0,0,-0.33519622,30.735523,125.97663)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <path
+      d="m 50,100 q 20,-30 40,0 20,30 40,0 20,-30 40,0"
+      fill="#000000"
+      id="path6"
+    />
+  </g>
+  <g
+    id="cigar"
+    inkscape:label="cigar"
+    transform="matrix(-0.50549619,0,0,0.3798162,187.72614,32.303234)"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <!-- Cigar Body -->
+    <rect
+      x="50"
+      y="150"
+      width="100"
+      height="20"
+      rx="10"
+      ry="10"
+      fill="#8b4513"
+      id="rect2"
+      style="fill: #0a450c; fill-opacity: 1"
+    />
+
+    <!-- Cigar Tip -->
+    <circle cx="45" cy="160" fill="#5c4033" id="ellipse4" r="10" />
+
+    <!-- Smoke -->
+    <path
+      d="m 45,140 c 5,-10 10,-20 5,-30 -5,-10 5,-20 0,-30 -5,-10 5,-20 0,-30"
+      fill="none"
+      stroke="#bbbbbb"
+      stroke-width="2"
+      id="path7"
+    />
+    <path
+      d="m 55,145 c 5,-10 10,-20 5,-30 -5,-10 5,-20 0,-30 -5,-10 5,-20 0,-30"
+      fill="none"
+      stroke="#bbbbbb"
+      stroke-width="2"
+      id="path8"
+    />
+  </g>
+
+  <g
+    id="crown"
+    inkscape:label="crown"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <path
+      d="m 69.126881,59.18987 8.100378,-33.4708 8.100376,19.126169 12.150565,-28.689256 12.15057,28.689256 8.10037,-19.126169 8.10038,33.4708 z"
+      stroke="#ffd700"
+      stroke-width="2.20034"
+      fill="#ffd700"
+      id="path9"
+    />
+    <ellipse
+      cx="77.227257"
+      cy="25.71907"
+      stroke="#ffd700"
+      stroke-width="1.32021"
+      fill="#ff0000"
+      id="circle12"
+      rx="4.0501876"
+      ry="4.7815423"
+    />
+    <ellipse
+      cx="97.478203"
+      cy="16.155983"
+      stroke="#ffd700"
+      stroke-width="1.32021"
+      fill="#ff0000"
+      id="circle13"
+      rx="4.0501876"
+      ry="4.7815423"
+    />
+    <ellipse
+      cx="117.72915"
+      cy="25.71907"
+      stroke="#ffd700"
+      stroke-width="1.32021"
+      fill="#ff0000"
+      id="circle14"
+      rx="4.0501876"
+      ry="4.7815423"
+    />
+  </g>
+  <g
+    id="magic-wand"
+    inkscape:label="magic-wand"
+    style="display: none"
+    sodipodi:insensitive="true"
+  >
+    <!-- Staff -->
+    <rect
+      x="-34.541779"
+      y="135.17764"
+      width="3.5288596"
+      height="50.897537"
+      fill="#8b4513"
+      stroke="#000000"
+      stroke-width="0.35195"
+      id="rect3"
+      transform="matrix(0.88169218,-0.47182507,0.5092453,0.86062142,0,0)"
+      inkscape:transform-center-x="17.778119"
+      inkscape:transform-center-y="3.2781643"
+    />
+
+    <!-- Gem on top -->
+    <ellipse
+      cx="-32.777351"
+      cy="131.66748"
+      fill="#00bfff"
+      stroke="#ffd700"
+      stroke-width="0.527924"
+      id="circle3"
+      rx="3.5288596"
+      ry="3.5101745"
+      transform="matrix(0.88169218,-0.47182507,0.5092453,0.86062142,0,0)"
+      inkscape:transform-center-x="32.52533"
+      inkscape:transform-center-y="-21.64453"
+    />
+  </g>
+  <g
+    id="corn-dog"
+    inkscape:label="corn-dog"
+    sodipodi:insensitive="true"
+    style="display: inline"
+  >
+    <!-- Stick -->
+    <rect
+      x="173.618"
+      y="60.51796"
+      width="1.2822894"
+      height="11.337627"
+      fill="#8b4513"
+      stroke="#000000"
+      stroke-width="0.190645"
+      id="rect4"
+      transform="rotate(27.436412)"
+      inkscape:transform-center-x="-1.5157202"
+      inkscape:transform-center-y="8.1590939"
+    />
+
+    <!-- Corn dog -->
+    <ellipse
+      cx="174.31174"
+      cy="49.236877"
+      rx="4.7597332"
+      ry="11.229801"
+      fill="#cd853f"
+      stroke="#000000"
+      stroke-width="0.298471"
+      id="ellipse5"
+      transform="rotate(27.436412)"
+      inkscape:transform-center-x="-9.3723007"
+      inkscape:transform-center-y="-6.8600898"
+    />
+  </g>
+  <g
+    id="scarf"
+    inkscape:label="scarf"
+    sodipodi:insensitive="true"
+    style="display: none"
+  >
+    <!-- Scarf loop -->
+    <ellipse
+      cx="97.044449"
+      cy="128.93356"
+      rx="17.890238"
+      ry="5.9218898"
+      fill="#ff0000"
+      stroke="#000000"
+      stroke-width="0.807637"
+      id="ellipse6"
+    />
+
+    <!-- Scarf ends -->
+    <rect
+      x="79.198227"
+      y="122.99571"
+      width="13.325573"
+      height="50.154514"
+      fill="#ff0000"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="rect7"
+    />
+    <rect
+      x="101.86441"
+      y="123.45261"
+      width="13.325573"
+      height="50.154514"
+      fill="#ff0000"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="rect8"
+    />
+
+    <!-- Fringe on scarf ends -->
+    <line
+      x1="79.198227"
+      y1="173.15022"
+      x2="83.640076"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line8"
+    />
+    <line
+      x1="83.640076"
+      y1="173.15022"
+      x2="88.08194"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line9"
+    />
+    <line
+      x1="88.08194"
+      y1="173.15022"
+      x2="92.523796"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line10"
+    />
+
+    <line
+      x1="101.40752"
+      y1="173.15022"
+      x2="105.84937"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line11"
+    />
+    <line
+      x1="105.84937"
+      y1="173.15022"
+      x2="110.29124"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line12"
+    />
+    <line
+      x1="110.29124"
+      y1="173.15022"
+      x2="114.73309"
+      y2="183.18114"
+      stroke="#000000"
+      stroke-width="0.943989"
+      id="line13"
+    />
+  </g>
+  <g
+    id="clown-nose"
+    inkscape:label="clown-nose"
+    sodipodi:insensitive="true"
+    style="display: none"
+  >
+    <!-- Clown nose -->
+    <circle
+      cx="99.177658"
+      cy="83.827187"
+      fill="#ff0000"
+      stroke="#000000"
+      stroke-width="1.53413"
+      id="circle4"
+      r="9.5914135"
+    />
+  </g>
+  <g
+    id="overalls"
+    inkscape:label="overalls"
+    transform="matrix(0.99544689,0,0,1.308085,0.45391604,-41.929541)"
+    sodipodi:insensitive="true"
+  >
+    <!-- Overalls body -->
+    <rect
+      x="82.337212"
+      y="152.06122"
+      width="34.71302"
+      height="59.667236"
+      fill="#0000ff"
+      stroke="#000000"
+      stroke-width="1.62543"
+      id="rect9"
+    />
+
+    <!-- Straps -->
+    <rect
+      x="82.051147"
+      y="136.91508"
+      width="7.5147262"
+      height="15.432193"
+      fill="#0000ff"
+      stroke="#000000"
+      stroke-width="1.05331"
+      id="rect10"
+    />
+    <rect
+      x="109.82661"
+      y="136.59225"
+      width="7.5046496"
+      height="15.749987"
+      fill="#0000ff"
+      stroke="#000000"
+      stroke-width="1.06338"
+      id="rect11"
+    />
+
+    <!-- Buckles -->
+    <ellipse
+      cx="85.972443"
+      cy="138.8405"
+      fill="#ffd700"
+      stroke="#000000"
+      stroke-width="0.812713"
+      id="circle15"
+      rx="1.7356509"
+      ry="1.9889078"
+    />
+    <ellipse
+      cx="114.23466"
+      cy="138.18475"
+      fill="#ffd700"
+      stroke="#000000"
+      stroke-width="0.812713"
+      id="circle16"
+      rx="1.7356509"
+      ry="1.9889078"
+    />
+
+    <!-- Pocket -->
+    <rect
+      x="92.751114"
+      y="160.01685"
+      width="13.885207"
+      height="19.889078"
+      fill="#0000ff"
+      stroke="#000000"
+      stroke-width="1.62543"
+      id="rect16"
+    />
+  </g>
+  <g id="necklace" inkscape:label="necklace" sodipodi:insensitive="true">
+    <!-- Gold chain -->
+    <path
+      d="m 105.09421,135.74878 q -2.77094,48.87802 -13.829746,1.86428"
+      stroke="#ffd700"
+      stroke-width="2.36433"
+      fill="none"
+      id="path16"
+    />
+
+    <!-- Dollar sign pendant -->
+    <text
+      x="87.893562"
+      y="188.75333"
+      font-family="Arial"
+      font-size="23.6753px"
+      fill="#ffd700"
+      stroke="#000000"
+      stroke-width="1.18377"
+      id="text16"
+      transform="scale(1.0621491,0.9414874)"
+    >
+      $
+    </text>
+  </g>
+</svg>
