@@ -11,12 +11,10 @@
     <h6 class="footer-title">Site</h6>
     <a href="/pricing" class="link link-hover">Pricing</a>
     <a href="/support" class="link link-hover">Support</a>
-    <a href="/creators" class="link link-hover">Creators</a>
   </nav>
   <nav>
     <h6 class="footer-title">{meta.prelaunchLabel}</h6>
     <a href="/for-users" class="link link-hover">For Users</a>
-    <a href="/for-creators" class="link link-hover">For Creators</a>
   </nav>
   <nav>
     <h6 class="footer-title">Legal</h6>

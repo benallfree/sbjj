@@ -45,6 +45,8 @@
       })
       .catch((e) => {
         error = e.message
+        code = ''
+        formState = FormState.Login
         console.error(e)
       })
   }

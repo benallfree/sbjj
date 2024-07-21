@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { isLoggedIn } from '$src/pocketbase-client'
   import type { HubContext } from '$store/HubContext'
   import { getContext } from 'svelte'
   import Cell from './Cell.svelte'
@@ -21,9 +22,11 @@
 <div class="description">
   <p>{@html hub.about}</p>
 </div>
-<div>
-  <Controls />
-</div>
+{#if isLoggedIn()}
+  <div>
+    <Controls />
+  </div>
+{/if}
 <div class="game-grid">
   {#each Object.entries(grid || {}) as [key, cell]}
     <Cell {key} />
