@@ -1,4 +1,4 @@
-import splashImg from '../assets/img/splash.webp?enhanced'
+import splashImg from '../assets/favicon.png?enhanced'
 
 export const meta = {
   APP_NAME: 'Cornage',

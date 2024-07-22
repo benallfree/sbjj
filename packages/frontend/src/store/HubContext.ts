@@ -18,15 +18,21 @@ export const HubRecordState = z.object({
 })
 export type HubRecordState = z.infer<typeof HubRecordState>
 
+const fixedLengthEntityStackArray = z
+  .array(EntityStackItem.nullable())
+  .refine((arr) => arr.length === 5, {
+    message: 'Array must have exactly 5 elements',
+  })
+
 export const HubPlayerState = z.object({
-  entityStack: EntityStackItem.array(),
+  entityStack: fixedLengthEntityStackArray,
   seeds: z.record(
     z.string(),
     z.object({
       count: z.number(),
     }),
   ),
-  activeSeedSlug: z.string(),
+  activeSeedSlug: z.string().nullable(),
   activeEntityStackIdx: z.number(),
   activeCornamentSelections: z.array(z.string()),
   selectedCellKey: z.string().optional(),
@@ -87,7 +93,13 @@ export const createHubContext = (
       seeds: {
         [defaultSeedSlug]: { count: 20 },
       },
-      entityStack: [],
+      entityStack: [
+        { seedSlug: meta.currentSeason.defaultSeedSlug, cornaments: [] },
+        null,
+        null,
+        null,
+        null,
+      ],
       activeEntityStackIdx: 0,
       activeSeedSlug: defaultSeedSlug,
       activeCornamentSelections: [],
@@ -125,23 +137,51 @@ export const createHubContext = (
   const setActiveEntityStackIdx = (stackIdx: number) => {
     _updateHubState((draft) => {
       draft.player.activeEntityStackIdx = stackIdx
+      draft.player.activeSeedSlug = null
+      draft.player.activeCornamentSelections = []
+      if (!draft.player.entityStack[stackIdx]) {
+        draft.player.entityStack[stackIdx] = {
+          seedSlug: meta.currentSeason.defaultSeedSlug,
+          cornaments: [],
+        }
+      }
+      draft.player.activeSeedSlug = draft.player.entityStack[stackIdx]!.seedSlug
+      draft.player.activeCornamentSelections =
+        draft.player.entityStack[stackIdx]!.cornaments
+      console.log(JSON.stringify(draft.player, null, 2))
     })
   }
 
   const setActiveSeedSlug = (slug: SeedSlug) => {
     _updateHubState((draft) => {
       draft.player.activeSeedSlug = slug
+      if (!draft.player.entityStack[draft.player.activeEntityStackIdx]) {
+        draft.player.entityStack[draft.player.activeEntityStackIdx] = {
+          seedSlug: slug,
+          cornaments: [],
+        }
+      }
+      draft.player.entityStack[draft.player.activeEntityStackIdx]!.seedSlug =
+        slug
     })
   }
 
   const toggleCornamentSelection = (slug: CornamentSlug) => {
     _updateHubState((draft) => {
-      if (draft.player.activeCornamentSelections.includes(slug)) {
-        draft.player.activeCornamentSelections =
-          draft.player.activeCornamentSelections.filter((s) => s !== slug)
-        return
+      draft.player.activeCornamentSelections =
+        draft.player.activeCornamentSelections.includes(slug)
+          ? draft.player.activeCornamentSelections.filter((s) => s !== slug)
+          : [...draft.player.activeCornamentSelections, slug]
+
+      if (!draft.player.entityStack[draft.player.activeEntityStackIdx]) {
+        draft.player.entityStack[draft.player.activeEntityStackIdx] = {
+          seedSlug:
+            draft.player.activeSeedSlug || meta.currentSeason.defaultSeedSlug,
+          cornaments: [],
+        }
       }
-      draft.player.activeCornamentSelections.push(slug)
+      draft.player.entityStack[draft.player.activeEntityStackIdx]!.cornaments =
+        draft.player.activeCornamentSelections
     })
   }
 

@@ -14,7 +14,7 @@ export const sanitizeUserSettings = (
     cloneDeep(merge({}, DEFAULT_USER_SETTINGS, settings)) as UserSettings,
   )
   if (!check.success) {
-    throw new Error('Invalid UserSettings')
+    throw new Error(`Invalid UserSettings: ${check.error}`)
   }
   return check.data
 }
@@ -34,7 +34,7 @@ export const sanitizePlayerState = (
     cloneDeep(merge({}, DEFAULT_PLAYER_STATE, state)) as HubPlayerState,
   )
   if (!check.success) {
-    throw new Error('Invalid HubPlayerState')
+    throw new Error(`Invalid HubPlayerState: ${check.error}`)
   }
   return check.data
 }
@@ -151,7 +151,7 @@ export const sanitizeHubState = (
     cloneDeep(merge({}, DEFAULT_HUB_STATE, state)) as HubRecordState,
   )
   if (!check.success) {
-    throw new Error('Invalid HubRecordState')
+    throw new Error(`Invalid HubRecordState: ${check.error}`)
   }
   return check.data
 }

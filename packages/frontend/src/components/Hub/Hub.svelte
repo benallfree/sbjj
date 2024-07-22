@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { isLoggedIn } from '$src/pocketbase-client'
   import type { HubContext } from '$store/HubContext'
+  import { isUserLoggedIn } from '$store/user'
   import { getContext } from 'svelte'
   import Cell from './Cell.svelte'
   import Controls from './Controls.svelte'
@@ -22,7 +22,7 @@
 <div class="description">
   <p>{@html hub.about}</p>
 </div>
-{#if isLoggedIn()}
+{#if $isUserLoggedIn}
   <div>
     <Controls />
   </div>

@@ -14,6 +14,14 @@
   const { state, setActiveEntityStackIdx } = getContext<HubContext>(`hub`)
   $: ({ hub, player } = $state)
 
+  $: entityStack =
+    player.entityStack.length < 5
+      ? [
+          ...player.entityStack,
+          ...Array(5 - player.entityStack.length).fill(null),
+        ]
+      : player.entityStack
+
   let isDetailOpen = false
   const expand = () => {
     isDetailOpen = !isDetailOpen
@@ -22,7 +30,7 @@
 
 <div class="controls">
   <button class="control" on:click={expand}><Fa icon={faExpand} /></button>
-  {#each player.entityStack as item, idx}
+  {#each entityStack as item, idx}
     <button
       class="control {player.activeEntityStackIdx === idx ? `selected` : ''}"
       on:click={() => setActiveEntityStackIdx(idx)}

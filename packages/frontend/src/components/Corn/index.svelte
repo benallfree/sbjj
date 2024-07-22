@@ -7,7 +7,6 @@
 
   // Type declaration for props
   export let item: EntityStackItem
-  console.log({ item })
 
   const { state: metaState } = getContext<MetaContext>('meta')
   $: ({
@@ -15,7 +14,6 @@
   } = $metaState)
 
   $: visibleIds = [baseSlug, item.seedSlug, ...item.cornaments]
-  $: console.log({ visibleIds })
 
   // Reference to the img element
   let objectRef: HTMLDivElement
@@ -39,10 +37,8 @@
     ) as SVGAElement[]
 
     topLevelGElements.forEach((group) => {
-      console.log({ group })
       if (visibleIds.includes(group.id)) {
         group.style.display = 'block'
-        console.log(`block`, visibleIds)
       } else {
         group.style.display = 'none'
       }
