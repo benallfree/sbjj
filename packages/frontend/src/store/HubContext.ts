@@ -1,5 +1,5 @@
 import { browser } from '$app/environment'
-import { onHubChanged, pb } from '$src/pocketbase-client'
+import { currentUserOrDie, onHubChanged, pb } from '$src/pocketbase-client'
 import type { CornamentSlug } from '$store/CornamentSlug'
 import { EntityStackItem } from '$store/EntityStackItem'
 import { GridCell } from '$store/GridCell'
@@ -123,7 +123,8 @@ export const createHubContext = (
   const _updateHubState = (cb: (draft: HubContext_State) => void) => {
     state.update((s) => {
       const res = produce(s, cb)
-      updatePlayerState(res.player).catch(console.error)
+      console.log(`_updateHubState`, JSON.stringify(res, null, 2))
+      localStorage.setItem(`hub.${hub.id}`, JSON.stringify(res))
       return res
     })
   }
@@ -131,6 +132,14 @@ export const createHubContext = (
   const selectCell = (key: CellCoordKey) => {
     _updateHubState((draft) => {
       draft.player.selectedCellKey = key
+      if (!draft.hub.state.grid[key]?.item) {
+        draft.hub.state.grid[key]!.item = {
+          ...draft.player.entityStack[draft.player.activeEntityStackIdx]!,
+          user: currentUserOrDie().id,
+        }
+      } else {
+        alert(`That cell is occupied`)
+      }
     })
   }
 

@@ -2,6 +2,6 @@ import { z } from 'zod'
 import { EntityStackItem } from './EntityStackItem'
 
 export const GridCell = z.object({
-  item: EntityStackItem.optional(),
+  item: EntityStackItem.extend({ user: z.string() }).optional(),
 })
-export type GridCell = EntityStackItem
+export type GridCell = z.infer<typeof GridCell>
